@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -25,43 +23,43 @@
     <script src="%PUBLIC_URL%/assets/js/slick.min.js"></script>
     <script src="%PUBLIC_URL%/zoom/jquery.anythingzoomer.js"></script>
     <script>
-      $(function () {
-          $("#zoom").anythingZoomer({
-              clone: true
-          });
-      });
-      $(".ai100").slick({
+        $(function () {
+            $("#zoom").anythingZoomer({
+                clone: true
+            });
+        });
+        $(".ai100").slick({
             infinite: false,
             slidesToShow: 1,
-            prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"></button>',
+            prevArrow: '<button className"slide-arrow prev-arrow"></button>',
+            nextArrow: '<button className"slide-arrow next-arrow"></button>',
         });
         $(".cards-slider").slick({
             infinite: false,
             slidesToShow: 3,
-            prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"></button>',
+            prevArrow: '<button className"slide-arrow prev-arrow"></button>',
+            nextArrow: '<button className"slide-arrow next-arrow"></button>',
         });
         $(".lab-slider").slick({
             infinite: false,
             slidesToShow: 3,
-            prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"></button>',
+            prevArrow: '<button className"slide-arrow prev-arrow"></button>',
+            nextArrow: '<button className"slide-arrow next-arrow"></button>',
         });
         $(".award-slider").slick({
             infinite: false,
             slidesToShow: 3,
             dots: true,
-            prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"></button>',
+            prevArrow: '<button className"slide-arrow prev-arrow"></button>',
+            nextArrow: '<button className"slide-arrow next-arrow"></button>',
         });
         $(".our-slider").slick({
             infinite: false,
             slidesToShow: 1,
-            prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"></button>',
+            prevArrow: '<button className"slide-arrow prev-arrow"></button>',
+            nextArrow: '<button className"slide-arrow next-arrow"></button>',
         });
-        
+
         $('#play-pause-button').click(function () {
             var mediaVideo = $("#media-video").get(0);
             if (mediaVideo.paused) {
@@ -99,7 +97,7 @@
                 $(".play-btn2").fadeIn();
             });
         });
-      </script>
+    </script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -110,8 +108,9 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -124,5 +123,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
