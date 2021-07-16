@@ -28,7 +28,7 @@ const LandingPage = () => {
           <div className="m-auto text-center">
             <div id="zoom">
               <div className="small">
-                <h1>
+                <h1 className="m-0">
                   The<b> Future of Microscopy</b> is Here!
                 </h1>
                 <center>
