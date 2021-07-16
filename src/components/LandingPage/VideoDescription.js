@@ -5,7 +5,7 @@ const VideoDescription = () =>{
     const ref=useRef()
     return (
          <div className="container-fluid px-0 position-relative video-section">
-        <video muted id="media-video" ref={ref}>
+        <video muted id="media-video" poster="assets/img/video_section.png" ref={ref}>
             <source src="assets/video/video.mp4" type="video/mp4"/>
         </video>
         <div className="video-text container">
@@ -29,7 +29,7 @@ const VideoDescription = () =>{
             }
             else{
                 setShow(true)
-                ref.current.pause()
+                ref.current.load()
             }
         })}>
             {show ? <i className="bi bi-play-fill"></i> :  <i className="bi bi-pause-fill"></i> }

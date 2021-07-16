@@ -20,6 +20,15 @@ const LandingPage = () => {
   const [shonitStyle, setShonitStyle] = useState(false);
   const [shravaStyle, setShravaStyle] = useState(false);
 
+  // const _handerMouseLeave = (e) =>{
+  //   e.preventDefault();
+  //   console.log("hande",shonitStyle)
+  // }
+
+  // useEffect(()=>{
+  //   console.log("shonitStyle",shonitStyle)
+  // },[shonitStyle])
+
   return (
     <div className="main">
       <Header />
@@ -66,11 +75,21 @@ const LandingPage = () => {
                   setShonitStyle(true);
                   setShravaStyle(false);
                 }}
-                onMouseLeave={(e) => {
-                  e.preventDefault();
-                  console.log("hello 1");
-                  setShonitStyle(false);
-                }}
+              //   onMouseLeave={ 
+              //     _handerMouseLeave
+              //   //   (e) => {
+              //   //   e.preventDefault();
+              //   //   // let id= setTimeout(()=>{
+              //   //   //   setShonitStyle(false);
+              //   //   // },2000)
+              //   //   console.log(shonitStyle)
+              //   //   // if(shonitStyle){
+              //   //   //  return (()=>{
+              //   //   //    clearTimeout(id)
+              //   //   //  })
+              //   //   // }
+              //   // }
+              // }
               >
                 <div className="blood">
                   <img src="assets/img/shonit.png" />
@@ -112,7 +131,7 @@ const LandingPage = () => {
                     className="img-fluid a1 user-select-none"
                   />
                 </div>
-                <MicroProduct />
+                <MicroProduct setShonit={shonitStyle} setShrava={shravaStyle} setShonitStyle={setShonitStyle} setShravaStyle={setShravaStyle}/>
                 <p className="text-description text-center mt-4">
                   The AI100 is an AI-driven smart robotic microscope.
                 </p>
@@ -126,12 +145,16 @@ const LandingPage = () => {
                 onMouseEnter={(e) => {
                   e.preventDefault();
                   setShravaStyle(true);
+                  setShonitStyle(false);
                 }}
-                onMouseLeave={(e) => {
-                  e.preventDefault();
-                  console.log("hello 1");
-                  setShravaStyle(false);
-                }}
+                // onMouseLeave={(e) => {
+                //   e.preventDefault();
+                //   if(!shravaStyle){
+                //     setTimeout(()=>{
+                //       setShravaStyle(false);
+                //     },2000)
+                //   }
+                // }}
               >
                 <div className="blood">
                   <img src="assets/img/urine.png" />

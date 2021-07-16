@@ -34,8 +34,8 @@ const Footer = () =>{
                                 <a href="" className="text-decoration-none text-danger fw-bold text-fwb">About Us</a>
                                 <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Products</a>
                                 <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Research</a>
-                                <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Career</a>
                                 <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Blog & News</a>
+                                <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Career</a>
                                 <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Contact Us</a>
                             </div>
                         </div>

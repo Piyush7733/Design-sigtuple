@@ -830,7 +830,6 @@ footer i {
 
 .main-hover {
   position: absolute;
-  display: none;
   bottom: 20px;
   left: 20px;
   border-radius: 15px;
@@ -839,6 +838,13 @@ footer i {
   width: 400px;
   padding-top: 25px;
   padding-bottom: 25px;
+}
+
+.main-hover-none {
+  display: none;
+}
+.main-hover-flex {
+  display: flex;
 }
 
 .text-img {
