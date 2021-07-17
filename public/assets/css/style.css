@@ -94,6 +94,10 @@
 .text-danger {
   color: #de1a1b;
 }
+.slick-slide img {
+  display: block;
+  width: 45% !important;
+}
 
 button {
   height: 50px;
@@ -487,7 +491,7 @@ button {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  height: 680px;
+  height: 560px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -503,6 +507,14 @@ button {
 
 .micro-product {
   border-radius: 50%;
+  padding: 90px 0;
+}
+
+.micro-product .slick-next {
+  left: 470px !important;
+}
+.micro-product .slick-prev {
+  left: 220px !important;
 }
 
 .slick-slide {

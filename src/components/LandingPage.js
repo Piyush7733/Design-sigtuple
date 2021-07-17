@@ -78,10 +78,12 @@ const LandingPage = () => {
                 >
                   <img src="assets/img/shonit.png" />
                 </div>
-                <div className="mx-auto mt-3">
+                <div className={`mt-3  ${shonitStyle ? `` : "mx-auto"}`}>
                   <p
                     className={`text-description m-0 ${
                       shonitStyle ? `analysis_bold` : ""
+                    } ${
+                      shonitStyle ? `blood-hover-block` : "blood-hover-none"
                     }`}
                   >
                     Blood
@@ -95,34 +97,37 @@ const LandingPage = () => {
                   </p>
                 </div>
                 <div
-                  className={`boold-hover mt-3 mx-auto ${
+                  className={`boold-hover mx-auto ${
                     shonitStyle ? `blood-hover-block` : "blood-hover-none"
                   }`}
                 >
-                  <p>
+                  <p className="m-0">
                     Shonit is an automated peripheral blood smear slide analyzer
                   </p>
-                  <button className="d-block px-4 explore mt-2">
+                  <button className="d-block px-4 explore">
                     Explore
                     <i className="bi bi-arrow-right-short"></i>
                   </button>
                 </div>
               </div>
-              <div className="col-8 mx-auto bg-white micro-product">
-                <div className="text-center mt-5">
-                  <img
-                    src="assets/img/AI100_2 1.png"
-                    className="img-fluid a1 user-select-none"
-                  />
+              <div className="col-8 mx-auto">
+                <div className="bg-white micro-product">
+                  <div className="text-center mt-5">
+                    <img
+                      src="assets/img/AI100_2 1.png"
+                      width="100%"
+                      className="img-fluid a1 user-select-none"
+                    />
+                  </div>
+                  <MicroProduct />
+                  <p className="text-description text-center mt-4">
+                    The AI100 is an AI-driven smart robotic microscope.
+                  </p>
+                  <button className="d-block mx-auto px-4 explore">
+                    Explore
+                    <i className="bi bi-arrow-right-short"></i>
+                  </button>
                 </div>
-                <MicroProduct />
-                <p className="text-description text-center mt-4">
-                  The AI100 is an AI-driven smart robotic microscope.
-                </p>
-                <button className="d-block mx-auto px-4 explore">
-                  Explore
-                  <i className="bi bi-arrow-right-short"></i>
-                </button>
               </div>
               <div
                 className="w-auto my-auto d-flex flex-column h-100 position-relative"
