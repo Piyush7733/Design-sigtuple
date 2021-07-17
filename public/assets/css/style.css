@@ -96,8 +96,11 @@
 }
 .slick-slide img {
   display: block;
-  width: 45% !important;
 }
+/* .microscope .slick-slide img {
+  display: block;
+  width: 45% !important;
+} */
 
 button {
   height: 50px;
