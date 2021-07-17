@@ -56,11 +56,11 @@ const LandingPage = () => {
       </div>
 
       <div id="product_sections">
-        <div className="container-fluid microscope pt-5">
+        <div className="container-fluid microscope">
           <div className="container">
             <div className="row">
               <div
-                className="w-auto my-auto d-flex flex-column h-100 position-relative"
+                className="w-auto my-auto d-flex h-100 flex-column position-relative"
                 onMouseEnter={(e) => {
                   e.preventDefault();
                   setShonitStyle(true);
@@ -68,11 +68,14 @@ const LandingPage = () => {
                 }}
                 onMouseLeave={(e) => {
                   e.preventDefault();
-                  console.log("hello 1");
                   setShonitStyle(false);
                 }}
               >
-                <div className="blood">
+                <div
+                  className={`blood ${
+                    shonitStyle ? `bg-transparent shadow-none` : "bg-white"
+                  }`}
+                >
                   <img src="assets/img/shonit.png" />
                 </div>
                 <div className="mx-auto mt-3">
@@ -129,11 +132,14 @@ const LandingPage = () => {
                 }}
                 onMouseLeave={(e) => {
                   e.preventDefault();
-                  console.log("hello 1");
                   setShravaStyle(false);
                 }}
               >
-                <div className="blood">
+                <div
+                  className={`blood ${
+                    shravaStyle ? `bg-transparent shadow-none` : "bg-white"
+                  }`}
+                >
                   <img src="assets/img/urine.png" />
                 </div>
                 <div className={`mt-3 mx-auto`}>
@@ -226,7 +232,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="container py-100">
+      <div className="container py-100 review">
         <h1 className="text-title text-center">
           Bringing Speed & Precision with
           <b> Extensive R&D</b>
@@ -247,7 +253,7 @@ const LandingPage = () => {
 
       <div className="container-fluid our-client d-flex">
         <div className="container my-auto">
-          <div className="row mx-0">
+          <div className="row mx-auto">
             <h1 className="text-title text-center">
               From
               <b> Our Clients</b>

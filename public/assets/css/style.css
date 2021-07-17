@@ -22,6 +22,7 @@
   font-size: 18px;
   font-family: nunitoSans-light;
   color: #868786;
+  word-wrap: initial;
 }
 
 .text-title {
@@ -31,7 +32,7 @@
 }
 
 .text-sub {
-  font-size: 22px;
+  font-size: 18px;
   font-family: nunitoSans;
   color: #707070;
 }
@@ -485,6 +486,15 @@ button {
   background-image: url(../img/mesh-gradient-2.png);
   background-size: cover;
   background-position: center;
+  overflow: hidden;
+  height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.microscope .boold-hover.blood-hover-block .blood {
+  background-color: transparent !important;
+  box-shadow: none;
 }
 
 .microscope .a1 {
@@ -493,7 +503,6 @@ button {
 
 .micro-product {
   border-radius: 50%;
-  height: 760px;
 }
 
 .slick-slide {
@@ -650,8 +659,8 @@ button {
 }
 
 .cards {
-  padding: 30px;
-  height: 330px;
+  padding: 40px;
+  height: 360px;
   display: flex !important;
   flex-direction: column;
   box-shadow: 0 5px 15px rgb(134 135 134 / 20%);
@@ -699,7 +708,7 @@ button {
   width: 70px;
   position: absolute;
   top: 0;
-  right: 50px;
+  right: 100px;
   z-index: 10;
 }
 /* 
@@ -707,6 +716,13 @@ button {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
 } */
+
+.review .slick-next {
+  left: 960px !important;
+}
+.review .slick-prev {
+  left: -90px !important;
+}
 
 .lab-card {
   box-shadow: 0 5px 15px rgb(134 135 134 / 20%);
@@ -940,14 +956,14 @@ footer i {
 }
 
 .analysis_bold {
-  font-size: 45px;
+  font-size: 35px;
 }
 
 .hover-me:hover .boold-hover {
   display: block;
 }
 .hover-me:hover .analysis_bold {
-  font-size: 45px;
+  font-size: 35px;
 }
 .hover-me:hover .boold-hover-shrava {
   display: block;
