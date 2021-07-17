@@ -97,10 +97,10 @@
 .slick-slide img {
   display: block;
 }
-/* .microscope .slick-slide img {
+.microscope .slick-slide img {
   display: block;
   width: 45% !important;
-} */
+}
 
 button {
   height: 50px;
