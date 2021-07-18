@@ -122,7 +122,7 @@ const Reviews = () => {
               className="d-inline me-2 my-auto"
             />
             {p.type}
-            {/* {showArrow === p.id ? ( */}
+            {showArrow === p.id ? (
             <img
               src="assets/img/red_next_arrow.png"
               style={{ marginLeft: "auto" }}
@@ -130,7 +130,7 @@ const Reviews = () => {
                 window.open("http://google.com");
               }}
             />
-            {/* ) : null} */}
+            ) : null}
           </span>
         </div>
       </div>

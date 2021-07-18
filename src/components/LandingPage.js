@@ -91,10 +91,10 @@ const LandingPage = () => {
               //   // }
               // }
 
-              onMouseLeave={(e) => {
-                e.preventDefault();
-                setShonitStyle(false);
-              }}
+              // onMouseLeave={(e) => {
+              //   e.preventDefault();
+              //   setShonitStyle(false);
+              // }}
               >
                 <div
                   className={`blood ${
@@ -144,7 +144,7 @@ const LandingPage = () => {
                       className="img-fluid a1 user-select-none"
                     />
                   </div>
-                  <MicroProduct />
+                  <MicroProduct setShonit={shonitStyle} setShrava={shravaStyle} setShonitStyle={setShonitStyle} setShravaStyle={setShravaStyle} />
                   <p className="text-description text-center mt-4">
                     The AI100 is an AI-driven smart robotic microscope.
                   </p>
@@ -177,10 +177,10 @@ const LandingPage = () => {
                 //     },2000)
                 //   }
                 // }}
-                onMouseLeave={(e) => {
-                  e.preventDefault();
-                  setShravaStyle(false);
-                }}
+                // onMouseLeave={(e) => {
+                //   e.preventDefault();
+                //   setShravaStyle(false);
+                // }}
               >
                 <div
                   className={`blood ${
