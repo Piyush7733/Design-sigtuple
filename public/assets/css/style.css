@@ -54,7 +54,7 @@
 
 .eye-section {
   position: absolute;
-  bottom: 100px;
+  bottom: 180px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -294,10 +294,10 @@ button {
 
 .verticle {
   margin-top: auto;
-  height: 100px;
+  height: 180px;
   border-left: 2px dashed #de1a1b;
   position: absolute;
-  top: calc(100% - 100px);
+  top: calc(100% - 180px);
   left: 50%;
   transform: translateX(-50%);
 }
@@ -494,7 +494,7 @@ button {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  height: 560px;
+  height: calc(700px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -510,11 +510,11 @@ button {
 
 .micro-product {
   border-radius: 50%;
-  padding: 90px 0;
+    padding: 100px 0 0 0;
 }
 
 .micro-product .slick-next {
-  left: 470px !important;
+  left: 580px !important;
 }
 .micro-product .slick-prev {
   left: 220px !important;
@@ -618,7 +618,9 @@ button {
 
 @media only screen and (min-width: 1400px) {
   .micro-product {
-    height: 879.99px;
+    height: 770px;
+    position: relative;
+    top: -20px;
   }
 
   .ai100 .prev-arrow {

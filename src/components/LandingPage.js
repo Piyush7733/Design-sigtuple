@@ -107,8 +107,6 @@ const LandingPage = () => {
                   <p
                     className={`text-description m-0 ${
                       shonitStyle ? `analysis_bold` : ""
-                    } ${
-                      shonitStyle ? `blood-hover-block` : "blood-hover-none"
                     }`}
                   >
                     Blood
@@ -137,6 +135,7 @@ const LandingPage = () => {
               </div>
               <div className="col-8 mx-auto">
                 <div className="bg-white micro-product">
+                  <div className={`${shonitStyle ? `our_product_text_block` : shravaStyle ? `our_product_text_block`: `our_product_text_none`}`}>Our <strong>Products</strong></div>
                   <div className="text-center mt-5">
                     <img
                       src="assets/img/AI100_2 1.png"

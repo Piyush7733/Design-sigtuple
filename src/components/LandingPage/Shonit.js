@@ -31,6 +31,7 @@ const Shonit = ({ pause }) => {
                 {
                 show ? <i className="bi bi-play-fill"></i> : <i className="bi bi-pause-fill"></i>
             } </div> */}
+      <div className="text_section_blood">Shonit <strong>in Action</strong></div>      
       <div className="work-box">
         <div className="blood">
           <img src="assets/img/shonit.png" />

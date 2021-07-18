@@ -40,21 +40,21 @@ const BlogContents= [
         date:"Jan 2.02021"
     },
     {
-        id:5,
+        id:6,
         title:"what to do in covid 19",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting...",
         duration:"1 min",
         date:"Jan 2.02021"
     },
     {
-        id:5,
+        id:7,
         title:"what to do in covid 19",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting...",
         duration:"1 min",
         date:"Jan 2.02021"
     },
     {
-        id:5,
+        id:8,
         title:"what to do in covid 19",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting...",
         duration:"1 min",

@@ -35,10 +35,10 @@
 .relative_microscope .microscope_text {
   position: absolute;
   background-color: #ffffff;
-  height: 91px;
-  width: 139px;
-  top: 130px;
-  right: 268px;
+  height: 100px;
+  width: 170px;
+  top: 60px;
+  right: 260px;
   padding: 30px;
 }
 .client_sections {
@@ -97,4 +97,30 @@
   align-items: center;
   height: 320px;
   background: #f3f3f3;
+}
+
+.text_section_blood {
+font-family: Nunito Sans;
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 111.3%;
+text-align: center;
+color: #707070;
+padding-top: 70px;
+}
+.our_product_text_block{
+  display: block;
+font-family: Nunito Sans;
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 111.3%;
+/* or 45px */
+text-align: center;
+
+color: #707070;
+}
+.our_product_text_none{
+  display: none;
 }

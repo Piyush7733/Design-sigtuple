@@ -19,7 +19,7 @@ const Footer = () =>{
                                 <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Shrava</a>
                             </div>
                             <p className="text-description mb-0">
-                                Copyright © 2015-2020
+                                Copyright © 2015-2021
                             </p>
                             <p className="text-description mb-0">
                                 SigTuple Technologies Private Limited.
