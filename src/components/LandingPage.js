@@ -37,7 +37,7 @@ const LandingPage = () => {
           <div className="m-auto text-center">
             <div id="zoom">
               <div className="small">
-                <h1>
+                <h1 className="m-0">
                   The<b> Future of Microscopy</b> is Here!
                 </h1>
                 <center>
@@ -65,11 +65,11 @@ const LandingPage = () => {
       </div>
 
       <div id="product_sections">
-        <div className="container-fluid microscope pt-5">
+        <div className="container-fluid microscope">
           <div className="container">
             <div className="row">
               <div
-                className="w-auto my-auto d-flex flex-column h-100 position-relative"
+                className="w-auto my-auto d-flex h-100 flex-column position-relative"
                 onMouseEnter={(e) => {
                   e.preventDefault();
                   setShonitStyle(true);
@@ -90,14 +90,25 @@ const LandingPage = () => {
               //   //   // }
               //   // }
               // }
+
+              onMouseLeave={(e) => {
+                e.preventDefault();
+                setShonitStyle(false);
+              }}
               >
-                <div className="blood">
+                <div
+                  className={`blood ${
+                    shonitStyle ? `bg-transparent shadow-none` : "bg-white"
+                  }`}
+                >
                   <img src="assets/img/shonit.png" />
                 </div>
-                <div className="mx-auto mt-3">
+                <div className={`mt-3  ${shonitStyle ? `` : "mx-auto"}`}>
                   <p
                     className={`text-description m-0 ${
                       shonitStyle ? `analysis_bold` : ""
+                    } ${
+                      shonitStyle ? `blood-hover-block` : "blood-hover-none"
                     }`}
                   >
                     Blood
@@ -111,34 +122,45 @@ const LandingPage = () => {
                   </p>
                 </div>
                 <div
-                  className={`boold-hover mt-3 mx-auto ${
+                  className={`boold-hover mx-auto ${
                     shonitStyle ? `blood-hover-block` : "blood-hover-none"
                   }`}
                 >
-                  <p>
+                  <p className="m-0">
                     Shonit is an automated peripheral blood smear slide analyzer
                   </p>
-                  <button className="d-block px-4 explore mt-2">
+                  <button className="d-block px-4 explore">
                     Explore
                     <i className="bi bi-arrow-right-short"></i>
                   </button>
                 </div>
               </div>
-              <div className="col-8 mx-auto bg-white micro-product">
-                <div className="text-center mt-5">
-                  <img
-                    src="assets/img/AI100_2 1.png"
-                    className="img-fluid a1 user-select-none"
-                  />
+              <div className="col-8 mx-auto">
+                <div className="bg-white micro-product">
+                  <div className="text-center mt-5">
+                    <img
+                      src="assets/img/AI100_2 1.png"
+                      width="100%"
+                      className="img-fluid a1 user-select-none"
+                    />
+                  </div>
+                  <MicroProduct />
+                  <p className="text-description text-center mt-4">
+                    The AI100 is an AI-driven smart robotic microscope.
+                  </p>
+                  <button className="d-block mx-auto px-4 explore">
+                    Explore
+                    <i className="bi bi-arrow-right-short"></i>
+                  </button>
                 </div>
-                <MicroProduct setShonit={shonitStyle} setShrava={shravaStyle} setShonitStyle={setShonitStyle} setShravaStyle={setShravaStyle}/>
-                <p className="text-description text-center mt-4">
-                  The AI100 is an AI-driven smart robotic microscope.
-                </p>
-                <button className="d-block mx-auto px-4 explore">
-                  Explore
-                  <i className="bi bi-arrow-right-short"></i>
-                </button>
+                {/* // <MicroProduct setShonit={shonitStyle} setShrava={shravaStyle} setShonitStyle={setShonitStyle} setShravaStyle={setShravaStyle}/>
+                // <p className="text-description text-center mt-4">
+                //   The AI100 is an AI-driven smart robotic microscope.
+                // </p>
+                // <button className="d-block mx-auto px-4 explore">
+                //   Explore
+                //   <i className="bi bi-arrow-right-short"></i>
+                // </button> */}
               </div>
               <div
                 className="w-auto my-auto d-flex flex-column h-100 position-relative"
@@ -155,8 +177,16 @@ const LandingPage = () => {
                 //     },2000)
                 //   }
                 // }}
+                onMouseLeave={(e) => {
+                  e.preventDefault();
+                  setShravaStyle(false);
+                }}
               >
-                <div className="blood">
+                <div
+                  className={`blood ${
+                    shravaStyle ? `bg-transparent shadow-none` : "bg-white"
+                  }`}
+                >
                   <img src="assets/img/urine.png" />
                 </div>
                 <div className={`mt-3 mx-auto`}>
@@ -249,7 +279,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="container py-100">
+      <div className="container py-100 review">
         <h1 className="text-title text-center">
           Bringing Speed & Precision with
           <b> Extensive R&D</b>
@@ -270,7 +300,7 @@ const LandingPage = () => {
 
       <div className="container-fluid our-client d-flex">
         <div className="container my-auto">
-          <div className="row mx-0">
+          <div className="row mx-auto">
             <h1 className="text-title text-center">
               From
               <b> Our Clients</b>

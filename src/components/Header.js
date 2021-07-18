@@ -10,7 +10,6 @@ const Header = () => {
       activeClass = "top";
     }
     setIsStickey(activeClass);
-    console.log(activeClass);
   }
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
