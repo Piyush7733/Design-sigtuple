@@ -48,12 +48,12 @@ const SectionCounter = () => {
       onMouseOver={(e) => {
         setShow(true);
       }}
-      onMouseLeave={(e) => {
-        setShow(false);
-        setAccuracy(0);
-        setInnovation(0);
-        setAcceptance(0);
-      }}
+      // onMouseLeave={(e) => {
+      //   setShow(false);
+      //   setAccuracy(0);
+      //   setInnovation(0);
+      //   setAcceptance(0);
+      // }}
     >
       <div className="col-12 my-auto">
         <div className="p-4 m-auto d-flex flex-wrap justify-content-between">

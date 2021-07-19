@@ -251,7 +251,7 @@ const LandingPage = () => {
                   aria-controls="pills-home"
                   aria-selected="true"
                 >
-                  Shonit
+                Shonit
                 </button>
               </li>
               <li className="nav-item" role="presentation">
@@ -292,7 +292,7 @@ const LandingPage = () => {
             className="text-decoration-none text-danger fw-bold text-fwb"
           >
             View All
-            <i className="bi bi-arrow-right-short"></i>
+            <img src="assets/img/red_next_arrow.png" style={{margin:"5px",paddingBottom:"5px",height:"25px"}}/>
           </a>
         </div>
       </div>

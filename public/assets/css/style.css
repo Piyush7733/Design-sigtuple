@@ -32,7 +32,7 @@
 }
 
 .text-sub {
-  font-size: 18px;
+  font-size: 24px;
   font-family: nunitoSans;
   color: #707070;
 }
@@ -62,15 +62,15 @@
 .eye {
   background-color: #de1a1b;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   display: flex;
   margin: 0 auto;
   filter: drop-shadow(0 0 0.2rem #909090);
 }
 
 .eye img {
-  max-width: 30px;
+  max-width: 35px;
   margin: auto;
 }
 
@@ -514,10 +514,10 @@ button {
 }
 
 .micro-product .slick-next {
-  left: 580px !important;
+  left: 515px !important;
 }
 .micro-product .slick-prev {
-  left: 220px !important;
+  left: 305px !important;
 }
 
 .slick-slide {
@@ -647,6 +647,7 @@ button {
   /* z-index: 10 !important; */
   position: relative;
   transition: 0;
+  font-weight: 900 !important;
 }
 .nav-link:hover {
   color: #868786;
@@ -666,12 +667,12 @@ button {
 .nav-link-1 {
   margin-right: -15px;
   box-shadow: none !important;
-  font-weight: 600 !important;
+  /* font-weight: 600 !important; */
 }
 
 .nav-link-2 {
   box-shadow: none !important;
-  font-weight: 600 !important;
+  /* font-weight: 600 !important; */
   margin-left: -15px;
 }
 
@@ -735,7 +736,7 @@ button {
 } */
 
 .review .slick-next {
-  left: 960px !important;
+  left: 990px !important;
 }
 .review .slick-prev {
   left: -90px !important;
@@ -948,7 +949,7 @@ footer i {
   font-style: normal;
   font-weight: normal;
   position: absolute;
-  padding-top: 285px;
+  padding-top: 257px;
   overflow-wrap: break-word;
 }
 .boold-hover-shrava {
@@ -979,7 +980,8 @@ footer i {
 }
 
 .analysis_bold {
-  font-size: 35px;
+  font-size: 45px;
+  line-height: 1;
 }
 
 .hover-me:hover .boold-hover {

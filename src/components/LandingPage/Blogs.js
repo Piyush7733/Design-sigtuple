@@ -82,7 +82,7 @@ const Blogs = () =>{
         border: "3px solid rgb(112, 112, 112)",
         boxSizing: "border-box",
         borderRadius: "41px",
-        left: "1070px"
+        left: "1100px"
     }
 
     let blog_prev = {
@@ -100,7 +100,7 @@ const Blogs = () =>{
         boxSizing: "border-box",
         borderRadius: "41px",
 
-        left:"-60px"
+        left:"-90px"
     }
 
     const settings_blog = {

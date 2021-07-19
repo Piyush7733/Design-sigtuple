@@ -28,9 +28,9 @@ const Shrava = ({ pause }) => {
         {
             show ? <i className="bi bi-play-fill"></i> : <i className="bi bi-pause-fill"></i>
         } </div> */}
-       <div className="text_section_blood">Shrava <strong>in Action</strong></div>      
       <div className="work-box">
-        <div class="blood">
+      <div className="text_section_blood">Shrava <strong>in Action</strong></div>      
+        <div class="blood image_section_blood">
           <img src="assets/img/urine.png" />
         </div>
       </div>

@@ -46,7 +46,7 @@ const Client = () => {
   const settings_clinet = {
     dots: false,
     infinite: false,
-    speed: 500,
+    speed: 0,
     slidesToShow: 1,
     slidesToScroll: 1,
     afterChange: (current) => {
@@ -181,7 +181,7 @@ const Client = () => {
             >
               <div className="card-body">
                 <p className="text-description fw-bold clients_text_sections">
-                  {c.review}
+                “{c.review.slice(0,170)}”
                 </p>
                 <div className="d-flex name clients_user_sections">
                   <img
@@ -190,8 +190,8 @@ const Client = () => {
                   />
                   <div className="py-2">
                     <h3 className="text-sub fw-bold m-0">{c.Username}</h3>
-                    <p className="m-0">{c.designation},</p>
-                    <p className="m-0">{c.work_at}</p>
+                    <p className="m-0 client_section_text">{c.designation},</p>
+                    <p className="m-0 client_section_text">{c.work_at}</p>
                   </div>
                 </div>
               </div>
@@ -216,20 +216,19 @@ const Client = () => {
                 <div
                   className="clientCount"
                   style={{
-                    top: "calc(100% - 100px)",
+                    top: "calc(100% - 75px)",
                     opacity: ".5",
                     position: "absolute",
                     fontFamily: "Nunito Sans",
                     fontStyle: "normal",
-                    fontWeight: "normal",
-                    fontSize: "18px",
+                    fontSize: "20px",
                     color: "#FFFFFF",
                   }}
                 >
                   {currentIndex < 10
                     ? currentIndex.toString().padStart(2, "0")
                     : currentIndex}
-                  /
+                  {" "}/{" "}
                   {clientCount < 10
                     ? clientCount.toString().padStart(2, "0")
                     : clientCount}

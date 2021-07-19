@@ -95,7 +95,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 320px;
+  height: 420px;
   background: #f3f3f3;
 }
 
@@ -107,7 +107,9 @@ font-size: 30px;
 line-height: 111.3%;
 text-align: center;
 color: #707070;
-padding-top: 70px;
+/* padding-top: 70px; */
+position: absolute;
+top: 115px;
 }
 .our_product_text_block{
   display: block;
@@ -123,4 +125,12 @@ color: #707070;
 }
 .our_product_text_none{
   display: none;
+}
+.image_section_blood{
+  position: absolute;
+  top: 190px;
+  margin-bottom:100px ;
+}
+.client_section_text {
+  color: #707070;
 }
