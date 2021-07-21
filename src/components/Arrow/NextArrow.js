@@ -7,11 +7,12 @@ const NextArrow = (props) => {
         clientNext = null,
         blogNext= null,
         reviewNext=null,
+        awardNext=null,
         onClick,
         ARROW_NEXT,
         ARROW_SIZE="12px"
     } = props;
-    let nextStyle = styleNext || clientNext || blogNext || reviewNext || {
+    let nextStyle = styleNext || clientNext || blogNext || reviewNext || awardNext || {
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",

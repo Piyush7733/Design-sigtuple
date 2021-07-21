@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import NextArrow from '../Arrow/NextArrow';
 import PrevArrow from '../Arrow/PrevArrow';
 
-const MicroProduct = ({setShonit,setShrava,setShonitStyle,setShravaStyle}) => {
+const MicroProduct = ({setHoverStyle,hoverStyle}) => {
     const [currentIndex,setCurrentIndex]=useState(1)
     const ref=useRef()
     let ai_100_next = {
@@ -17,7 +17,7 @@ const MicroProduct = ({setShonit,setShrava,setShonitStyle,setShravaStyle}) => {
         width: "35px",
         height: "35px",
 
-        opacity: "0.6",
+        opacity: currentIndex < 3 ? "1" : "0.6",
         border: "2px solid #707070",
         boxSizing: "border-box",
         borderRadius: "41px",
@@ -35,7 +35,7 @@ const MicroProduct = ({setShonit,setShrava,setShonitStyle,setShravaStyle}) => {
         width: "35px",
         height: "35px",
 
-        opacity: "0.6",
+        opacity: currentIndex == 1 ? "0.6" : "1",
         border: "2px solid #707070",
         boxSizing: "border-box",
         borderRadius: "41px",
@@ -59,20 +59,27 @@ const MicroProduct = ({setShonit,setShrava,setShonitStyle,setShravaStyle}) => {
             console.log(currentIndex,current)
             
         },
-        nextArrow: <NextArrow styleNext={ai_100_next} ARROW_NEXT={currentIndex < 3 ? `assets/img/right-arrow-black.png` : 'assets/img/right_arrow.png'} ARROW_SIZE={currentIndex < 3 ? "20px" : "12px"} />,
-        prevArrow: <PrevArrow stylePrev={ai_100_prev} ARROW_PREW={currentIndex == 1 ? `assets/img/left_arrow.png` : `assets/img/left-arrow-black.png`} ARROW_SIZE={currentIndex==1 ? "12px":"20px"} />
+        nextArrow: <NextArrow  styleNext={ai_100_next} ARROW_NEXT={`assets/img/right-arrow-black.svg`} ARROW_SIZE={"15px"}/>,
+        prevArrow: <PrevArrow  stylePrev={ai_100_prev} ARROW_PREW={`assets/img/left-arrow-black.svg`} ARROW_SIZE={"15px"}/>
+
+        // nextArrow: <NextArrow styleNext={ai_100_next} ARROW_NEXT={currentIndex < 3 ? `assets/img/right-arrow-black.png` : 'assets/img/right_arrow.png'} ARROW_SIZE={currentIndex < 3 ? "20px" : "12px"} />,
+        // prevArrow: <PrevArrow stylePrev={ai_100_prev} ARROW_PREW={currentIndex == 1 ? `assets/img/left_arrow.png` : `assets/img/left-arrow-black.png`} ARROW_SIZE={currentIndex==1 ? "12px":"20px"} />
     };
 
-    useEffect(()=>{
-        if(setShonit)
-        ref.current.slickGoTo(1)
-    },[setShonit])
+    // useEffect(()=>{
+    //     if(hoverStyle==='shonit')
+    //     ref.current.slickGoTo(1)
+    // },[setShonit])
   
     
     useEffect(()=>{
-        if(setShrava)
-        ref.current.slickGoTo(2)
-    },[setShrava])
+        if(hoverStyle==='shonit'){
+            ref.current.slickGoTo(1)
+        }
+        if(hoverStyle==='shrava'){
+            ref.current.slickGoTo(2)
+        }
+    },[hoverStyle])
 
     console.log("setting_ai100",setting_ai100)
 
@@ -81,23 +88,23 @@ const MicroProduct = ({setShonit,setShrava,setShonitStyle,setShravaStyle}) => {
             <div>
                 <div className="relative_microscope">
                     <img src="assets/img/microscope.png" className="img-fluid mx-auto" />
-                    <span className="microscope_text">
+                    {/* <span className="microscope_text">
                         <img src="assets/img/AI100_small.png" style={{ height: "35px",width: "75px"}}/>
-                    </span>
+                    </span> */}
                 </div>
             </div>
-            <div className={`${setShonit ? "hover-sec" : ""}`}>
+            <div className={`${hoverStyle==='shonit' ? "hover-sec" : ""}`} active>
                 <div className="relative_microscope">
-                    <img src="assets/img/microscope.png" className="img-fluid mx-auto" />
-                    <span className="microscope_text">
+                    <img src="assets/img/microscope_shonit.png" className="img-fluid mx-auto" />
+                    {/* <span className="microscope_text">
                         <img src="assets/img/shonit.png" style={{ height: "55px",width: "90px"}}/>
-                    </span>
+                    </span> */}
                 </div>
-                <div className={`${setShonit ? `main-hover row m-0 g-0 main-hover-flex` : `main-hover row m-0 g-0 main-hover-none`}`} onMouseEnter={(e=>{
-                    setShonitStyle(true)
+                <div className={`${hoverStyle==='shonit' ? `main-hover row m-0 g-0 main-hover-flex` : `main-hover row m-0 g-0 main-hover-none`}`} onMouseEnter={(e=>{
+                    setHoverStyle("shonit")
                 })} 
                 onMouseLeave={(e=>{
-                    setShonitStyle(false)
+                    setHoverStyle(null)
                 })}>
                     <div className="text-img">
                         <img src="assets/img/circle-dot.png" />
@@ -119,18 +126,18 @@ const MicroProduct = ({setShonit,setShrava,setShonitStyle,setShravaStyle}) => {
                     </div>
                 </div>
             </div>
-            <div className={`${setShrava ? "hover-sec" : ""}`}>
+            <div className={`${hoverStyle==='shrava' ? "hover-sec" : ""}`}>
                 <div className="relative_microscope">
-                    <img src="assets/img/microscope.png" className="img-fluid mx-auto" />
-                    <span className="microscope_text">
+                    <img src="assets/img/microscope_shrava.png" className="img-fluid mx-auto" />
+                    {/* <span className="microscope_text">
                     <img src="assets/img/urine.png" style={{ height: "50px",width: "83px"}}/>
-                    </span>
+                    </span> */}
                 </div>
-                <div className={`${setShrava ? `main-hover row m-0 g-0 main-hover-flex` : `main-hover row m-0 g-0 main-hover-none`}`} onMouseEnter={(e=>{
-                    setShravaStyle(true)
+                <div className={`${hoverStyle==='shrava' ? `main-hover row m-0 g-0 main-hover-flex` : `main-hover row m-0 g-0 main-hover-none`}`} onMouseEnter={(e=>{
+                    setHoverStyle("shrava")
                 })} 
                 onMouseLeave={(e=>{
-                    setShravaStyle(false)
+                    setHoverStyle(null)
                 })}>
                     <div className="text-img">
                         <img src="assets/img/circle-dot.png" />

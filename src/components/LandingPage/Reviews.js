@@ -19,7 +19,7 @@ const Reviews = () => {
     height: "66px",
     position: "absolute",
 
-    opacity: "0.5",
+    opacity:  currentIndex < publication.length ? "1" : "0.5" ,
     border: "3px solid rgb(112, 112, 112)",
     boxSizing: "border-box",
     borderRadius: "41px",
@@ -36,7 +36,7 @@ const Reviews = () => {
     height: "66px",
     position: "absolute",
 
-    opacity: "0.5",
+    opacity: currentIndex == 1 ? "0.5" : "1",
     border: "3px solid rgb(112, 112, 112)",
     boxSizing: "border-box",
     borderRadius: "41px",
@@ -58,28 +58,31 @@ const Reviews = () => {
       }
       console.log(currentIndex, current);
     },
-    nextArrow: (
-      <NextArrow
-        reviewNext={nextArrow}
-        ARROW_NEXT={
-          currentIndex < publication.length
-            ? `assets/img/right-arrow-black.png`
-            : "assets/img/right_arrow.png"
-        }
-        ARROW_SIZE={currentIndex < publication.length ? "20px" : "12px"}
-      />
-    ),
-    prevArrow: (
-      <PrevArrow
-        reviewPrev={prevArrow}
-        ARROW_PREW={
-          currentIndex == 1
-            ? `assets/img/left_arrow.png`
-            : `assets/img/left-arrow-black.png`
-        }
-        ARROW_SIZE={currentIndex == 1 ? "12px" : "20px"}
-      />
-    ),
+    nextArrow: <NextArrow reviewNext={nextArrow} ARROW_NEXT={`assets/img/right-arrow-black.svg`} ARROW_SIZE={"20px"}/>,
+    prevArrow: <PrevArrow reviewPrev={prevArrow} ARROW_PREW={`assets/img/left-arrow-black.svg`} ARROW_SIZE={"20px"}/>
+
+    // nextArrow: (
+    //   <NextArrow
+    //     reviewNext={nextArrow}
+    //     ARROW_NEXT={
+    //       currentIndex < publication.length
+    //         ? `assets/img/right-arrow-black.png`
+    //         : "assets/img/right_arrow.png"
+    //     }
+    //     ARROW_SIZE={currentIndex < publication.length ? "20px" : "12px"}
+    //   />
+    // ),
+    // prevArrow: (
+    //   <PrevArrow
+    //     reviewPrev={prevArrow}
+    //     ARROW_PREW={
+    //       currentIndex == 1
+    //         ? `assets/img/left_arrow.png`
+    //         : `assets/img/left-arrow-black.png`
+    //     }
+    //     ARROW_SIZE={currentIndex == 1 ? "12px" : "20px"}
+    //   />
+    // ),
   };
 
   useEffect(() => {

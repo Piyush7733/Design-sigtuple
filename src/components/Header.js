@@ -33,8 +33,9 @@ const Header = () => {
               data-bs-target="#offcanvasRight"
               aria-controls="offcanvasRight"
             >
-              <div className="bar"></div>
-              <div className="bar mt-1"></div>
+              <img src="assets/img/hamburger.svg" style={{height:"32px",width:"32px"}}/>
+              {/* <div className="bar"></div>
+              <div className="bar mt-1"></div> */}
             </div>
           </div>
         </div>

@@ -6,11 +6,12 @@ const PrevArrow = (props) => {
         clientPrev = null,
         blogPrev = null,
         reviewPrev =null,
+        awardPrev=null,
         ARROW_PREW,
         ARROW_SIZE="12px",
         onClick
     } = props;
-    let prevStyle = stylePrev || clientPrev || blogPrev || reviewPrev || {
+    let prevStyle = stylePrev || clientPrev || blogPrev || reviewPrev || awardPrev || {
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",

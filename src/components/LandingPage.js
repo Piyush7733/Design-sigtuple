@@ -17,17 +17,7 @@ import "../css/LandingPage.css";
 import Header from "./Header";
 
 const LandingPage = () => {
-  const [shonitStyle, setShonitStyle] = useState(false);
-  const [shravaStyle, setShravaStyle] = useState(false);
-
-  // const _handerMouseLeave = (e) =>{
-  //   e.preventDefault();
-  //   console.log("hande",shonitStyle)
-  // }
-
-  // useEffect(()=>{
-  //   console.log("shonitStyle",shonitStyle)
-  // },[shonitStyle])
+  const [hoverStyle, setHoverStyle] = useState(null);
 
   return (
     <div className="main">
@@ -72,48 +62,27 @@ const LandingPage = () => {
                 className="w-auto my-auto d-flex h-100 flex-column position-relative"
                 onMouseEnter={(e) => {
                   e.preventDefault();
-                  setShonitStyle(true);
-                  setShravaStyle(false);
+                  setHoverStyle("shonit")
                 }}
-              //   onMouseLeave={ 
-              //     _handerMouseLeave
-              //   //   (e) => {
-              //   //   e.preventDefault();
-              //   //   // let id= setTimeout(()=>{
-              //   //   //   setShonitStyle(false);
-              //   //   // },2000)
-              //   //   console.log(shonitStyle)
-              //   //   // if(shonitStyle){
-              //   //   //  return (()=>{
-              //   //   //    clearTimeout(id)
-              //   //   //  })
-              //   //   // }
-              //   // }
-              // }
-
-              // onMouseLeave={(e) => {
-              //   e.preventDefault();
-              //   setShonitStyle(false);
-              // }}
               >
                 <div
                   className={`blood ${
-                    shonitStyle ? `bg-transparent shadow-none` : "bg-white"
+                    hoverStyle==='shonit' ? `bg-transparent shadow-none` : "bg-white"
                   }`}
                 >
                   <img src="assets/img/shonit.png" />
                 </div>
-                <div className={`mt-3  ${shonitStyle ? `` : "mx-auto"}`}>
+                <div className={`mt-3  ${hoverStyle==='shonit' ? `` : "mx-auto"}`}>
                   <p
                     className={`text-description m-0 ${
-                      shonitStyle ? `analysis_bold` : ""
+                      hoverStyle==='shonit' ? `analysis_bold` : ""
                     }`}
                   >
                     Blood
                   </p>
                   <p
                     className={`text-description m-0 fw-bold ${
-                      shonitStyle ? "analysis_bold" : ""
+                      hoverStyle==='shonit' ? "analysis_bold" : ""
                     }`}
                   >
                     Analyser
@@ -121,7 +90,7 @@ const LandingPage = () => {
                 </div>
                 <div
                   className={`boold-hover mx-auto ${
-                    shonitStyle ? `blood-hover-block` : "blood-hover-none"
+                    hoverStyle==='shonit' ? `blood-hover-block` : "blood-hover-none"
                   }`}
                 >
                   <p className="m-0">
@@ -135,7 +104,7 @@ const LandingPage = () => {
               </div>
               <div className="col-8 mx-auto">
                 <div className="bg-white micro-product">
-                  <div className={`${shonitStyle ? `our_product_text_block` : shravaStyle ? `our_product_text_block`: `our_product_text_none`}`}>Our <strong>Products</strong></div>
+                  <div className={`${hoverStyle==='shonit' ? `our_product_text_block` : hoverStyle==='shrava' ? `our_product_text_block`: `our_product_text_none`}`}>Our <strong>Products</strong></div>
                   <div className="text-center mt-5">
                     <img
                       src="assets/img/AI100_2 1.png"
@@ -143,7 +112,7 @@ const LandingPage = () => {
                       className="img-fluid a1 user-select-none"
                     />
                   </div>
-                  <MicroProduct setShonit={shonitStyle} setShrava={shravaStyle} setShonitStyle={setShonitStyle} setShravaStyle={setShravaStyle} />
+                  <MicroProduct setHoverStyle={setHoverStyle} hoverStyle={hoverStyle} />
                   <p className="text-description text-center mt-4">
                     The AI100 is an AI-driven smart robotic microscope.
                   </p>
@@ -165,25 +134,12 @@ const LandingPage = () => {
                 className="w-auto my-auto d-flex flex-column h-100 position-relative"
                 onMouseEnter={(e) => {
                   e.preventDefault();
-                  setShravaStyle(true);
-                  setShonitStyle(false);
+                  setHoverStyle("shrava")
                 }}
-                // onMouseLeave={(e) => {
-                //   e.preventDefault();
-                //   if(!shravaStyle){
-                //     setTimeout(()=>{
-                //       setShravaStyle(false);
-                //     },2000)
-                //   }
-                // }}
-                // onMouseLeave={(e) => {
-                //   e.preventDefault();
-                //   setShravaStyle(false);
-                // }}
               >
                 <div
                   className={`blood ${
-                    shravaStyle ? `bg-transparent shadow-none` : "bg-white"
+                    hoverStyle==='shrava' ? `bg-transparent shadow-none` : "bg-white"
                   }`}
                 >
                   <img src="assets/img/urine.png" />
@@ -191,21 +147,21 @@ const LandingPage = () => {
                 <div className={`mt-3 mx-auto`}>
                   <p
                     className={`text-description m-0 ${
-                      shravaStyle ? `analysis_bold` : ""
+                      hoverStyle==='shrava' ? `analysis_bold` : ""
                     }`}
                   >
                     Urine
                   </p>
                   <p
                     className={`text-description m-0 fw-bold ${
-                      shravaStyle ? `analysis_bold` : ""
+                      hoverStyle==='shrava' ? `analysis_bold` : ""
                     }`}
                   >
                     Analyser
                   </p>
                   <div
                     className={`boold-hover-shrava ${
-                      shravaStyle
+                      hoverStyle==='shrava'
                         ? `blood-hover-shrava-block`
                         : "blood-hover-shrava-none"
                     }`}
