@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import NextArrow from '../Arrow/NextArrow';
 import PrevArrow from '../Arrow/PrevArrow';
 
-const MicroProduct = ({setHoverStyle,hoverStyle}) => {
+const MicroProduct = ({hoverStyle}) => {
     const [currentIndex,setCurrentIndex]=useState(1)
     const ref=useRef()
     let ai_100_next = {
@@ -21,8 +21,8 @@ const MicroProduct = ({setHoverStyle,hoverStyle}) => {
         border: "2px solid #707070",
         boxSizing: "border-box",
         borderRadius: "41px",
-        top: "-21px",
-        left: "481px"
+        top: "-75px",
+        left: "650px"
     }
     let ai_100_prev = {
         display: "flex",
@@ -39,8 +39,8 @@ const MicroProduct = ({setHoverStyle,hoverStyle}) => {
         border: "2px solid #707070",
         boxSizing: "border-box",
         borderRadius: "41px",
-        top: "-21px",
-        left: "341px"
+        top: "-75px",
+        left: "364px"
     }
 
     const setting_ai100 = {
@@ -85,83 +85,101 @@ const MicroProduct = ({setHoverStyle,hoverStyle}) => {
 
     return (
         <Slider {...setting_ai100} ref={ref}>
-            <div>
-                <div className="relative_microscope">
-                    <img src="assets/img/microscope.png" className="img-fluid mx-auto" />
-                    {/* <span className="microscope_text">
-                        <img src="assets/img/AI100_small.png" style={{ height: "35px",width: "75px"}}/>
-                    </span> */}
-                </div>
-            </div>
-            <div className={`${hoverStyle==='shonit' ? "hover-sec" : ""}`} active>
-                <div className="relative_microscope">
-                    <img src="assets/img/microscope_shonit.png" className="img-fluid mx-auto" />
-                    {/* <span className="microscope_text">
-                        <img src="assets/img/shonit.png" style={{ height: "55px",width: "90px"}}/>
-                    </span> */}
-                </div>
-                <div className={`${hoverStyle==='shonit' ? `main-hover row m-0 g-0 main-hover-flex` : `main-hover row m-0 g-0 main-hover-none`}`} onMouseEnter={(e=>{
-                    setHoverStyle("shonit")
-                })} 
-                onMouseLeave={(e=>{
-                    setHoverStyle(null)
-                })}>
-                    <div className="text-img">
-                        <img src="assets/img/circle-dot.png" />
-                        <div className="text-hover col">
-                            <p className="text-description mt-auto ps-3">Neutrophil <span>2</span></p>
-                            <p className="text-description mt-auto ps-3">Lymphocyte</p>
-                            <p className="text-description mt-auto ps-3">Monocyte<span>1</span></p>
-                            <p className="text-description mt-auto ps-3">Neutrophil</p>
-                            <p className="text-description mt-auto ps-3">Lymphocyte</p>
-                            <p className="text-description mt-auto ps-3">Monocyte</p>
-                        </div>
-                    </div>
-                    <div className="col-12 d-flex classified border-top">
-                        <p className="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger">Unclassified
-                            <span>1</span>
-                        </p>
-                        <p className="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger ms-auto">
-                            Rejected <span>7</span></p>
-                    </div>
-                </div>
-            </div>
-            <div className={`${hoverStyle==='shrava' ? "hover-sec" : ""}`}>
-                <div className="relative_microscope">
-                    <img src="assets/img/microscope_shrava.png" className="img-fluid mx-auto" />
-                    {/* <span className="microscope_text">
-                    <img src="assets/img/urine.png" style={{ height: "50px",width: "83px"}}/>
-                    </span> */}
-                </div>
-                <div className={`${hoverStyle==='shrava' ? `main-hover row m-0 g-0 main-hover-flex` : `main-hover row m-0 g-0 main-hover-none`}`} onMouseEnter={(e=>{
-                    setHoverStyle("shrava")
-                })} 
-                onMouseLeave={(e=>{
-                    setHoverStyle(null)
-                })}>
-                    <div className="text-img">
-                        <img src="assets/img/circle-dot.png" />
-                        <div className="text-hover col">
-                            <p className="text-description mt-auto ps-3">Neutrophil <span>2</span></p>
-                            <p className="text-description mt-auto ps-3">Lymphocyte</p>
-                            <p className="text-description mt-auto ps-3">Monocyte<span>1</span></p>
-                            <p className="text-description mt-auto ps-3">Neutrophil</p>
-                            <p className="text-description mt-auto ps-3">Lymphocyte</p>
-                            <p className="text-description mt-auto ps-3">Monocyte</p>
-                        </div>
-                    </div>
-                    <div className="col-12 d-flex classified border-top">
-                        <p className="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger">Unclassified
-                            <span>1</span>
-                        </p>
-                        <p className="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger ms-auto">
-                            Rejected <span>7</span></p>
-                    </div>
-                </div>
-           
-            </div>
-
+        <div class="">
+          <div class="relative_microscope text-center">
+            <img src="assets/img/microscope.png" class="img-fluid mx-auto" />
+          </div>
+        </div>
+        <div class={`${hoverStyle==='shonit' ? "hover-sec" : ""}`}>
+          <div class="relative_microscope text-center">
+            <img src="assets/img/microscope_shonit.png" class="img-fluid mx-auto" />
+          </div>
+        </div>
+        <div class={`${hoverStyle==='shrava' ? "hover-sec" : ""}`}>
+          <div class="relative_microscope text-center">
+            <img src="assets/img/microscope_shrava.png" class="img-fluid mx-auto" />
+          </div>
+        </div>
         </Slider>
+        
+        // <Slider {...setting_ai100} ref={ref}>
+        //     <div>
+        //         <div className="relative_microscope">
+        //             <img src="assets/img/microscope.png" className="img-fluid mx-auto" />
+        //             {/* <span className="microscope_text">
+        //                 <img src="assets/img/AI100_small.png" style={{ height: "35px",width: "75px"}}/>
+        //             </span> */}
+        //         </div>
+        //     </div>
+        //     <div className={`${hoverStyle==='shonit' ? "hover-sec" : ""}`} active>
+        //         <div className="relative_microscope">
+        //             <img src="assets/img/microscope_shonit.png" className="img-fluid mx-auto" />
+        //             {/* <span className="microscope_text">
+        //                 <img src="assets/img/shonit.png" style={{ height: "55px",width: "90px"}}/>
+        //             </span> */}
+        //         </div>
+        //         <div className={`${hoverStyle==='shonit' ? `main-hover row m-0 g-0 main-hover-flex` : `main-hover row m-0 g-0 main-hover-none`}`} onMouseEnter={(e=>{
+        //             setHoverStyle("shonit")
+        //         })} 
+        //         onMouseLeave={(e=>{
+        //             setHoverStyle(null)
+        //         })}>
+        //             <div className="text-img">
+        //                 <img src="assets/img/circle-dot.png" />
+        //                 <div className="text-hover col">
+        //                     <p className="text-description mt-auto ps-3">Neutrophil <span>2</span></p>
+        //                     <p className="text-description mt-auto ps-3">Lymphocyte</p>
+        //                     <p className="text-description mt-auto ps-3">Monocyte<span>1</span></p>
+        //                     <p className="text-description mt-auto ps-3">Neutrophil</p>
+        //                     <p className="text-description mt-auto ps-3">Lymphocyte</p>
+        //                     <p className="text-description mt-auto ps-3">Monocyte</p>
+        //                 </div>
+        //             </div>
+        //             <div className="col-12 d-flex classified border-top">
+        //                 <p className="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger">Unclassified
+        //                     <span>1</span>
+        //                 </p>
+        //                 <p className="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger ms-auto">
+        //                     Rejected <span>7</span></p>
+        //             </div>
+        //         </div>
+        //     </div>
+        //     <div className={`${hoverStyle==='shrava' ? "hover-sec" : ""}`}>
+        //         <div className="relative_microscope">
+        //             <img src="assets/img/microscope_shrava.png" className="img-fluid mx-auto" />
+        //             {/* <span className="microscope_text">
+        //             <img src="assets/img/urine.png" style={{ height: "50px",width: "83px"}}/>
+        //             </span> */}
+        //         </div>
+        //         <div className={`${hoverStyle==='shrava' ? `main-hover row m-0 g-0 main-hover-flex` : `main-hover row m-0 g-0 main-hover-none`}`} onMouseEnter={(e=>{
+        //             setHoverStyle("shrava")
+        //         })} 
+        //         onMouseLeave={(e=>{
+        //             setHoverStyle(null)
+        //         })}>
+        //             <div className="text-img">
+        //                 <img src="assets/img/circle-dot.png" />
+        //                 <div className="text-hover col">
+        //                     <p className="text-description mt-auto ps-3">Neutrophil <span>2</span></p>
+        //                     <p className="text-description mt-auto ps-3">Lymphocyte</p>
+        //                     <p className="text-description mt-auto ps-3">Monocyte<span>1</span></p>
+        //                     <p className="text-description mt-auto ps-3">Neutrophil</p>
+        //                     <p className="text-description mt-auto ps-3">Lymphocyte</p>
+        //                     <p className="text-description mt-auto ps-3">Monocyte</p>
+        //                 </div>
+        //             </div>
+        //             <div className="col-12 d-flex classified border-top">
+        //                 <p className="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger">Unclassified
+        //                     <span>1</span>
+        //                 </p>
+        //                 <p className="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger ms-auto">
+        //                     Rejected <span>7</span></p>
+        //             </div>
+        //         </div>
+           
+        //     </div>
+
+        // </Slider>
     )
 }
 
