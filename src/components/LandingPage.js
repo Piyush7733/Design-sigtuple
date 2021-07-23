@@ -208,17 +208,15 @@ const LandingPage = () => {
                   setHoverStyle("shonit")
                 }}>
                   <div class="ProcuctLeft">
-                    <div class={`blood ${
-                    hoverStyle==='shonit' ? `bg-transparent shadow-none` : `bg-white`
-                  }`}>
+                    <div class={`blood ${hoverStyle === 'shonit' ? `bg-transparent shadow-none` : `bg-white`
+                      }`}>
                       <img src="assets/img/shonit.png" />
                     </div>
                     <div class="ProcuctLeft-description text-center">
                       <div class="mt-3 mx-3">
-                        <p class={`${ hoverStyle==='shonit' ? `text-description-hover` : 'text-description' } m-0 text-start`}>Blood <br /><strong>Analyzer</strong></p>
+                        <p class={`${hoverStyle === 'shonit' ? `text-description-hover` : 'text-description'} m-0 text-start`}>Blood <br /><strong>Analyzer</strong></p>
                       </div>
-                      <div class={`mt-3 mx-3 sub-description ${
-                    hoverStyle==='shonit' ? `sub-description-block` : `sub-description-none`}`}>
+                      <div class={`mt-3 mx-3 sub-description ${hoverStyle === 'shonit' ? `sub-description-block` : `sub-description-none`}`}>
                         <p class="m-0 text-start">Shonit is an automated peripheral blood smear slide analyzer</p>
                         <button class="d-block px-4 mt-3 explore text-start">
                           Explore
@@ -235,7 +233,7 @@ const LandingPage = () => {
                     <img src="assets/img/AI100_2 1.png" class="img-fluid position-relative" />
                   </div>
                   <div class="slick-slider product-slider mt-5">
-                    <MicroProduct hoverStyle={hoverStyle}/>
+                    <MicroProduct hoverStyle={hoverStyle} />
                     {/* <div class="">
                       <div class="relative_microscope text-center">
                         <img src="assets/img/microscope.png" class="img-fluid mx-auto" />
@@ -252,7 +250,7 @@ const LandingPage = () => {
                     </button>
                   </div>
 
-                  <div class={`box-detailsproduct ${hoverStyle ? `main-hover-flex`:`main-hover-none`}`} onMouseLeave={(e=>{
+                  <div class={`box-detailsproduct ${hoverStyle ? `main-hover-flex` : `main-hover-none`}`} onMouseLeave={(e => {
                     setHoverStyle(null)
                   })}>
                     <div class="main-hover row m-0 g-0">
@@ -261,18 +259,18 @@ const LandingPage = () => {
                         <div class="text-hover col">
                           <p class="text-description mt-auto ps-3">
                             Neutrophil <span>2</span></p>
-                            <p class="text-description mt-auto ps-3">Lymphocyte</p>
-                            <p class="text-description mt-auto ps-3">Monocyte<span>1</span></p>
-                            <p class="text-description mt-auto ps-3">Neutrophil</p>
-                            <p class="text-description mt-auto ps-3">Lymphocyte</p>
-                            <p class="text-description mt-auto ps-3">Monocyte</p>
-                            </div>
-                            </div>
-                            <div class="col-12 d-flex classified border-top">
-                              <p class="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger">Unclassified<span>1</span></p>
-                              <p class="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger ms-auto">Rejected <span>7</span></p>
-                              </div>
-                              </div>
+                          <p class="text-description mt-auto ps-3">Lymphocyte</p>
+                          <p class="text-description mt-auto ps-3">Monocyte<span>1</span></p>
+                          <p class="text-description mt-auto ps-3">Neutrophil</p>
+                          <p class="text-description mt-auto ps-3">Lymphocyte</p>
+                          <p class="text-description mt-auto ps-3">Monocyte</p>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex classified border-top">
+                        <p class="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger">Unclassified<span>1</span></p>
+                        <p class="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger ms-auto">Rejected <span>7</span></p>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -281,17 +279,15 @@ const LandingPage = () => {
                   setHoverStyle("shrava")
                 }}>
                   <div class="ProcuctRight">
-                    <div class={`blood ${
-                    hoverStyle==='shrava' ? `bg-transparent shadow-none` : `bg-white`
-                  }`}>
+                    <div class={`blood ${hoverStyle === 'shrava' ? `bg-transparent shadow-none` : `bg-white`
+                      }`}>
                       <img src="assets/img/urine.png" />
                     </div>
                     <div class="ProcuctRight-description text-center">
                       <div class="mt-3 mx-3">
-                        <p class={`${ hoverStyle==='shrava' ? `text-description-hover` : 'text-description' } m-0 text-start`}>Urine <br /><strong>Analyser</strong></p>
+                        <p class={`${hoverStyle === 'shrava' ? `text-description-hover` : 'text-description'} m-0 text-start`}>Urine <br /><strong>Analyser</strong></p>
                       </div>
-                      <div class={`mt-3 mx-3 sub-description ${
-                    hoverStyle==='shrava' ? `sub-description-block` : `sub-description-none`}`}>
+                      <div class={`mt-3 mx-3 sub-description ${hoverStyle === 'shrava' ? `sub-description-block` : `sub-description-none`}`}>
                         <p class="m-0 text-start">Shrava is an automated peripheral blood smear slide analyzer</p>
                         <button class="d-block px-4 mt-3 explore text-start">
                           Explore
@@ -307,7 +303,7 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          {/* <div class="mobileproduct">
+          <div class="mobileproduct">
             <div class="mobileproduct-grid mt-4 mx-auto ">
               <div class="ProcuctLeft mx-auto">
                 <div class="ProcuctLeft-img">
@@ -349,7 +345,7 @@ const LandingPage = () => {
               </div>
             </div>
 
-          </div> */}
+          </div>
         </div>
         <div class="bg_round"></div>
       </div>
@@ -449,7 +445,32 @@ const LandingPage = () => {
         </div>
       </div> */}
 
-      <div className="container py-100 review">
+
+      <div class="Extensive-area py-100">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="text-center">
+                <h1 class="text-title text-center">Bringing Speed &amp; Precision with<b> Extensive R&amp;D</b></h1>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxl-10 col-11 mx-auto bg-white mt-5">
+              <div class="slick-slider Extensive-slider">
+                <Reviews />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center mt-5">
+              <a href="" class="text-decoration-none text-danger fw-bold text-fwb">View All <img src="assets/img/red_next_arrow.png" class="img-fluid ml-3" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="container py-100 review">
         <h1 className="text-title text-center">
           Bringing Speed & Precision with
           <b> Extensive R&D</b>
@@ -466,9 +487,28 @@ const LandingPage = () => {
             <img src="assets/img/red_next_arrow.png" style={{ margin: "5px", paddingBottom: "5px", height: "25px" }} />
           </a>
         </div>
+      </div> */}
+
+
+      <div class="Clients-area our-client d-flex">
+        <div class="container py-100">
+          <div class="row">
+            <div class="col">
+              <div class="text-center">
+                <h1 class="text-title">From<b> Our Clients</b></h1>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxl-9 col-12 mx-auto mt-5 position-relative">
+              <img src="assets/img/cot.png" class="cot" />
+              <Client />
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="container-fluid our-client d-flex">
+      {/* <div className="container-fluid our-client d-flex">
         <div className="container my-auto">
           <div className="row mx-auto">
             <h1 className="text-title text-center">
@@ -481,45 +521,93 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="container py-100">
-        <h1 className="text-title text-center">
-          Know
-          <b> What’s Brewing</b>
-        </h1>
-        <p className="text-description text-center">
-          Get access to the breakthroughs we make in our research and innovation
-          every day.
-        </p>
-        <div className="col-xxl-10 col-11 mx-auto bg-white mt-5">
-          <Blogs />
-        </div>
-      </div>
-      <div className="container-fluid award d-flex">
-        <div className="container my-auto">
-          <h1 className="text-title text-center">
-            Awards &<b> Recognitions</b>
-          </h1>
-          <div className="col-12 mx-auto mt-5">
-            <Awards />
+      </div> */}
+
+
+      <div class="Brewing-area">
+        <div class="container py-100">
+          <div class="row">
+            <div class="col">
+              <div class="text-center">
+                <h1 class="text-title">Know<b> What’s Brewing</b></h1>
+                <p class="text-description">Get access to the breakthroughs we make in our research and innovation every day.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxl-10 col-11 mx-auto bg-white mt-5">
+              <div class="slick-slider brewing-slider">
+                <Blogs />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className="container-fluid simple d-flex">
-        <div className="container my-auto">
-          <h1>
-            Simple. Quick. Accurate.
-            <br />
-            <b>See it for yourself.</b>
+
+      {/* <div className="container py-100">
+          <h1 className="text-title text-center">
+            Know
+            <b> What’s Brewing</b>
           </h1>
-          <p className="my-3">
-            Let us show you how our device helps
-            <br />
-            you transform your workflow
+          <p className="text-description text-center">
+            Get access to the breakthroughs we make in our research and innovation
+            every day.
           </p>
-          <button className="mt-3 px-4 shadow-none">Book a Demo</button>
+          <div className="col-xxl-10 col-11 mx-auto bg-white mt-5">
+            <Blogs />
+          </div>
+        </div> */}
+
+
+
+
+      <div class="awards-area award d-flex">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="text-center">
+                <h1 class="text-title">Awards &amp;<b> Recognitions</b></h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mx-auto mt-70">
+
+            <div class="slick-slider awards-slider">
+              <Awards />
+          </div>
+          </div>
         </div>
       </div>
+      {/* <div className="container-fluid award d-flex">
+                <div className="container my-auto">
+                  <h1 className="text-title text-center">
+                    Awards &<b> Recognitions</b>
+                  </h1>
+                  <div className="col-12 mx-auto mt-5">
+                    <Awards />
+                  </div>
+                </div>
+              </div> */}
+
+
+<div class="yourself-area simple d-flex">
+                <div class="container my-auto">
+                    <div class="row">
+                        <div class="col">
+                            <h1>
+                                Simple. Quick. Accurate.<br />
+                                <b>See it for yourself.</b>
+                            </h1>
+                            <p class="my-3">
+                                Let us show you how our device helps<br />
+                                you transform your workflow
+                            </p>
+                            <button class="mt-3 px-4 shadow-none">Book a Demo</button>                            
+                        </div>
+                    </div>
+
+                </div>
+            </div> 
       <Footer />
     </div>
   );

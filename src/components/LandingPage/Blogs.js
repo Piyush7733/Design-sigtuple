@@ -128,75 +128,91 @@ const Blogs = () =>{
     };
 
     const renderItems=BlogContents.map(b=>{
-        if(b.id==showBlog){
-            return(
-                <div className="p-3" key={b.id} >
-                <div className="lab-card position-relative">
-                    <img src="assets/img/lab-1.png" className="img-fluid"/>
-                    <div className="lab-text" onMouseEnter={(e=>{
-                            e.preventDefault();
-                            setBlogShow(b.id)
-                        })} onMouseLeave={(e=>{
-                            e.preventDefault();
-                            console.log("hello 1")
-                            setBlogShow(null)
-                        })}>
-                        <span>{b.duration} read</span>
-                        <h3 className="text-sub mb-1">{b.title}</h3>
-                         <div className='description-blog-show'>
-                        <span className="text-70 fw-normal d-block">
-                            {b.description}
-                        </span>
-                        <span className="text-70 fw-light d-block mt-2 mb-3">
-                            {b.date}
-                        </span>
-                        <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Read More
-                            <i className="bi bi-arrow-right-short"></i>
-                        </a>
-                    </div>
-                    </div>
-                </div>
+        return (<div class="p-3" key={b.id}>
+        <div class="lab-card position-relative ">
+          <img src="assets/img/lab-1.png" class="img-fluid" />
+            <div class="lab-text">
+              <span>{b.duration} read</span>
+              <h3 class="text-sub mb-1">{b.title}</h3>
+              <div class="description-blog-hide">
+                <span class="text-70 fw-normal d-block">{b.description}</span>
+                <span class="text-70 fw-light d-block mt-2 mb-3">{b.date}</span>
+                <a href="" class="text-decoration-none text-danger fw-bold text-fwb">Read More
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
-            )   
-        }
-        else{
-            return(
-                <div className="p-3" key={b.id}>
-                <div className="lab-card position-relative">
-                    <img src="assets/img/lab-1.png" className="img-fluid"/>
-                    <div className="lab-text" onMouseEnter={(e=>{
-                            e.preventDefault();
-                            setBlogShow(b.id)
-                        })}>
-                        <span>{b.duration} read</span>
-                        <h3 className="text-sub mb-1">{b.title}</h3>
-                         <div className='description-blog-hide'>
-                        <span className="text-70 fw-normal d-block">
-                            {b.description}
-                        </span>
-                        <span className="text-70 fw-light d-block mt-2 mb-3">
-                            {b.date}
-                        </span>
-                        <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Read More
-                            <i className="bi bi-arrow-right-short"></i>
-                        </a>
-                    </div>
-                    </div>
-                </div>
             </div>
-            )
-        }  
+        </div>)
+
+        // if(b.id==showBlog){
+        //     return(
+        //         <div className="p-3" key={b.id} >
+        //         <div className="lab-card position-relative">
+        //             <img src="assets/img/lab-1.png" className="img-fluid"/>
+        //             <div className="lab-text" onMouseEnter={(e=>{
+        //                     e.preventDefault();
+        //                     setBlogShow(b.id)
+        //                 })} onMouseLeave={(e=>{
+        //                     e.preventDefault();
+        //                     console.log("hello 1")
+        //                     setBlogShow(null)
+        //                 })}>
+        //                 <span>{b.duration} read</span>
+        //                 <h3 className="text-sub mb-1">{b.title}</h3>
+        //                  <div className='description-blog-show'>
+        //                 <span className="text-70 fw-normal d-block">
+        //                     {b.description}
+        //                 </span>
+        //                 <span className="text-70 fw-light d-block mt-2 mb-3">
+        //                     {b.date}
+        //                 </span>
+        //                 <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Read More
+        //                     <i className="bi bi-arrow-right-short"></i>
+        //                 </a>
+        //             </div>
+        //             </div>
+        //         </div>
+        //     </div>
+        //     )   
+        // }
+        // else{
+        //     return(
+        //         <div className="p-3" key={b.id}>
+        //         <div className="lab-card position-relative">
+        //             <img src="assets/img/lab-1.png" className="img-fluid"/>
+        //             <div className="lab-text" onMouseEnter={(e=>{
+        //                     e.preventDefault();
+        //                     setBlogShow(b.id)
+        //                 })}>
+        //                 <span>{b.duration} read</span>
+        //                 <h3 className="text-sub mb-1">{b.title}</h3>
+        //                  <div className='description-blog-hide'>
+        //                 <span className="text-70 fw-normal d-block">
+        //                     {b.description}
+        //                 </span>
+        //                 <span className="text-70 fw-light d-block mt-2 mb-3">
+        //                     {b.date}
+        //                 </span>
+        //                 <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Read More
+        //                     <i className="bi bi-arrow-right-short"></i>
+        //                 </a>
+        //             </div>
+        //             </div>
+        //         </div>
+        //     </div>
+        //     )
+        // }  
     })
 
 
 
     return (
-        <div>
  <Slider {...settings_blog}>
      {renderItems}
- </Slider>
-        </div>
-    )
+ </Slider>    )
 }
 
 export default Blogs;

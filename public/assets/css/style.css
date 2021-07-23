@@ -53,7 +53,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 }
 .eye-section {
     position: absolute;
-    bottom: 149px;
+    bottom: 150px;
     left: 50%;
     transform: translateX(-50%)
 }

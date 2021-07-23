@@ -17,13 +17,13 @@ const Client = () => {
     // padding: "14px",
 
     position: "absolute",
-    width: "35px",
-    height: "35px",
+    width: "50px",
+    height: "50px",
     border: "3px solid #FFFFFF",
     boxSizing: "border-box",
     borderRadius: "41px",
-    left: "calc(100% - 90px)",
-    top: "300px",
+    left: "calc(100% - 125px)",
+    top: "347px",
     zIndex: 20,
   };
   let client_prev = {
@@ -34,13 +34,13 @@ const Client = () => {
     // padding: "14px",
 
     position: "absolute",
-    width: "35px",
-    height: "35px",
+    width: "50px",
+    height: "50px",
     border: "3px solid #FFFFFF",
     boxSizing: "border-box",
     borderRadius: "41px",
     left: "calc(100% - 130px)",
-    top: "300px",
+    top: "347px",
     zIndex: 20,
   };
   const settings_clinet = {
@@ -159,91 +159,126 @@ const Client = () => {
       //       </div>
       //     </div>
       //   </div>
-      <>
-        <div className="container">
-          <div
-            className="row"
-            style={{
-              backgroundColor: "#de1a1b",
-              borderRadius: "40px",
-              minHeight: "360px",
-            }}
-          >
-            <div
-              className="col-6"
-              style={{
-                backgroundColor: "#FFF",
-                boxShadow: "0px 4px 14px rgba(112, 112, 112, 0.25)",
-                borderTopLeftRadius: "20px",
-                borderTopRightRadius: "50px",
-                borderBottomLeftRadius: "20px",
-              }}
-            >
-              <div className="card-body">
-                <p className="text-description fw-bold clients_text_sections">
-                “{c.review.slice(0,170)}”
-                </p>
-                <div className="d-flex name clients_user_sections">
-                  <img
-                    src={`${Api.defaults.baseURL}${c.profilepic[0].url}`}
-                    className="me-3"
-                  />
-                  <div className="py-2">
-                    <h3 className="text-sub fw-bold m-0">{c.Username}</h3>
-                    <p className="m-0 client_section_text">{c.designation},</p>
-                    <p className="m-0 client_section_text">{c.work_at}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-6 d-flex align-items-center"
-              style={{
-                backgroundColor: "#de1a1b",
-                padding: "0 80px",
-                borderTopRightRadius: "20px",
-                borderBottomRightRadius: "20px",
-              }}
-            >
-              <div className="card-body">
-                <h1 className="text-title text-white fw-bold">
-                  {/* good use of remote access */}
-                  {c.review_title}
-                </h1>
-                <p className="text-description text-white m-0">
-                  for reporting post working hours and weekends
-                </p>
-                <div
-                  className="clientCount"
-                  style={{
-                    top: "calc(100% - 75px)",
-                    opacity: ".5",
-                    position: "absolute",
-                    fontFamily: "Nunito Sans",
-                    fontStyle: "normal",
-                    fontSize: "20px",
-                    color: "#FFFFFF",
-                  }}
-                >
-                  {currentIndex < 10
+      // <>
+      //   <div className="container">
+      //     <div
+      //       className="row"
+      //       style={{
+      //         backgroundColor: "#de1a1b",
+      //         borderRadius: "40px",
+      //         minHeight: "360px",
+      //       }}
+      //     >
+      //       <div
+      //         className="col-6"
+      //         style={{
+      //           backgroundColor: "#FFF",
+      //           boxShadow: "0px 4px 14px rgba(112, 112, 112, 0.25)",
+      //           borderTopLeftRadius: "20px",
+      //           borderTopRightRadius: "50px",
+      //           borderBottomLeftRadius: "20px",
+      //         }}
+      //       >
+      //         <div className="card-body">
+      //           <p className="text-description fw-bold clients_text_sections">
+      //           “{c.review.slice(0,170)}”
+      //           </p>
+      //           <div className="d-flex name clients_user_sections">
+      //             <img
+      //               src={`${Api.defaults.baseURL}${c.profilepic[0].url}`}
+      //               className="me-3"
+      //             />
+      //             <div className="py-2">
+      //               <h3 className="text-sub fw-bold m-0">{c.Username}</h3>
+      //               <p className="m-0 client_section_text">{c.designation},</p>
+      //               <p className="m-0 client_section_text">{c.work_at}</p>
+      //             </div>
+      //           </div>
+      //         </div>
+      //       </div>
+      //       <div
+      //         className="col-6 d-flex align-items-center"
+      //         style={{
+      //           backgroundColor: "#de1a1b",
+      //           padding: "0 80px",
+      //           borderTopRightRadius: "20px",
+      //           borderBottomRightRadius: "20px",
+      //         }}
+      //       >
+      //         <div className="card-body">
+      //           <h1 className="text-title text-white fw-bold">
+      //             {/* good use of remote access */}
+      //             {c.review_title}
+      //           </h1>
+      //           <p className="text-description text-white m-0">
+      //             for reporting post working hours and weekends
+      //           </p>
+      //           <div
+      //             className="clientCount"
+      //             style={{
+      //               top: "calc(100% - 75px)",
+      //               opacity: ".5",
+      //               position: "absolute",
+      //               fontFamily: "Nunito Sans",
+      //               fontStyle: "normal",
+      //               fontSize: "20px",
+      //               color: "#FFFFFF",
+      //             }}
+      //           >
+      //             {currentIndex < 10
+      //               ? currentIndex.toString().padStart(2, "0")
+      //               : currentIndex}
+      //             {" "}/{" "}
+      //             {clientCount < 10
+      //               ? clientCount.toString().padStart(2, "0")
+      //               : clientCount}
+      //           </div>
+      //         </div>
+      //       </div>
+      //     </div>
+      //   </div>
+      // </>
+
+      <div class="slide" key={c.id}>
+                    <div class="row" >
+                      <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12" >
+                        <div class="card-body left-card-body">
+                          <p class="text-description fw-bold clients_text_sections">
+                            “{c.review.slice(0,170)}”
+                          </p>
+                          <div class="d-flex name clients_user_sections">
+                            <img src={`${Api.defaults.baseURL}${c.profilepic[0].url}`} class="me-3" />
+                            <div class="py-2">
+                              <h3 class="text-sub fw-bold m-0">{c.Username}</h3>
+                              <p class="m-0 client_section_text">{c.designation},</p>
+                              <p class="m-0 client_section_text">{c.work_at}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
+                        <div class="card-body right-card-body">
+                          <h1 class="text-title text-white fw-bold">{c.review_title}</h1>
+                          <p class="text-description text-white m-0">{c.short_review}</p>
+                        </div>
+                      </div>
+                    </div>
+        </div>
+    );
+  });
+
+  return (
+    <div class="Clients-slider">
+    <Slider {...settings_clinet}>{renderItems}</Slider>
+    <div class="Clients-count">
+    {currentIndex < 10
                     ? currentIndex.toString().padStart(2, "0")
                     : currentIndex}
                   {" "}/{" "}
                   {clientCount < 10
                     ? clientCount.toString().padStart(2, "0")
                     : clientCount}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  });
-
-  return (
-    <div className="client-arrows">
-      <Slider {...settings_clinet}>{renderItems}</Slider>
+    </div>
     </div>
   );
 };

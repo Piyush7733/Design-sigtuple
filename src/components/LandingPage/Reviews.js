@@ -19,11 +19,11 @@ const Reviews = () => {
     height: "66px",
     position: "absolute",
 
-    opacity:  currentIndex < publication.length ? "1" : "0.5" ,
+    opacity: currentIndex < publication.length ? "1" : "0.5",
     border: "3px solid rgb(112, 112, 112)",
     boxSizing: "border-box",
     borderRadius: "41px",
-    left: "970px",
+    left: "1075px",
   };
 
   let prevArrow = {
@@ -40,7 +40,7 @@ const Reviews = () => {
     border: "3px solid rgb(112, 112, 112)",
     boxSizing: "border-box",
     borderRadius: "41px",
-    left: "-70px",
+    left: "-75px",
   };
 
   const settings2 = {
@@ -58,8 +58,8 @@ const Reviews = () => {
       }
       console.log(currentIndex, current);
     },
-    nextArrow: <NextArrow reviewNext={nextArrow} ARROW_NEXT={`assets/img/right-arrow-black.svg`} ARROW_SIZE={"20px"}/>,
-    prevArrow: <PrevArrow reviewPrev={prevArrow} ARROW_PREW={`assets/img/left-arrow-black.svg`} ARROW_SIZE={"20px"}/>
+    nextArrow: <NextArrow reviewNext={nextArrow} ARROW_NEXT={`assets/img/right-arrow-black.svg`} ARROW_SIZE={"20px"} />,
+    prevArrow: <PrevArrow reviewPrev={prevArrow} ARROW_PREW={`assets/img/left-arrow-black.svg`} ARROW_SIZE={"20px"} />
 
     // nextArrow: (
     //   <NextArrow
@@ -97,34 +97,22 @@ const Reviews = () => {
 
   let renderItems = publication.map((p) => {
     return (
-      <div className="p-3" key={p.id}>
-        <div className="cards">
-          <div className="d-flex">
-            <span className="text-danger text-fwb fw-bold">{p.title}</span>
-            <span className="text-70 ms-auto text-fwb">
-              {new Date(p.publish_at).getFullYear()}
-            </span>
+      <div class="p-3" key={p.id}>
+        <div class="cards">
+          <div class="d-flex">
+            <span class="text-danger text-fwb fw-bold">{p.title}</span>
+            <span class="text-70 ms-auto text-fwb">{new Date(p.publish_at).getFullYear()}</span>
           </div>
-          <p className="text-description mt-4">
-            {p.description.length > 150
+          <p class="text-description mt-4">{p.description.length > 150
               ? `${p.description.substring(0, 150)}...`
-              : p.description}
-          </p>
-          <span
-            className="text-70 d-flex mt-auto"
-            onMouseEnter={(e) => {
+              : p.description}</p>
+          <span class="text-70 d-flex mt-auto" onMouseEnter={(e) => {
               setShowArrow(p.id);
             }}
             onMouseLeave={(e) => {
               setShowArrow(null);
-            }}
-          >
-            <img
-              src="assets/img/bookmark.png"
-              width="8%"
-              className="d-inline me-2 my-auto"
-            />
-            {p.type}
+            }}>
+            <img src="assets/img/bookmark.png" width="8%" class="d-inline me-2 my-auto" />{p.type}
             {showArrow === p.id ? (
             <img
               src="assets/img/red_next_arrow.png"
@@ -137,6 +125,47 @@ const Reviews = () => {
           </span>
         </div>
       </div>
+
+      // <div className="p-3" key={p.id}>
+      //   <div className="cards">
+      //     <div className="d-flex">
+      //       <span className="text-danger text-fwb fw-bold">{p.title}</span>
+      //       <span className="text-70 ms-auto text-fwb">
+      //         {new Date(p.publish_at).getFullYear()}
+      //       </span>
+      //     </div>
+      //     <p className="text-description mt-4">
+      //       {p.description.length > 150
+      //         ? `${p.description.substring(0, 150)}...`
+      //         : p.description}
+      //     </p>
+      //     <span
+      //       className="text-70 d-flex mt-auto"
+      //       onMouseEnter={(e) => {
+      //         setShowArrow(p.id);
+      //       }}
+      //       onMouseLeave={(e) => {
+      //         setShowArrow(null);
+      //       }}
+      //     >
+      //       <img
+      //         src="assets/img/bookmark.png"
+      //         width="8%"
+      //         className="d-inline me-2 my-auto"
+      //       />
+      //       {p.type}
+      //       {showArrow === p.id ? (
+      //       <img
+      //         src="assets/img/red_next_arrow.png"
+      //         style={{ marginLeft: "auto" }}
+      //         onClick={(e) => {
+      //           window.open("http://google.com");
+      //         }}
+      //       />
+      //       ) : null}
+      //     </span>
+      //   </div>
+      // </div>
     );
   });
 
