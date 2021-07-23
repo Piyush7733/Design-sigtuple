@@ -1169,6 +1169,13 @@ ul li {
     color: #868786;
     word-wrap: initial
 }
+.text-description-hover-small {
+    font-size: 24px;
+    line-height: 25px;
+   font-family: nunitoSans-light;
+    color: #868786;
+    word-wrap: initial
+}
 
 
 .ProcuctRight {

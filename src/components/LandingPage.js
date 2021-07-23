@@ -22,7 +22,35 @@ const LandingPage = () => {
   return (
     <div className="main">
       <Header />
-      <div className="container-fluid hero-banner">
+      <div class="hero-area hero-banner">
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="hero-section d-flex vh-100 flex-column">
+                                <div class="m-auto text-center"> 
+                                    <div id="zoom" class="text mt-90">
+                                        <div class="small">
+                                            <h1 class="m-0">The<b> Future of Microscopy</b> is Here!</h1>
+                                            <center><h2>We are democratizing microscopy through AI, robotics, and cloud computing.</h2></center>
+                                        </div> 
+                                        <div class="large"></div>
+                                    </div> 
+                                </div>
+                                <div class="m-auto text-center check-products">
+                                    <a href="#product_sections">
+                                        <div class="eye-section">
+                                            <span class="text-danger font-regular fw-bold">Check our products</span>
+                                            <div class="eye mt-2"><img src="assets/img/eye.png" /></div>
+                                        </div>
+                                    </a>
+                                    <div class="verticle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      {/* <div className="container-fluid hero-banner">
         <div className="container hero-section d-flex h-100 flex-column">
           <div className="m-auto text-center">
             <div id="zoom">
@@ -47,7 +75,7 @@ const LandingPage = () => {
                 </div>
               </a>
               <div class="verticle"></div>
-            </div>
+            </div> */}
             {/* <a href="#product_sections">
               <div className="eye-section">
                 <span className="text-danger font-regular fw-bold">
@@ -59,9 +87,9 @@ const LandingPage = () => {
               </div>
             </a>
             <div className="verticle"></div> */}
-          </div>
+          {/* </div>
         </div>
-      </div>
+      </div> */}
 
       {/* <div id="product_sections">
         <div className="container-fluid microscope">
@@ -232,7 +260,7 @@ const LandingPage = () => {
                   <div class="text-center ">
                     <img src="assets/img/AI100_2 1.png" class="img-fluid position-relative" />
                   </div>
-                  <div class="slick-slider product-slider mt-5">
+                  <div class="slick-slider product-slider product-slide  mt-5">
                     <MicroProduct hoverStyle={hoverStyle} />
                     {/* <div class="">
                       <div class="relative_microscope text-center">
@@ -305,15 +333,19 @@ const LandingPage = () => {
           </div>
           <div class="mobileproduct">
             <div class="mobileproduct-grid mt-4 mx-auto ">
-              <div class="ProcuctLeft mx-auto">
-                <div class="ProcuctLeft-img">
+              <div class="ProcuctLeft mx-auto" onMouseEnter={(e) => {
+                  e.preventDefault();
+                  setHoverStyle("shonit")
+                }}>
+                <div class={`ProcuctLeft-img  ${hoverStyle === 'shonit' ? `bg-transparent shadow-none` : `bg-white`
+                      }`}>
                   <img src="assets/img/shonit.png" />
                 </div>
                 <div class="ProcuctLeft-description mx-auto">
                   <div class="mt-3 mx-3">
-                    <p class="text-description m-0 text-start">Blood <br /><strong>Analyzer</strong></p>
+                    <p class={`${hoverStyle === 'shonit' ? `text-description-hover-small` : 'text-description'} m-0 text-start`}>Blood <br /><strong>Analyzer</strong></p>
                   </div>
-                  <div class="mt-3 mx-3 sub-description">
+                  <div class={`mt-3 mx-3 sub-description ${hoverStyle === 'shonit' ? `sub-description-block` : `sub-description-none`}`}>
                     <p class="m-0 text-start">Shonit is an automated peripheral blood smear slide analyzer</p>
                     <button class="d-block px-4 mt-3 explore text-start">
                       Explore
@@ -324,15 +356,19 @@ const LandingPage = () => {
                   </div>
                 </div>
               </div>
-              <div class="ProcuctRight mx-auto">
-                <div class="ProcuctLeft-img">
+              <div class="ProcuctRight mx-auto" onMouseEnter={(e) => {
+                  e.preventDefault();
+                  setHoverStyle("shrava")
+                }}>
+                <div class={`ProcuctLeft-img  ${hoverStyle === 'shrava' ? `bg-transparent shadow-none` : `bg-white`
+                      }`}>
                   <img src="assets/img/urine.png" />
                 </div>
                 <div class="ProcuctRight-description text-center">
                   <div class="mt-3 mx-3">
-                    <p class="text-description m-0 text-start">Urine <br /><strong>Analyser</strong></p>
+                    <p class={`${hoverStyle === 'shrava' ? `text-description-hover-small` : 'text-description'} m-0 text-start`}>Urine <br /><strong>Analyser</strong></p>
                   </div>
-                  <div class="mt-3 mx-3 sub-description">
+                  <div class={`mt-3 mx-3 sub-description ${hoverStyle === 'shrava' ? `sub-description-block` : `sub-description-none`}`}>
                     <p class="m-0 text-start">Shrava is an automated peripheral blood smear slide analyzer</p>
                     <button class="d-block px-4 mt-3 explore text-start">
                       Explore

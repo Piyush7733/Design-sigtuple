@@ -72,7 +72,8 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 	.verticle {margin-top: auto; height: 180px; border-left: 2px dashed #de1a1b; position: relative; top: calc(100% - 180px); left: 0; transform: translateX(50%); right: 0; bottom: 0; margin: 0 auto; }
 	.hero-banner, .our-client, .policy {height: auto !important; }
 	.hero-section {height: auto !important; margin-top: 60px;}
-	.small h1 {font-size: 40px; }
+	.small h1 {font-size: 40px; width: 332px; }
+	.small h2 {font-size: 20px; width: 332px; }
 	.check-products {margin-top: 70px !important; }
 	.play-btn {position: relative; top: -120px; left: 0; transform: translate(0%, 0%); width: 80px; height: 80px; background-color: transparent; border: 8px solid #fff; border-radius: 50%; display: flex; cursor: pointer; right: 0; margin: auto; }
 	.Extensive-slider .slick-arrow, .brewing-slider .slick-arrow,  .awards-slider .slick-arrow{display: none !important;}
