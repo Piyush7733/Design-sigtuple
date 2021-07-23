@@ -49,6 +49,32 @@ const Reviews = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
     afterChange: (current) => {
       console.log(currentIndex, current);
       if (current == 0) {
@@ -58,8 +84,20 @@ const Reviews = () => {
       }
       console.log(currentIndex, current);
     },
-    nextArrow: <NextArrow reviewNext={nextArrow} ARROW_NEXT={`assets/img/right-arrow-black.svg`} ARROW_SIZE={"20px"} />,
-    prevArrow: <PrevArrow reviewPrev={prevArrow} ARROW_PREW={`assets/img/left-arrow-black.svg`} ARROW_SIZE={"20px"} />
+    nextArrow: (
+      <NextArrow
+        reviewNext={nextArrow}
+        ARROW_NEXT={`assets/img/right-arrow-black.svg`}
+        ARROW_SIZE={"20px"}
+      />
+    ),
+    prevArrow: (
+      <PrevArrow
+        reviewPrev={prevArrow}
+        ARROW_PREW={`assets/img/left-arrow-black.svg`}
+        ARROW_SIZE={"20px"}
+      />
+    ),
 
     // nextArrow: (
     //   <NextArrow
@@ -101,26 +139,38 @@ const Reviews = () => {
         <div class="cards">
           <div class="d-flex">
             <span class="text-danger text-fwb fw-bold">{p.title}</span>
-            <span class="text-70 ms-auto text-fwb">{new Date(p.publish_at).getFullYear()}</span>
+            <span class="text-70 ms-auto text-fwb">
+              {new Date(p.publish_at).getFullYear()}
+            </span>
           </div>
-          <p class="text-description mt-4">{p.description.length > 150
+          <p class="text-description mt-4">
+            {p.description.length > 150
               ? `${p.description.substring(0, 150)}...`
-              : p.description}</p>
-          <span class="text-70 d-flex mt-auto" onMouseEnter={(e) => {
+              : p.description}
+          </p>
+          <span
+            class="text-70 d-flex mt-auto"
+            onMouseEnter={(e) => {
               setShowArrow(p.id);
             }}
             onMouseLeave={(e) => {
               setShowArrow(null);
-            }}>
-            <img src="assets/img/bookmark.png" width="8%" class="d-inline me-2 my-auto" />{p.type}
-            {showArrow === p.id ? (
+            }}
+          >
             <img
-              src="assets/img/red_next_arrow.png"
-              style={{ marginLeft: "auto" }}
-              onClick={(e) => {
-                window.open("http://google.com");
-              }}
+              src="assets/img/bookmark.png"
+              width="8%"
+              class="d-inline me-2 my-auto"
             />
+            {p.type}
+            {showArrow === p.id ? (
+              <img
+                src="assets/img/red_next_arrow.png"
+                style={{ marginLeft: "auto" }}
+                onClick={(e) => {
+                  window.open("http://google.com");
+                }}
+              />
             ) : null}
           </span>
         </div>
