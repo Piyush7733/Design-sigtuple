@@ -22,8 +22,8 @@ const Client = () => {
     border: "3px solid #FFFFFF",
     boxSizing: "border-box",
     borderRadius: "41px",
-    left: "calc(100% - 125px)",
-    top: "347px",
+    // left: "calc(100% - 125px)",
+    // top: "347px",
     zIndex: 20,
   };
   let client_prev = {
@@ -39,8 +39,8 @@ const Client = () => {
     border: "3px solid #FFFFFF",
     boxSizing: "border-box",
     borderRadius: "41px",
-    left: "calc(100% - 130px)",
-    top: "347px",
+    // left: "calc(100% - 130px)",
+    // top: "347px",
     zIndex: 20,
   };
   const settings_clinet = {

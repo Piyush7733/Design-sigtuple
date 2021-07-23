@@ -2,10 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import Slider from "react-slick";
 import NextArrow from '../Arrow/NextArrow';
 import PrevArrow from '../Arrow/PrevArrow';
+// import { useMediaQuery } from 'react-responsive';
 
 const MicroProduct = ({hoverStyle}) => {
     const [currentIndex,setCurrentIndex]=useState(1)
     const ref=useRef()
+    
     let ai_100_next = {
         display: "flex",
         flexDirection: "row",
@@ -21,8 +23,8 @@ const MicroProduct = ({hoverStyle}) => {
         border: "2px solid #707070",
         boxSizing: "border-box",
         borderRadius: "41px",
-        top: "-75px",
-        left: "650px"
+        // top: "-75px",
+        // left: "650px"
     }
     let ai_100_prev = {
         display: "flex",
@@ -39,8 +41,8 @@ const MicroProduct = ({hoverStyle}) => {
         border: "2px solid #707070",
         boxSizing: "border-box",
         borderRadius: "41px",
-        top: "-75px",
-        left: "374px"
+        // top: "-75px",
+        // left: "364px"
     }
 
     const setting_ai100 = {
@@ -101,7 +103,6 @@ const MicroProduct = ({hoverStyle}) => {
           </div>
         </div>
         </Slider>
-        
         // <Slider {...setting_ai100} ref={ref}>
         //     <div>
         //         <div className="relative_microscope">
