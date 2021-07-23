@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Slider from "react-slick";
 import NextArrow from '../Arrow/NextArrow';
 import PrevArrow from '../Arrow/PrevArrow';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 
 const MicroProduct = ({hoverStyle}) => {
     const [currentIndex,setCurrentIndex]=useState(1)
