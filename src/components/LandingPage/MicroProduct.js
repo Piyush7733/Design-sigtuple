@@ -40,7 +40,7 @@ const MicroProduct = ({hoverStyle}) => {
         boxSizing: "border-box",
         borderRadius: "41px",
         top: "-75px",
-        left: "364px"
+        left: "374px"
     }
 
     const setting_ai100 = {
