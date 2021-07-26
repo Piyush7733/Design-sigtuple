@@ -15,7 +15,7 @@ const Awards = () => {
     height: "66px",
     position: "absolute",
 
-    opacity: currentIndex < 4 ? "1" : "0.5",
+    opacity: currentIndex < 4 ? "0.5" : "0.1",
     border: "3px solid rgb(112, 112, 112)",
     boxSizing: "border-box",
     borderRadius: "41px",
@@ -31,7 +31,7 @@ const Awards = () => {
     height: "66px",
     position: "absolute",
 
-    opacity: currentIndex === 1 ? "0.5" : "1",
+    opacity: currentIndex === 1 ? "0.1" : "0.5",
     border: "3px solid rgb(112, 112, 112)",
     boxSizing: "border-box",
     borderRadius: "41px",
@@ -66,6 +66,7 @@ const Awards = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: true,
         },
       },
     ],

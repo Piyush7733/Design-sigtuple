@@ -19,7 +19,7 @@ const Reviews = () => {
     height: "66px",
     position: "absolute",
 
-    opacity: currentIndex < publication.length ? "1" : "0.5",
+    opacity: currentIndex < publication.length ? "0.5" : "0.1",
     border: "3px solid rgb(112, 112, 112)",
     boxSizing: "border-box",
     borderRadius: "41px",
@@ -36,7 +36,7 @@ const Reviews = () => {
     height: "66px",
     position: "absolute",
 
-    opacity: currentIndex == 1 ? "0.5" : "1",
+    opacity: currentIndex == 1 ? "0.1" : "0.5",
     border: "3px solid rgb(112, 112, 112)",
     boxSizing: "border-box",
     borderRadius: "41px",
@@ -70,7 +70,8 @@ const Reviews = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true
+          infinite: false,
+          arrows:false
         },
       },
     ],

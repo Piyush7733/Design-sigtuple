@@ -19,7 +19,7 @@ const MicroProduct = ({hoverStyle}) => {
         width: "35px",
         height: "35px",
 
-        opacity: currentIndex < 3 ? "1" : "0.6",
+        opacity: currentIndex < 3 ? "0.5" : "0.1",
         border: "2px solid #707070",
         boxSizing: "border-box",
         borderRadius: "41px",
@@ -37,7 +37,7 @@ const MicroProduct = ({hoverStyle}) => {
         width: "35px",
         height: "35px",
 
-        opacity: currentIndex == 1 ? "0.6" : "1",
+        opacity: currentIndex == 1 ? "0.1" : "0.5",
         border: "2px solid #707070",
         boxSizing: "border-box",
         borderRadius: "41px",

@@ -85,7 +85,7 @@ const Blogs = () => {
     height: "66px",
     position: "absolute",
 
-    opacity: currentIndex < blogLen ? "1" : "0.5",
+    opacity: currentIndex < blogLen ? "0.5" : "0.1",
     border: "3px solid rgb(112, 112, 112)",
     boxSizing: "border-box",
     borderRadius: "41px",
@@ -102,7 +102,7 @@ const Blogs = () => {
     height: "66px",
     position: "absolute",
 
-    opacity: currentIndex == 1 ? "0.5" : "1",
+    opacity: currentIndex == 1 ? "0.1" : "0.5",
     border: "3px solid rgb(112, 112, 112)",
     boxSizing: "border-box",
     borderRadius: "41px",
@@ -122,16 +122,17 @@ const Blogs = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
+          infinite: false,
           dots: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          dots: true
         },
       },
       {
@@ -139,6 +140,7 @@ const Blogs = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: true
         },
       },
     ],
