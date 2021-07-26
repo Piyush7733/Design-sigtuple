@@ -68,6 +68,11 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         left: inherit;
         right: 260px;
     }
+    .Research-section h1,
+    .blog-titles h1,
+    .Careers-section h1 {
+        font-size: 54px;
+    }
 }
 
 /* Responsive Media Query (less than 1199px)*/
@@ -125,6 +130,11 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 @media only screen and(max-width: 1140px) {}
 /* Responsive Media Query (less than 991px)*/
 @media only screen and(max-width: 991px) {
+
+    .Research-section h1,
+    .blog-titles h1 {
+        font-size: 42px;
+    }
     .nav-bookdemo,
     .nav-user {
         display: none;
@@ -135,17 +145,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         left: 50%;
         transform: translateX(-50%);
     }
-    .verticle {
-        margin: 0 auto;
-        height: 180px;
-        border-left: 2px dashed #de1a1b;
-        position: relative;
-        top: calc(100% - 180px);
-        left: 0;
-        transform: translateX(50%);
-        right: 0;
-        bottom: 0;
-    }
+    /*.verticle {margin-top: auto; height: 180px; border-left: 2px dashed #de1a1b; position: relative; top: calc(100% - 180px); left: 0; transform: translateX(50%); right: 0; bottom: 0; margin: 0 auto; }*/
     .hero-banner,
     .our-client,
     .policy {
@@ -198,6 +198,59 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         display: inline-block;
         width: 100%;
     }
+
+
+    .solutions-vh {
+        height: auto !important;
+    }
+    .Solutions-grid {
+        margin-top: 50px;
+    }
+    .Benefits-grid.grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+    .Benefits-list {
+        margin: 0;
+        box-shadow: 0 9px 21px rgb(112 112 112 / 25%);
+        -webkit-box-shadow: 0 9px 21px rgb(112 112 112 / 25%);
+        -moz-box-shadow: 0 9px 21px rgba(112, 112, 112, 0.25);
+        border-bottom: 0 solid #de1a1b;
+    }
+    .Benefits-text {
+        display: block;
+    }
+
+    .description-blog-hide {
+        display: block;
+    }
+    .description-blog-hide span:nth-child(1) {
+        display: none !important;
+    }
+
+    .Blog-list-grid.grid-3,
+    .Publications-grid.grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Blog-list-grid.grid-3 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .steps-vh {
+        height: auto !important;
+    }
+    .steps-grid.grid-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .steps-top-padding {
+        padding-top: 0 !important
+    }
+    .accurate-list,
+    .steps-list {
+        margin-right: 20px;
+    }
+
+
 }
 /* Responsive Media Query (less than 767px)*/
 @media only screen and(max-width: 767px) {
@@ -272,7 +325,6 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         width: 320px;
         padding: 30px;
     }
-
     .main-hover {
         bottom: 0;
         position: relative;
@@ -282,17 +334,52 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         margin: 0 auto !important;
     }
     .awards-area {
-        padding: 100px 10% 200px;
+        padding: 200px 10%;
+    }
+    .review-report-img,
+    .Cell-identification-img,
+    .multiple-tests-img {
+        margin-top: 80px;
+    }
+    .Benefits-grid.grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Blog-list-grid.grid-3,
+    .Publications-grid.grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Research-area .check-products {
+        display: none;
+    }
+    .accurate-grid.grid-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cot {
+        display: none;
+    }
+    .Publications-data-list ul li button {
+        padding-right: 14px !important;
+        padding-left: 14px !important;
     }
 
+    .Research-section p br {
+        display: none;
+    }
 }
 @media only screen and(max-width: 599px) {
     .awards-slider-item > .text-center.plr-80 {
         padding: 0 !important;
     }
+    .Blog-list-grid.grid-3,
+    .Publications-grid.grid-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 /* Responsive Media Query (less than 575px)*/
 @media only screen and(max-width:575px) {
+    .text-title {
+        font-size: 22px;
+    }
     .procuct-area .slick-prev {
         left: 60px;
     }
@@ -300,6 +387,8 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         right: 60px;
         left: inherit;
     }
+
+
 }
 /* Responsive Media Query (less than 480px)*/
 @media only screen and(max-width:480px) {

@@ -22,7 +22,7 @@ const LandingPage = () => {
   return (
     <div className="main">
       <Header />
-      <div class="hero-area hero-banner">
+      <div class="heor-area hero-banner">
                 <div class="container-fluid ">
                     <div class="row">
                         <div class="col-md-12">
@@ -240,7 +240,7 @@ const LandingPage = () => {
                       }`}>
                       <img src="assets/img/shonit.png" />
                     </div>
-                    <div class="ProcuctLeft-description text-center">
+                    <div class="ProcuctLeft-description">
                       <div class="mt-3 mx-3">
                         <p class={`${hoverStyle === 'shonit' ? `text-description-hover` : 'text-description'} m-0 text-start`}>Blood <br /><strong>Analyzer</strong></p>
                       </div>
@@ -248,7 +248,7 @@ const LandingPage = () => {
                         <p class="m-0 text-start">Shonit is an automated peripheral blood smear slide analyzer</p>
                         <button class="d-block px-4 mt-3 explore text-start">
                           Explore
-                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          {" "}<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B" />
                           </svg>
                         </button>
@@ -260,7 +260,7 @@ const LandingPage = () => {
                   <div class="text-center ">
                     <img src="assets/img/AI100_2 1.png" class="img-fluid position-relative" />
                   </div>
-                  <div class="slick-slider product-slider product-slide  mt-5">
+                  <div class="slick-slider product-slider mt-5">
                     <MicroProduct hoverStyle={hoverStyle} />
                     {/* <div class="">
                       <div class="relative_microscope text-center">
@@ -272,7 +272,7 @@ const LandingPage = () => {
                     <p class="text-description text-center mt-4">The AI100 is an AI-driven smart robotic microscope.</p>
                     <button class="d-block mx-auto px-4 explore">
                       Explore
-                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      {" "}<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B" />
                       </svg>
                     </button>
@@ -311,7 +311,7 @@ const LandingPage = () => {
                       }`}>
                       <img src="assets/img/urine.png" />
                     </div>
-                    <div class="ProcuctRight-description text-center">
+                    <div class="ProcuctRight-description">
                       <div class="mt-3 mx-3">
                         <p class={`${hoverStyle === 'shrava' ? `text-description-hover` : 'text-description'} m-0 text-start`}>Urine <br /><strong>Analyser</strong></p>
                       </div>
@@ -319,7 +319,7 @@ const LandingPage = () => {
                         <p class="m-0 text-start">Shrava is an automated peripheral blood smear slide analyzer</p>
                         <button class="d-block px-4 mt-3 explore text-start">
                           Explore
-                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          {" "}<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B" />
                           </svg>
                         </button>
@@ -349,7 +349,7 @@ const LandingPage = () => {
                     <p class="m-0 text-start">Shonit is an automated peripheral blood smear slide analyzer</p>
                     <button class="d-block px-4 mt-3 explore text-start">
                       Explore
-                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      {" "}<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B" />
                       </svg>
                     </button>
@@ -372,7 +372,7 @@ const LandingPage = () => {
                     <p class="m-0 text-start">Shrava is an automated peripheral blood smear slide analyzer</p>
                     <button class="d-block px-4 mt-3 explore text-start">
                       Explore
-                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      {" "}<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B" />
                       </svg>
                     </button>
@@ -500,7 +500,11 @@ const LandingPage = () => {
           </div>
           <div class="row">
             <div class="col-12 text-center mt-5">
-              <a href="" class="text-decoration-none text-danger fw-bold text-fwb">View All <img src="assets/img/red_next_arrow.png" class="img-fluid ml-3" alt="" /></a>
+              <a href="" class="text-decoration-none text-danger fw-bold text-fwb">View All
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginLeft: "5px"}}>
+               <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B"></path>
+              </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -526,7 +530,7 @@ const LandingPage = () => {
       </div> */}
 
 
-      <div class="Clients-area our-client d-flex">
+  <div class="Clients-area our-client d-flex client-before pb-50">
         <div class="container py-100">
           <div class="row">
             <div class="col">

@@ -126,7 +126,7 @@ button {
 }
 .navbar.stickey {
     background-color: #fff;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075) !important
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important
 }
 .navbar.noramal {
     background-color: transparent
@@ -256,7 +256,8 @@ button {
     position: absolute;
     top: calc(100% - 150px);
     left: 50%;
-    transform: translateX(-50%)
+    /* transform: translateX(-50%) */
+
 }
 .slick-current {
     opacity: 1
@@ -589,8 +590,8 @@ button {
 .our-client {
     background-image: url('../img/mesh-gradient-3.png');
     background-size: cover;
-    height: 100vh;
-    background-position: center
+    background-position: center;
+    position: relative;
 }
 .our-slider {
     background: linear-gradient(to left,#de1a1b 50%,#fff 50%);
@@ -838,6 +839,7 @@ footer i {
 .hover-me:hover .boold-hover-shrava {
     display: block
 }
+
 .slick-next::before,
 .slick-prev::before {
     content: none;
@@ -856,6 +858,7 @@ footer i {
     height: 85px;
     width: 85px;
     border-radius: 100px;
+    margin-right: 15px;
 }
 .relative_microscope {
     position: relative;
@@ -950,8 +953,18 @@ footer i {
 }
 
 
+.fw-bold {
+    font-weight: 700 !important;
+}
 .text-color {
     color: #de1a1b !important
+}
+.text-gray {
+    color: #707070 !important
+}
+button:focus {
+    outline: 0 dotted !important;
+    outline: 0 auto -webkit-focus-ring-color !important;
 }
 /*grid*/
 .grid-1 {
@@ -997,9 +1010,7 @@ ul li {
 .modal-content {
     border-radius: 1.5rem;
 }
-.slick-dots {
-    display: none !important;
-}
+/*.slick-dots{display: none !important;}*/
 .slick-dots li.slick-active button {
     background: #de1a1b;
 }
@@ -1164,7 +1175,7 @@ ul li {
 }
 .text-description-hover {
     font-size: 45px;
-    line-height: 35px;
+    line-height: 45px;
    font-family: nunitoSans-light;
     color: #868786;
     word-wrap: initial
@@ -1218,6 +1229,9 @@ ul li {
     bottom: 160px;
 }
 
+.icon.nav-user {
+    margin: 0 40px 0 20px;
+}
 
 .mobileproduct {
     display: none;
@@ -1458,6 +1472,25 @@ ul li {
 .Clients-slider .slick-disabled {
     opacity: 0.5;
 }
+
+.client-before:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    background: linear-gradient(180deg , rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+}
+.client-after:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    background: linear-gradient(0deg , rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+}
 /* ---------------------------------------
 		Clients Slider End
 ----------------------------------------*/
@@ -1539,9 +1572,9 @@ ul li {
     height: 100%;
     transition: all 0.3s;
     transform: translateX(100%);
-    background: #ffffff00;
+    background: #F4F4F4;
     z-index: 1032;
-    padding: 30px 100px; backdrop-filter: blur(30px);
+    padding: 30px 100px;
     box-shadow: -4px -1px 7px -2px rgb(0 0 0 / 15%);
     -webkit-box-shadow: -4px -1px 7px -2px rgb(0 0 0 / 15%);
     -moz-box-shadow: -4px -1px 7px -2px rgb(0 0 0 / 15%);
@@ -1605,6 +1638,10 @@ ul li {
     color: #707070;
     display: inline-block;
     width: 100%;
+}
+.right-panel-menu .social-media {
+    margin: 15px 0;
+    display: inline-block;
 }
 /* ---------------------------------------
 		Right Panel Menu  End
@@ -1673,4 +1710,619 @@ ul li {
 }
 /* ---------------------------------------
 		Book a demo popup End
+----------------------------------------*/
+
+
+/* ---------------------------------------
+		Product Page Start
+----------------------------------------*/
+
+/*product-area start*/
+.product-area {
+    background-image: url('../img/mesh-gradient-1.png');
+    background-size: cover;
+    background-position: center;
+    padding-top: 74px;
+}
+.Product-text-area {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #707070;
+}
+.Product-text {
+    padding: 50px 0;
+}
+/*product-area End*/
+
+
+/*Multiple Area Slider Start*/
+.multiple-area {
+    background-image: url('../../assets/img/mesh-gradient-2.png');
+    background-size: 100% 100%;
+    background-position: center center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.multiple-tests-img img {
+    width: 80%;
+}
+.multiple-area .slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: flex !important;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    flex-direction: column;
+    right: 0 !important;
+    text-align: right;
+    align-items: flex-end;
+}
+.multiple-area .slick-dots li button {
+    margin: 7px;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    background: #de1a1b;
+    opacity: 0.3;
+}
+.multiple-area .slick-dots li.slick-active button {
+    opacity: 1;
+}
+/*Multiple Area Slider Start*/
+
+/*Cell Identification Slider Start*/
+.Cell-identification-area {
+    background-image: url('../../assets/img/mesh-gradient-2.png');
+    background-size: 100% 100%;
+    background-position: center center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.Cell-identification-img img {
+    width: 80%;
+}
+.Cell-identification-area .slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: flex !important;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    flex-direction: column;
+    right: 0 !important;
+    text-align: right;
+    align-items: flex-end;
+}
+.Cell-identification-area .slick-dots li button {
+    margin: 7px;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    background: #de1a1b;
+    opacity: 0.3;
+}
+.Cell-identification-area .slick-dots li.slick-active button {
+    opacity: 1;
+}
+/*Cell Identification Slider Start*/
+
+/*Review Report Slider Start*/
+.review-report-area {
+    background-image: url('../../assets/img/mesh-gradient-2.png');
+    background-size: 100% 100%;
+    background-position: center center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.review-report-img img {
+    width: 80%;
+}
+.review-report-area .slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: flex !important;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    flex-direction: column;
+    right: 0 !important;
+    text-align: right;
+    align-items: flex-end;
+}
+.review-report-area .slick-dots li button {
+    margin: 7px;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    background: #de1a1b;
+    opacity: 0.3;
+}
+.review-report-area .slick-dots li.slick-active button {
+    opacity: 1;
+}
+/*Cell Identification Slider Start*/
+
+
+/*solutions-area Start*/
+.solutions-area {
+    background-image: url('../img/mesh-gradient-1.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.solutions-area:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    background: linear-gradient(180deg , rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+}
+.Solutions-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 3px 20px rgb(134 135 134 / 20%);
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+}
+.Solutions-img img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80px;
+}
+/*solutions-area End*/
+
+/*Benefits Start*/
+.Benefits-grid.grid-4 {
+    align-items: center;
+}
+.Benefits-list {
+    padding: 30px;
+    border-radius: 19px;
+    overflow: hidden;
+    margin: 0 120px 0 0;
+    min-height: 248px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Benefits-list:hover {
+    box-shadow: 0 9px 21px rgb(112 112 112 / 25%);
+    -webkit-box-shadow: 0 9px 21px rgb(112 112 112 / 25%);
+    -moz-box-shadow: 0 9px 21px rgba(112, 112, 112, 0.25);
+    border-bottom: 8px solid #de1a1b;
+}
+.Benefits-text {
+    display: none;
+}
+.Benefits-list:hover .Benefits-text {
+    display: block;
+}
+.Benefits-title h6 {
+    color: #707070
+}
+.Benefits-list:hover .Benefits-title h6 {
+    color: #de1a1b;
+    font-weight: 700
+}
+.Benefits-text p {
+    font-size: 14px;
+}
+/*Benefits End*/
+
+/*Tech Specs Start*/
+.optiontitle h2 {
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+}
+.specs-card {
+    border-bottom: 1px solid #202020;
+}
+.specs-heading a {
+    color: #707070;
+    padding: 20px 0;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    font-size: 18px;
+}
+.specs-heading a svg {
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+.specs-body {
+    margin-bottom: 30px;
+}
+
+.detailed-btn a {
+    border: 1.5px solid #707070;
+    box-sizing: border-box;
+    border-radius: 41px;
+    padding: 12px 30px;
+    display: inline-block;
+}
+/*Tech Specs End*/
+
+/* ---------------------------------------
+		Product Page End
+----------------------------------------*/
+
+
+/* ---------------------------------------
+		Blog Page Start
+----------------------------------------*/
+.Blog-area {
+    padding-top: 70px;
+}
+.blog-titles {
+    margin: 80px 0 40px;
+    display: inline-block;
+    width: 100%;
+}
+.text-small-name {
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    font-weight: 500
+}
+.Blog-list-grid.grid-3 {
+    grid-gap: 2rem;
+    margin: 0 100px;
+}
+.Blog-list-grid .lab-card:hover .description-blog-hide {
+    display: block;
+}
+
+.blog-titles h1 {
+    font-size: 52px;
+}
+/* ---------------------------------------
+		Blog Page End
+----------------------------------------*/
+
+/* ---------------------------------------
+		Research page Start
+----------------------------------------*/
+.Research-area {
+    background-image: url('../img/mesh-gradient-1.png');
+    background-size: cover;
+    background-position: center;
+}
+.Research-area:before {
+    background: linear-gradient(180deg , rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    left: 0;
+}
+.Research-area .verticle,
+.Careers-area .verticle {
+    top: calc(100% - 170px);
+}
+.Research-area .eye-section,
+.Careers-area .eye-section {
+    bottom: 20px;
+}
+.Publications-data-list ul {
+    background-color: #f3f3f3;
+    border-radius: 50px;
+}
+.Publications-data-list ul li button {
+    box-shadow: none;
+}
+.Publications-grid.grid-3 {
+    grid-gap: 2rem;
+}
+
+.Research-section h1,
+.Careers-section h1 {
+    font-size: 72px;
+}
+/* ---------------------------------------
+		Research page End
+----------------------------------------*/
+
+/* ---------------------------------------
+		product page Start
+----------------------------------------*/
+.accurate-grid.grid-2 {
+    grid-gap: 2rem;
+}
+.accurate-list {
+    border-bottom: 1px solid rgb(32 32 32 / 50%);
+    padding-bottom: 30px;
+    margin-right: 100px;
+}
+.accurate-list-img img {
+    border-radius: 50px;
+    margin-right: 15px;
+}
+.Shrava-grid .text-gray {
+    flex-basis: 100px;
+}
+
+/*Shonit Start*/
+.Shonit-slider .slick-arrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    opacity: 0.5;
+    border: 3px solid rgb(112, 112, 112);
+    box-sizing: border-box;
+    border-radius: 41px;
+    z-index: 999;
+}
+.Shonit-slider .slick-prev:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    background: url('../../assets/img/left-arrow-black.png');
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.Shonit-slider .slick-next:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    background: url('../../assets/img/right-arrow-black.png');
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.Shonit-slider .slick-prev {
+    left: -90px;
+}
+.Shonit-slider .slick-next {
+    right: -90px;
+}
+
+.Shonit-slider .slick-active {
+    padding: 50px 0;
+}
+.Shonit-slider .slick-center {
+    transform: scale(1.3);
+}
+.Shonit-slider .slick-slide:not(.slick-active) {
+    margin: 50px 0;
+}
+.Shonit-slider .slick-arrow.slick-disabled {
+    opacity: 0.3;
+}
+/*Shonit End*/
+
+/*Extensive slider Start*/
+.ShravaAI-area {
+    background-image: url('../img/mesh-gradient-1.png');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 120px;
+}
+.ShravaAI-area .slick-arrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    opacity: 0.5;
+    border: 3px solid rgb(112, 112, 112);
+    box-sizing: border-box;
+    border-radius: 41px;
+    z-index: 999;
+}
+.ShravaAI-area .slick-prev:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    background: url('../../assets/img/left-arrow-black.png');
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.ShravaAI-area .slick-next:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    background: url('../../assets/img/right-arrow-black.png');
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.ShravaAI-area .slick-prev {
+    left: -90px;
+}
+.ShravaAI-area .slick-next {
+    right: -90px;
+}
+.ShravaAI-area .slick-arrow.slick-disabled {
+    opacity: 0.3;
+}
+/*Extensive Slider End */
+
+/*analysis Slider Start*/
+.analysis-area {
+    background-image: url('../../assets/img/mesh-gradient-2.png');
+    background-size: 100% 100%;
+    background-position: center center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.analysis-area .analysis-img img {
+    width: 80%;
+}
+.analysis-area .slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: flex !important;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    flex-direction: column;
+    right: 0 !important;
+    text-align: right;
+    align-items: flex-end;
+}
+.analysis-area .slick-dots li button {
+    margin: 7px;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    background: #de1a1b;
+    opacity: 0.3;
+}
+.analysis-area .slick-dots li.slick-active button {
+    opacity: 1;
+}
+/*analysis Slider End*/
+
+/*Microscopic Slider Start*/
+.Microscopic-area {
+    background-image: url('../../assets/img/mesh-gradient-2.png');
+    background-size: 100% 100%;
+    background-position: center center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.Microscopic-area .Microscopic-img img {
+    width: 80%;
+}
+.Microscopic-area .slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: flex !important;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    flex-direction: column;
+    right: 0 !important;
+    text-align: right;
+    align-items: flex-end;
+}
+.Microscopic-area .slick-dots li button {
+    margin: 7px;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    background: #de1a1b;
+    opacity: 0.3;
+}
+.Microscopic-area .slick-dots li.slick-active button {
+    opacity: 1;
+}
+/*analysis Slider End*/
+
+/*steps-area start*/
+.steps-area {
+    background-image: url('../../assets/img/bg_01.png');
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.steps-list {
+    margin-right: 140px;
+}
+/*steps-area End*/
+
+/* ---------------------------------------
+		product 01 page End
+----------------------------------------*/
+
+/* ---------------------------------------
+		Careers page Start
+----------------------------------------*/
+.Careers-area {
+    background-image: url('../img/mesh-gradient-1.png');
+    background-size: cover;
+    background-position: center;
+}
+/*experts-area Start*/
+.experts-area {
+    background-image: url('../../assets/img/mesh-gradient-2.png');
+    background-size: 100% 100%;
+    background-position: center center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.experts-grid.grid-4 {
+    grid-gap: 2rem;
+}
+.experts-list {
+    margin: 0 45px;
+}
+.Values-img {
+    margin-left: 100px;
+    margin-right: -31%;
+}
+/*experts-area End*/
+
+
+/* ---------------------------------------
+		Careers page End
 ----------------------------------------*/
