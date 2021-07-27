@@ -23,6 +23,7 @@ const MicroProduct = ({hoverStyle}) => {
         border: "2px solid #707070",
         boxSizing: "border-box",
         borderRadius: "41px",
+        display:"none"
         // top: "-75px",
         // left: "650px"
     }
@@ -41,12 +42,13 @@ const MicroProduct = ({hoverStyle}) => {
         border: "2px solid #707070",
         boxSizing: "border-box",
         borderRadius: "41px",
+        display:"none"
         // top: "-75px",
         // left: "364px"
     }
 
     const setting_ai100 = {
-        dots: false,
+        dots: true,
         infinite: false,
         speed: 500,
         slidesToShow: 1,

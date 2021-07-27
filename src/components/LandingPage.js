@@ -347,7 +347,7 @@ const LandingPage = () => {
                   </div>
                   <div class={`mt-3 mx-3 sub-description ${hoverStyle === 'shonit' ? `sub-description-block` : `sub-description-none`}`}>
                     <p class="m-0 text-start">Shonit is an automated peripheral blood smear slide analyzer</p>
-                    <button class="d-block px-4 mt-3 explore text-start">
+                    <button class="d-block px-4 mt-3 explore text-start" style={{width:"131px"}}>
                       Explore
                       {" "}<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B" />
@@ -370,7 +370,7 @@ const LandingPage = () => {
                   </div>
                   <div class={`mt-3 mx-3 sub-description ${hoverStyle === 'shrava' ? `sub-description-block` : `sub-description-none`}`}>
                     <p class="m-0 text-start">Shrava is an automated peripheral blood smear slide analyzer</p>
-                    <button class="d-block px-4 mt-3 explore text-start">
+                    <button class="d-block px-4 mt-3 explore text-start" style={{width:"131px"}}>
                       Explore
                       {" "}<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B" />
