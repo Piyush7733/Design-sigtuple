@@ -140,7 +140,7 @@ const Reviews = () => {
         <div className="cards">
           <div className="d-flex">
             <span className="text-danger text-fwb fw-bold">{p.title}</span>
-            <span className="text-70 ms-auto text-fwb">
+            <span className="text-70 ms-auto text-fwb" style={{marginLeft:"70px"}}>
               {new Date(p.publish_at).getFullYear()}
             </span>
           </div>
