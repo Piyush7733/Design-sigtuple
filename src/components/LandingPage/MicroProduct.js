@@ -89,19 +89,19 @@ const MicroProduct = ({hoverStyle}) => {
 
     return (
         <Slider {...setting_ai100} ref={ref}>
-        <div class="">
-          <div class="relative_microscope text-center">
-            <img src="assets/img/microscope.png" class="img-fluid mx-auto" />
+        <div className="">
+          <div className="relative_microscope text-center">
+            <img src="assets/img/microscope.png" className="img-fluid mx-auto" />
           </div>
         </div>
-        <div class={`${hoverStyle==='shonit' ? "hover-sec" : ""}`}>
-          <div class="relative_microscope text-center">
-            <img src="assets/img/microscope_shonit.png" class="img-fluid mx-auto" />
+        <div className={`${hoverStyle==='shonit' ? "hover-sec" : ""}`}>
+          <div className="relative_microscope text-center">
+            <img src="assets/img/microscope_shonit.png" className="img-fluid mx-auto" />
           </div>
         </div>
-        <div class={`${hoverStyle==='shrava' ? "hover-sec" : ""}`}>
-          <div class="relative_microscope text-center">
-            <img src="assets/img/microscope_shrava.png" class="img-fluid mx-auto" />
+        <div className={`${hoverStyle==='shrava' ? "hover-sec" : ""}`}>
+          <div className="relative_microscope text-center">
+            <img src="assets/img/microscope_shrava.png" className="img-fluid mx-auto" />
           </div>
         </div>
         </Slider>

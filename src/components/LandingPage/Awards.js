@@ -100,36 +100,36 @@ const Awards = () => {
 
   return (
     <Slider {...settings2}>
-      <div class="awards-slider-item">
-        <div class="text-center plr-80">
-          <img src="assets/img/award-1.png" class="pb-2 img-fluid" />
+      <div className="awards-slider-item">
+        <div className="text-center plr-80">
+          <img src="assets/img/award-1.png" className="pb-2 img-fluid" />
           {/* <hr class="my-3" />
           <p class="text-description mb-0 text-fwb fw-bold text-center">Winner</p>
           <p class="text-description text-center mb-0">AI healthcare Category</p> */}
         </div>
       </div>
 
-      <div class="awards-slider-item">
-        <div class="text-center plr-80">
-          <img src="assets/img/award-2.png" class="pb-2 img-fluid" />
+      <div className="awards-slider-item">
+        <div className="text-center plr-80">
+          <img src="assets/img/award-2.png" className="pb-2 img-fluid" />
           {/* <hr class="my-3" />
           <p class="text-description mb-0 text-fwb fw-bold text-center">Winner</p>
           <p class="text-description text-center mb-0">AI healthcare Category</p> */}
         </div>
       </div>
 
-      <div class="awards-slider-item">
-        <div class="text-center plr-80">
-          <img src="assets/img/award-3.png" class="pb-2 img-fluid" />
+      <div className="awards-slider-item">
+        <div className="text-center plr-80">
+          <img src="assets/img/award-3.png" className="pb-2 img-fluid" />
           {/* <hr class="my-3" />
           <p class="text-description mb-0 text-fwb fw-bold text-center">Winner</p>
           <p class="text-description text-center mb-0">AI healthcare Category</p> */}
         </div>
       </div>
 
-      <div class="awards-slider-item">
-        <div class="text-center plr-80">
-          <img src="assets/img/award-1.png" class="pb-2 img-fluid" />
+      <div className="awards-slider-item">
+        <div className="text-center plr-80">
+          <img src="assets/img/award-1.png" className="pb-2 img-fluid" />
           {/* <hr class="my-3" />
           <p class="text-description mb-0 text-fwb fw-bold text-center">Winner</p>
           <p class="text-description text-center mb-0">AI healthcare Category</p> */}

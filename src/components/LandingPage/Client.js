@@ -239,27 +239,27 @@ const Client = () => {
       //   </div>
       // </>
 
-      <div class="slide" key={c.id}>
-                    <div class="row" >
-                      <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12" >
-                        <div class="card-body left-card-body">
-                          <p class="text-description fw-bold clients_text_sections">
+      <div className="slide" key={c.id}>
+                    <div className="row" >
+                      <div className="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12" >
+                        <div className="card-body left-card-body">
+                          <p className="text-description fw-bold clients_text_sections">
                             “{c.review.slice(0,200)}”
                           </p>
-                          <div class="d-flex name clients_user_sections">
+                          <div className="d-flex name clients_user_sections">
                             <img src={`${c.profilepic[0].url}`} class="me-3" style={{objectFit:"cover"}}/>
-                            <div class="py-2">
-                              <h3 class="text-sub fw-bold m-0">{c.Username}</h3>
-                              <p class="m-0 client_section_text">{c.designation},</p>
-                              <p class="m-0 client_section_text">{c.work_at}</p>
+                            <div className="py-2">
+                              <h3 className="text-sub fw-bold m-0">{c.Username}</h3>
+                              <p className="m-0 client_section_text">{c.designation},</p>
+                              <p className="m-0 client_section_text">{c.work_at}</p>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
-                        <div class="card-body right-card-body">
-                          <h1 class="text-title text-white fw-bold">{c.review_title}</h1>
-                          <p class="text-description text-white m-0">{c.short_review}</p>
+                      <div className="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
+                        <div className="card-body right-card-body">
+                          <h1 className="text-title text-white fw-bold">{c.review_title}</h1>
+                          <p className="text-description text-white m-0">{c.short_review}</p>
                         </div>
                       </div>
                     </div>

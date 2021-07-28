@@ -4,22 +4,22 @@ const VideoDescription = () =>{
     const [show,setShow] = useState(true)
     const ref=useRef()
     return (
-        <div class="work-area py-100">
-        <div class="container-fluid px-0 position-relative video-section">
+        <div className="work-area py-100">
+        <div className="container-fluid px-0 position-relative video-section">
             <video id="media-video" poster="assets/img/video_section.png" ref={ref}>
                 <source src="assets/video/video.mp4" type="video/mp4" />
                 </video>
-            <div class="video-text container">
+            <div className="video-text container">
                 <h1>
                     SigTuple Combined Robotics &amp;<br />
                     <b>Artificial Intelligence</b>
                 </h1>
-                <p class="textdescription">
+                <p className="textdescription">
                     to build a smart screening solution.<br />
                     Healthcare made accessible, accurate, and affordable.
                 </p>
             </div>
-            <div id="play-pause-button" class="play-btn" onClick={(e=>{
+            <div id="play-pause-button" className="play-btn" onClick={(e=>{
             if(show){
                 setShow(false)
                 ref.current.play()

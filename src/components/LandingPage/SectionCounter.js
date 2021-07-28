@@ -46,36 +46,36 @@ const SectionCounter = () => {
     <div class="policy-area"  onMouseOver={(e) => {
       setShow(true);
     }}>
-    <div class=" container">
-        <div class="row">
-            <div class="col-12 policy ">
-                <div class="my-auto w-100">
-                    <div class="p-4 m-auto d-xxl-flex d-xl-flex d-lg-flex justify-content-between policy-list">
-                        <div class="policy-list-item">
+    <div className=" container">
+        <div className="row">
+            <div className="col-12 policy ">
+                <div className="my-auto w-100">
+                    <div className="p-4 m-auto d-xxl-flex d-xl-flex d-lg-flex justify-content-between policy-list">
+                        <div className="policy-list-item">
                             <h5>ACCURACY</h5>
-                            <div class="d-flex mt-2">
+                            <div className="d-flex mt-2">
                                 <h1>{accuracy}</h1>
-                                <p class="text-description mt-auto ps-3">
+                                <p className="text-description mt-auto ps-3">
                                     Clinical Studies<br />
                                     Performed
                                 </p>
                             </div>
                         </div>
-                        <div class="policy-list-item">
+                        <div className="policy-list-item">
                             <h5>Innovation</h5>
-                            <div class="d-flex mt-2">
+                            <div className="d-flex mt-2">
                                 <h1>{innovation}</h1>
-                                <p class="text-description mt-auto ps-3">
+                                <p className="text-description mt-auto ps-3">
                                     Granted Patents in<br />
                                     The US and India
                                 </p>
                             </div>
                         </div>
-                        <div class="policy-list-item item-last">
+                        <div className="policy-list-item item-last">
                             <h5>Acceptance</h5>
-                            <div class="d-flex mt-2">
+                            <div className="d-flex mt-2">
                                 <h1>{acceptance}</h1>
-                                <p class="text-description mt-auto ps-3">
+                                <p className="text-description mt-auto ps-3">
                                     Publications in Medical<br />
                                     and Technical Journals
                                 </p>

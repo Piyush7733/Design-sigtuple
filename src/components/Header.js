@@ -55,8 +55,8 @@ const Header = () => {
               onClick={e=>{
                 setOpenMenu(true)
               }}>
-                <div class="my-auto toolbar-menu" >
-                        <img src="assets/img/icons/menu.svg" class="img-fluid" style={{width:"50px"}} />
+                <div className="my-auto toolbar-menu" >
+                        <img src="assets/img/icons/menu.svg" className="img-fluid" style={{width:"50px"}} />
                 </div>
               {/* <img src="assets/img/icons/hamburger.svg" style={{ height: "32px", width: "32px" }} /> */}
               {/* <div className="bar"></div>
@@ -67,24 +67,24 @@ const Header = () => {
       </nav>
 
 
-      <div class={`right-panel-menu right-panel-wrapper ${openMenu ? `menu-active` : ''}`} ref={ref}>
+      <div className={`right-panel-menu right-panel-wrapper ${openMenu ? `menu-active` : ''}`} ref={ref}>
             {/* <div class="panel-overlay"></div> */}
-            <div class="right-panel">
-                <div class="right-panel-head"> 
-                    <a class="close-panel menu-panel" href="javascript:void(0);" onClick={(e=>{
+            <div className="right-panel">
+                <div className="right-panel-head"> 
+                    <a className="close-panel menu-panel" href="javascript:void(0);" onClick={(e=>{
                       setOpenMenu(false)
                     })}> 
                         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" width="1em" height="1em" style={{"fill": "#de1a1b"}}>
                             <path d="M687,731.94h-.75a19.06,19.06,0,0,1-4.89-4L543.76,590.37c-3.75-3.75-3.76-3.75-7.51,0L398.69,727.93a19.06,19.06,0,0,1-4.89,4h-.75a17.55,17.55,0,0,1-4.09-3.19Q370.14,709.87,351.25,691a17.55,17.55,0,0,1-3.19-4.09v-.75a19.27,19.27,0,0,1,4-4.89L489.63,543.75c3.75-3.75,3.75-3.76,0-7.51q-68.78-68.79-137.56-137.56a19.27,19.27,0,0,1-4-4.89V393a17.55,17.55,0,0,1,3.19-4.09q18.88-18.82,37.71-37.71a17.55,17.55,0,0,1,4.09-3.19h.75a18.86,18.86,0,0,1,4.89,4L536.25,489.62c3.75,3.75,3.76,3.75,7.51,0L681.32,352.06a19.06,19.06,0,0,1,4.89-4H687a17.55,17.55,0,0,1,4.09,3.19q18.83,18.88,37.71,37.71A17.55,17.55,0,0,1,732,393v.75a18.86,18.86,0,0,1-4,4.89L590.38,536.24c-3.75,3.75-3.75,3.76,0,7.51q68.77,68.78,137.56,137.56a19.06,19.06,0,0,1,4,4.89V687a17.55,17.55,0,0,1-3.19,4.09q-18.88,18.83-37.71,37.71A17.55,17.55,0,0,1,687,731.94Z" transform="translate(-348 -348)"/>
-                            <path class="cls-1" d="M393.05,348.05q-22.17,22.82-45,45c0-14.25,0-28.5-.05-42.74,0-1.88.42-2.31,2.3-2.3C364.56,348.09,378.8,348.05,393.05,348.05Z" transform="translate(-348 -348)"/>
-                            <path class="cls-1" d="M732,393l-45-45c14.25,0,28.5,0,42.74-.05,1.88,0,2.31.42,2.3,2.3C731.91,364.54,732,378.79,732,393Z" transform="translate(-348 -348)"/>
-                            <path class="cls-1" d="M348.06,687q22.86,22.14,45,45c-14.19,0-28.38-.06-42.56.06-2.08,0-2.51-.41-2.49-2.49C348.12,715.33,348.06,701.14,348.06,687Z" transform="translate(-348 -348)"/>
-                            <path class="cls-1" d="M687,731.94q22.17-22.83,45-45c0,14.25,0,28.49,0,42.74,0,1.88-.42,2.31-2.3,2.3C715.46,731.9,701.21,731.94,687,731.94Z" transform="translate(-348 -348)"/>
+                            <path className="cls-1" d="M393.05,348.05q-22.17,22.82-45,45c0-14.25,0-28.5-.05-42.74,0-1.88.42-2.31,2.3-2.3C364.56,348.09,378.8,348.05,393.05,348.05Z" transform="translate(-348 -348)"/>
+                            <path className="cls-1" d="M732,393l-45-45c14.25,0,28.5,0,42.74-.05,1.88,0,2.31.42,2.3,2.3C731.91,364.54,732,378.79,732,393Z" transform="translate(-348 -348)"/>
+                            <path className="cls-1" d="M348.06,687q22.86,22.14,45,45c-14.19,0-28.38-.06-42.56.06-2.08,0-2.51-.41-2.49-2.49C348.12,715.33,348.06,701.14,348.06,687Z" transform="translate(-348 -348)"/>
+                            <path className="cls-1" d="M687,731.94q22.17-22.83,45-45c0,14.25,0,28.49,0,42.74,0,1.88-.42,2.31-2.3,2.3C715.46,731.9,701.21,731.94,687,731.94Z" transform="translate(-348 -348)"/>
                         </svg>
                     </a>
                 </div>
-                <div class="right-panel-body">
-                    <ul class="right-panel-item m-0">
+                <div className="right-panel-body">
+                    <ul className="right-panel-item m-0">
                         <li>
                             <a href="">About Us</a>
                         </li>
@@ -101,17 +101,17 @@ const Header = () => {
                             <a href="">Contact Us</a>
                         </li> 
                     </ul>
-                    <div class="social-media">
-                        <ul class="mt-3 mb-3">
+                    <div className="social-media">
+                        <ul className="mt-3 mb-3">
                             <li>
-                                <a href="" ><img src="assets/img/icons/fb.svg" class="img-fluid" /></a>
-                                <a href="" class="mlr-20"><img src="assets/img/icons/youtube.svg" class="img-fluid" /></a>
-                                <a href=""><img src="assets/img/icons/in.svg" class="img-fluid" /></a>
+                                <a href="" ><img src="assets/img/icons/fb.svg" className="img-fluid" /></a>
+                                <a href="" className="mlr-20"><img src="assets/img/icons/youtube.svg" className="img-fluid" /></a>
+                                <a href=""><img src="assets/img/icons/in.svg" className="img-fluid" /></a>
                             </li>
                         </ul>                        
                     </div>
-                    <div class="Book-demo">
-                        <button class="mt-3 px-4 toolbar-menu" data-bs-toggle="modal" data-bs-target="#bookademo">Book a Demo</button>                        
+                    <div className="Book-demo">
+                        <button className="mt-3 px-4 toolbar-menu" data-bs-toggle="modal" data-bs-target="#bookademo">Book a Demo</button>                        
                     </div>
                 </div>
             </div>

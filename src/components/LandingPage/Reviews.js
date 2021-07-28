@@ -162,7 +162,7 @@ const Reviews = () => {
             <img
               src="assets/img/bookmark.png"
               width="7%"
-              class="d-inline me-2 my-auto"
+              className="d-inline me-2 my-auto"
             />
             {p.type}
             {showArrow === p.id ? (
