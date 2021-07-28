@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import LandingPage from './LandingPage';
+import BlogLists from "./BlogLists";
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,7 +20,7 @@ const App = () =>{
           <LandingPage />
           </Route>
           <Route path="/blogs" exact>
-          <LandingPage />
+          <BlogLists />
           </Route>
         </Switch>
       </Router>
