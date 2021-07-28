@@ -993,3 +993,6 @@ footer i {
 .hover-me:hover .boold-hover-shrava {
   display: block;
 }
+.Extensive-slider .cards p.text-description {
+  min-height: 190px;
+}

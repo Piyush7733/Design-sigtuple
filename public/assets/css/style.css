@@ -1850,7 +1850,8 @@ button {
     background-size: cover;
     background-position: center;
     padding: 150px 0;
-    color: #fff
+    color: #fff;
+    height: auto;
 }
 .simple h1 {
     font-size: 50px;

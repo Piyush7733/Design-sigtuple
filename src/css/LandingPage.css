@@ -49,6 +49,7 @@
   padding: 30px 40px;
   font-size: 18px;
   margin: auto;
+  min-height: 218px;
 }
 .clients_user_sections {
   padding: 10px 34px;
