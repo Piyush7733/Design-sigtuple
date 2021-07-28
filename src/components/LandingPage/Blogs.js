@@ -1,77 +1,81 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
+import moment from "moment";
 import NextArrow from "../Arrow/NextArrow";
 import PrevArrow from "../Arrow/PrevArrow";
+import { getBlogs } from "../../Api";
 
-const BlogContents = [
-  {
-    id: 1,
-    title: "Top 10 companies",
-    description: "here is some of top 10 company like,google,fb,amazon..",
-    duration: "2 min",
-    date: "Jan 2.02021",
-  },
-  {
-    id: 2,
-    title: `Winner of India’s biggest AI solution`,
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting...",
-    duration: "2 min",
-    date: "Jan 2.02021",
-  },
-  {
-    id: 3,
-    title: "SigTuple CEO says",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting...",
-    duration: "1 min",
-    date: "Jan 2.02021",
-  },
-  {
-    id: 4,
-    title: "top 20 medicine",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting...",
-    duration: "2 min",
-    date: "Jan 2.02021",
-  },
-  {
-    id: 5,
-    title: "what to do in covid 19",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting...",
-    duration: "1 min",
-    date: "Jan 2.02021",
-  },
-  {
-    id: 6,
-    title: "what to do in covid 19",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting...",
-    duration: "1 min",
-    date: "Jan 2.02021",
-  },
-  {
-    id: 7,
-    title: "what to do in covid 19",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting...",
-    duration: "1 min",
-    date: "Jan 2.02021",
-  },
-  {
-    id: 8,
-    title: "what to do in covid 19",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting...",
-    duration: "1 min",
-    date: "Jan 2.02021",
-  },
-];
 
-let blogLen = BlogContents.length;
+// const BlogContents = [
+//   {
+//     id: 1,
+//     title: "Top 10 companies",
+//     description: "here is some of top 10 company like,google,fb,amazon..",
+//     duration: "2 min",
+//     date: "Jan 2.02021",
+//   },
+//   {
+//     id: 2,
+//     title: `Winner of India’s biggest AI solution`,
+//     description:
+//       "Lorem Ipsum is simply dummy text of the printing and typesetting...",
+//     duration: "2 min",
+//     date: "Jan 2.02021",
+//   },
+//   {
+//     id: 3,
+//     title: "SigTuple CEO says",
+//     description:
+//       "Lorem Ipsum is simply dummy text of the printing and typesetting...",
+//     duration: "1 min",
+//     date: "Jan 2.02021",
+//   },
+//   {
+//     id: 4,
+//     title: "top 20 medicine",
+//     description:
+//       "Lorem Ipsum is simply dummy text of the printing and typesetting...",
+//     duration: "2 min",
+//     date: "Jan 2.02021",
+//   },
+//   {
+//     id: 5,
+//     title: "what to do in covid 19",
+//     description:
+//       "Lorem Ipsum is simply dummy text of the printing and typesetting...",
+//     duration: "1 min",
+//     date: "Jan 2.02021",
+//   },
+//   {
+//     id: 6,
+//     title: "what to do in covid 19",
+//     description:
+//       "Lorem Ipsum is simply dummy text of the printing and typesetting...",
+//     duration: "1 min",
+//     date: "Jan 2.02021",
+//   },
+//   {
+//     id: 7,
+//     title: "what to do in covid 19",
+//     description:
+//       "Lorem Ipsum is simply dummy text of the printing and typesetting...",
+//     duration: "1 min",
+//     date: "Jan 2.02021",
+//   },
+//   {
+//     id: 8,
+//     title: "what to do in covid 19",
+//     description:
+//       "Lorem Ipsum is simply dummy text of the printing and typesetting...",
+//     duration: "1 min",
+//     date: "Jan 2.02021",
+//   },
+// ];
+
+// let blogLen = BlogContents.length;
 
 const Blogs = () => {
+  const [blogList,setBloglist]=useState([])
   const [showBlog, setBlogShow] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(1);
 
@@ -85,7 +89,7 @@ const Blogs = () => {
     height: "66px",
     position: "absolute",
 
-    opacity: currentIndex < blogLen ? "0.5" : "0.1",
+    opacity: currentIndex < blogList && blogList.length ? "0.5" : "0.1",
     border: "3px solid rgb(112, 112, 112)",
     boxSizing: "border-box",
     borderRadius: "41px",
@@ -172,20 +176,28 @@ const Blogs = () => {
     // prevArrow: <PrevArrow blogPrev={blog_prev} ARROW_PREW={currentIndex == 1 ? `assets/img/left_arrow.png` : `assets/img/left-arrow-black.png`} ARROW_SIZE={currentIndex==1 ? "12px":"20px"}/>
   };
 
-  const renderItems = BlogContents.map((b) => {
+  useEffect(()=>{
+    const getBlog = async() =>{
+      let data=await getBlogs({limit:5})
+      setBloglist(data)
+    }
+    getBlog()
+  },[])
+
+  const renderItems = blogList.map((b) => {
     return (
-      <div class="p-3" key={b.id}>
-        <div class="lab-card position-relative ">
-          <img src="assets/img/lab-1.png" class="img-fluid" />
+      <div className="p-3" key={b.id}>
+        <div className="lab-card position-relative ">
+          <img src={`${b.cover_image && b.cover_image.length ? b.cover_image[0].formats.medium.url : ''}`} className="img-fluid"  style={{height:"418px",width:"370px",objectFit:"cover"}}/>
           <div class="lab-text">
-            <span>{b.duration} read</span>
-            <h3 class="text-sub mb-1 fw_6">{b.title}</h3>
-            <div class="description-blog-hide">
-              <span class="text-70 fw_4 d-block">{b.description}</span>
-              <span class="text-70 fw_4 d-block mt-2 mb-3">{b.date}</span>
+            <span>{b.duration} min read</span>
+            <h3 className="text-sub mb-1 fw_6">{b.title}</h3>
+            <div className="description-blog-hide">
+              <span className="text-70 fw_4 d-block">{b.description}</span>
+              <span className="text-70 fw_4 d-block mt-2 mb-3">{moment(b.publish_at).format("MMM DD,YYYY")}</span>
               <a
                 href=""
-                class="text-decoration-none text-danger fw-bold text-fwb"
+                className="text-decoration-none text-danger fw-bold text-fwb"
               >
                 Read More
                 <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginLeft: "5px"}}>
