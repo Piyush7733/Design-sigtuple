@@ -20,8 +20,9 @@ const LandingPage = () => {
   const [hoverStyle, setHoverStyle] = useState(null);
 
   return (
-    <div className="main">
-      <Header />
+    <>
+    {/* <div className="main"> */}
+      {/* <Header /> */}
       <div className="heor-area hero-banner">
                 <div className="container-fluid ">
                     <div className="row">
@@ -648,8 +649,9 @@ const LandingPage = () => {
 
                 </div>
             </div> 
-      <Footer />
-    </div>
+      {/* <Footer /> */}
+    {/* </div> */}
+    </>
   );
 };
 
