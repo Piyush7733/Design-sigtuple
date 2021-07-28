@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import NextArrow from "../Arrow/NextArrow";
 import PrevArrow from "../Arrow/PrevArrow";
-import Api from "../../Api";
+import {getPublications} from "../../Api";
 
 const Reviews = () => {
   const [publication, setPublication] = useState([]);
@@ -126,31 +126,32 @@ const Reviews = () => {
 
   useEffect(() => {
     const getPublication = async () => {
-      let data = await Api.get("/publications");
+      let data = await getPublications();
       console.log(data);
       console.log("publication.length", publication.length);
-      setPublication(data.data);
+      setPublication(data);
     };
     getPublication();
   }, []);
 
   let renderItems = publication.map((p) => {
     return (
-      <div class="p-3" key={p.id}>
-        <div class="cards">
-          <div class="d-flex">
-            <span class="text-danger text-fwb fw-bold">{p.title}</span>
-            <span class="text-70 ms-auto text-fwb">
+      <div className="p-3" key={p.id}>
+        <div className="cards">
+          <div className="d-flex">
+            <span className="text-danger text-fwb fw-bold">{p.title}</span>
+            <span className="text-70 ms-auto text-fwb">
               {new Date(p.publish_at).getFullYear()}
             </span>
           </div>
-          <p class="text-description mt-4">
+          <p className="text-description mt-4">
             {p.description.length > 150
-              ? `${p.description.substring(0, 150)}...`
+              ? `${p.description.substring(0, 100)}...`
               : p.description}
           </p>
           <span
-            class="text-70 d-flex mt-auto"
+            className="text-70 d-flex mt-auto"
+            style={{fontSize:"14px"}}
             onMouseEnter={(e) => {
               setShowArrow(p.id);
             }}
@@ -160,14 +161,14 @@ const Reviews = () => {
           >
             <img
               src="assets/img/bookmark.png"
-              width="8%"
+              width="7%"
               class="d-inline me-2 my-auto"
             />
             {p.type}
             {showArrow === p.id ? (
               <img
                 src="assets/img/red_next_arrow.png"
-                style={{ marginLeft: "auto" }}
+                style={{ marginLeft: "auto",marginTop:"2px",width:"20px",height:"20px"}}
                 onClick={(e) => {
                   window.open("http://google.com");
                 }}

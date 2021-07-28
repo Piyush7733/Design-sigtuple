@@ -76,7 +76,7 @@ import { getBlogs } from "../../Api";
 
 const Blogs = () => {
   const [blogList,setBloglist]=useState([])
-  const [showBlog, setBlogShow] = useState(null);
+  // const [showBlog, setBlogShow] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(1);
 
   let blog_next = {
@@ -89,7 +89,7 @@ const Blogs = () => {
     height: "66px",
     position: "absolute",
 
-    opacity: currentIndex < blogList && blogList.length ? "0.5" : "0.1",
+    opacity: currentIndex < blogList.length ? "0.5" : "0.1",
     border: "3px solid rgb(112, 112, 112)",
     boxSizing: "border-box",
     borderRadius: "41px",
@@ -144,7 +144,9 @@ const Blogs = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true
+          dots: true,
+          infinite: true,
+          arrows:false
         },
       },
     ],
@@ -188,19 +190,19 @@ const Blogs = () => {
     return (
       <div className="p-3" key={b.id}>
         <div className="lab-card position-relative ">
-          <img src={`${b.cover_image && b.cover_image.length ? b.cover_image[0].formats.medium.url : ''}`} className="img-fluid"  style={{height:"418px",width:"370px",objectFit:"cover"}}/>
+        <img src={`${b.cover_image && b.cover_image.length ? b.cover_image[0].url : `assets/img/lab-1.png`}`} class="img-fluid" style={{width:"320px",height:"418px",objectFit:"cover"}}/>
           <div class="lab-text">
             <span>{b.duration} min read</span>
             <h3 className="text-sub mb-1 fw_6">{b.title}</h3>
             <div className="description-blog-hide">
-              <span className="text-70 fw_4 d-block">{b.description}</span>
+              <span className="text-70 fw_4 d-block">{`${b.description.slice(0,100)}...`}</span>
               <span className="text-70 fw_4 d-block mt-2 mb-3">{moment(b.publish_at).format("MMM DD,YYYY")}</span>
               <a
                 href=""
                 className="text-decoration-none text-danger fw-bold text-fwb"
               >
                 Read More
-                <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginLeft: "5px"}}>
+                <svg width="12" height="12" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginLeft: "5px"}}>
                   <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B"></path>
                 </svg>
               </a>

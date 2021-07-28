@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import Api from "../../Api";
+import {getClients} from "../../Api";
 import NextArrow from "../Arrow/NextArrow";
 import PrevArrow from "../Arrow/PrevArrow";
 
 const Client = () => {
   const [clients, setClient] = useState([]);
-  const [clientCount, setClientCount] = useState(0);
+  // const [clientCount, setClientCount] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(1);
 
   let client_next = {
@@ -70,17 +70,17 @@ const Client = () => {
   useEffect(() => {
     // console.log(Api.defaults.baseURL)
     const getClient = async () => {
-      let data = await Api.get("/clients");
+      let data = await getClients();
       console.log(data);
-      setClient(data.data);
+      setClient(data);
     };
-    const getCount = async () => {
-      let data = await Api.get("/clients/count");
-      console.log(data);
-      setClientCount(data.data);
-    };
+    // const getCount = async () => {
+    //   let data = await Api.get("/clients/count");
+    //   console.log(data);
+    //   setClientCount(data.data);
+    // };
     getClient();
-    getCount();
+    // getCount();
   }, []);
 
   const renderItems = clients.map((c) => {
@@ -244,10 +244,10 @@ const Client = () => {
                       <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12" >
                         <div class="card-body left-card-body">
                           <p class="text-description fw-bold clients_text_sections">
-                            “{c.review.slice(0,170)}”
+                            “{c.review.slice(0,200)}”
                           </p>
                           <div class="d-flex name clients_user_sections">
-                            <img src={`${Api.defaults.baseURL}${c.profilepic[0].url}`} class="me-3" />
+                            <img src={`${c.profilepic[0].url}`} class="me-3" style={{objectFit:"cover"}}/>
                             <div class="py-2">
                               <h3 class="text-sub fw-bold m-0">{c.Username}</h3>
                               <p class="m-0 client_section_text">{c.designation},</p>
@@ -275,9 +275,9 @@ const Client = () => {
                     ? currentIndex.toString().padStart(2, "0")
                     : currentIndex}
                   {" "}/{" "}
-                  {clientCount < 10
-                    ? clientCount.toString().padStart(2, "0")
-                    : clientCount}
+                  {clients.length < 10
+                    ? clients.length.toString().padStart(2, "0")
+                    : clients.length}
     </div>
     </div>
   );
