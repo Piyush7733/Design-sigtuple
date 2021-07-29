@@ -3,6 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import LandingPage from './LandingPage';
 import BlogLists from "./BlogLists";
+import Careers from "./Careers";
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +22,9 @@ const App = () =>{
           </Route>
           <Route path="/blogs" exact>
           <BlogLists />
+          </Route>
+          <Route path="/careers" exact>
+          <Careers />
           </Route>
         </Switch>
       </Router>

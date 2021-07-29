@@ -30,6 +30,9 @@
     <script src="%PUBLIC_URL%/assets/js/slick.min.js"></script>
     <script src="%PUBLIC_URL%/zoom/jquery.anythingzoomer.js"></script>
     <script src="%PUBLIC_URL%/assets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.js">
+    </script>
+
     <script>
         $(function () {
             $("#zoom").anythingZoomer({
@@ -106,6 +109,16 @@
                 $(".play-btn2").fadeIn();
             });
         });
+
+             
+        let module=document.querySelector(".ellipse1");
+        $clamp(module,{clamp:1});
+        let module=document.querySelector(".ellipse2");
+        $clamp(module,{clamp:2});
+        let module=document.querySelector(".ellipse3");
+        $clamp(module,{clamp:3});
+        let module=document.querySelector(".ellipse4");
+        $clamp(module,{clamp:4});
     </script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.

@@ -17,6 +17,8 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 	.procuct-area .slick-next {left: inherit; right: 394px; }
 
 	.main-hover {left: 185px; }
+    .bg_round {width: 1000px;}
+    .ProcuctRight {margin-left: 90px;}
 	
 }
 /* Responsive Media Query (Greater than 1200px)*/
@@ -78,6 +80,9 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 /* Responsive Media Query (less than 991px)*/
 @media only screen and (max-width: 991px) {
 
+    .right-panel-menu .right-panel .right-panel-head .close-panel{
+        right: -9px;
+    }
     .Research-section h1,
     .blog-titles h1 {
         font-size: 42px;

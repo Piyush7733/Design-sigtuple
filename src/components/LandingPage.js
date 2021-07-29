@@ -225,7 +225,7 @@ const LandingPage = () => {
           <div className="row mt-5 position-relative">
             <div className="col position-relative">
               <div className="text-center position-relative">
-                <h2 className={`text-title text-center pb-3 position-relative ${hoverStyle ? `our_product_text_block` : `our_product_text_none`}`}>Our<b> Product</b></h2>
+                <h2 className={`text-title text-center pb-3 position-relative ${hoverStyle ? `our_product_text_block` : `our_product_text_none`}`}>Our<b> Products</b></h2>
               </div>
             </div>
           </div>
@@ -243,10 +243,10 @@ const LandingPage = () => {
                     </div>
                     <div className="ProcuctLeft-description">
                       <div className="mt-3 mx-3">
-                        <p className={`${hoverStyle === 'shonit' ? `text-description-hover` : 'text-description'} m-0 text-start`}>Blood <br /><strong>Analyzer</strong></p>
+                        <p className={`${hoverStyle === 'shonit' ? `text-description-hover` : 'text-description'} m-0 text-start`}>Blood <br /><strong>Analyser</strong></p>
                       </div>
                       <div className={`mt-3 mx-3 sub-description ${hoverStyle === 'shonit' ? `sub-description-block` : `sub-description-none`}`}>
-                        <p className="m-0 text-start">Shonit is an automated peripheral blood smear slide analyzer</p>
+                        <p className="m-0 text-start text-gray-1">Shonit is an automated peripheral blood smear slide analyzer</p>
                         <button className="d-block px-4 mt-3 explore text-start">
                           Explore
                           {" "}<svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -317,7 +317,7 @@ const LandingPage = () => {
                         <p className={`${hoverStyle === 'shrava' ? `text-description-hover` : 'text-description'} m-0 text-start`}>Urine <br /><strong>Analyser</strong></p>
                       </div>
                       <div className={`mt-3 mx-3 sub-description ${hoverStyle === 'shrava' ? `sub-description-block` : `sub-description-none`}`}>
-                        <p className="m-0 text-start">Shrava is an automated peripheral blood smear slide analyzer</p>
+                        <p className="m-0 text-start text-gray-1">Shrava is an automated peripheral blood smear slide analyzer</p>
                         <button className="d-block px-4 mt-3 explore text-start">
                           Explore
                           {" "}<svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -344,10 +344,10 @@ const LandingPage = () => {
                 </div>
                 <div className="ProcuctLeft-description mx-auto">
                   <div className="mt-3 mx-3">
-                    <p className={`${hoverStyle === 'shonit' ? `text-description-hover-small` : 'text-description'} m-0 text-start`}>Blood <br /><strong>Analyzer</strong></p>
+                    <p className={`${hoverStyle === 'shonit' ? `text-description-hover-small` : 'text-description'} m-0 text-start`}>Blood <br /><strong>Analyser</strong></p>
                   </div>
                   <div className={`mt-3 mx-3 sub-description ${hoverStyle === 'shonit' ? `sub-description-block` : `sub-description-none`}`}>
-                    <p className="m-0 text-start">Shonit is an automated peripheral blood smear slide analyzer</p>
+                    <p className="m-0 text-start text-gray-1">Shonit is an automated peripheral blood smear slide analyzer</p>
                     <button className="d-block px-4 mt-3 explore text-start" style={{width:"131px"}}>
                       Explore
                       {" "}<svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -370,7 +370,7 @@ const LandingPage = () => {
                     <p className={`${hoverStyle === 'shrava' ? `text-description-hover-small` : 'text-description'} m-0 text-start`}>Urine <br /><strong>Analyser</strong></p>
                   </div>
                   <div className={`mt-3 mx-3 sub-description ${hoverStyle === 'shrava' ? `sub-description-block` : `sub-description-none`}`}>
-                    <p className="m-0 text-start">Shrava is an automated peripheral blood smear slide analyzer</p>
+                    <p className="m-0 text-start text-gray-1">Shrava is an automated peripheral blood smear slide analyzer</p>
                     <button className="d-block px-4 mt-3 explore text-start" style={{width:"131px"}}>
                       Explore
                       {" "}<svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

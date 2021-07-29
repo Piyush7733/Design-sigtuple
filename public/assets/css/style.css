@@ -962,6 +962,9 @@ footer i {
 .text-gray {
     color: #707070 !important
 }
+.text-gray-1 {
+    color: #868786 !important
+}
 button:focus {
     outline: 0 dotted !important;
     outline: 0 auto -webkit-focus-ring-color !important;
@@ -1074,6 +1077,11 @@ ul li {
 /* ---------------------------------------
 		Product Slider Start
 ----------------------------------------*/
+
+.procuct-area .product-grid .text-description { 
+    line-height: 22px;
+    margin-left: 25px !important;
+}
 .procuct-area {
     background-image: url('../../assets/img/mesh-gradient-2.png');
     background-size: cover;
@@ -1771,7 +1779,7 @@ button {
     margin: 0
 }
 .cot {
-    width: 70px;
+    width: 100px;
     position: absolute;
     top: 0;
     right: 100px;
@@ -1799,7 +1807,9 @@ button {
 }
 .lab-text h3 {
     font-size: 20px;
-    margin-top: 5px
+    margin-top: 5px;
+    min-height: 50px;
+
 }
 .lab-text span {
     font-size: 14px;
@@ -2565,7 +2575,7 @@ ul li {
     border-bottom-right-radius: 0;
 }
 .Clients-slider .right-card-body {
-    padding: 0 90px;
+    padding: 0 70px;
 }
 .Clients-count {
     top: calc(100% - 75px);
@@ -2748,6 +2758,7 @@ ul li {
     align-items: center;
     justify-content: flex-end;
     padding: 0 30px;
+    margin-bottom: 27px;
 }
 .right-panel-menu .right-panel .right-panel-head h3 {
     color: #999;
@@ -2768,6 +2779,8 @@ ul li {
     border-radius: 9999px;
     transition: all 0.3s;
     background: var(--black-color-2);
+    position: relative;
+    right: -40px;
 }
 .right-panel-menu .panel-overlay {
     position: fixed;
@@ -2786,10 +2799,10 @@ ul li {
     pointer-events: all;
 }
 .right-panel-item li a {
-    margin: 8px 0;
+    margin: 16px 0;
     cursor: pointer;
     list-style: none;
-    font-size: 25px;
+    font-size: 28px;
     font-family: nunitoSans-light;
     color: #707070;
     display: inline-block;
@@ -3177,7 +3190,7 @@ ul li {
 }
 .Research-area .verticle,
 .Careers-area .verticle {
-    top: calc(100% - 170px);
+    top: calc(100% - 212px);
 }
 .Research-area .eye-section,
 .Careers-area .eye-section {

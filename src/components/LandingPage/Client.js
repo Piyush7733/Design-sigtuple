@@ -247,7 +247,7 @@ const Client = () => {
                             “{c.review.slice(0,200)}”
                           </p>
                           <div className="d-flex name clients_user_sections">
-                            <img src={`${c.profilepic[0].url}`} class="me-3" style={{objectFit:"cover"}}/>
+                            <img src={`${c.profilepic && c.profilepic[0] ? c.profilepic[0].url :'assets/img/carbon_user-avatar-filled.png'}`} class="me-3" style={{objectFit:"cover"}}/>
                             <div className="py-2">
                               <h3 className="text-sub fw-bold m-0">{c.Username}</h3>
                               <p className="m-0 client_section_text">{c.designation},</p>
@@ -258,7 +258,7 @@ const Client = () => {
                       </div>
                       <div className="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
                         <div className="card-body right-card-body">
-                          <h1 className="text-title text-white fw-bold">{c.review_title}</h1>
+                          <h1 className="text-title text-white fw_9">{c.review_title}</h1>
                           <p className="text-description text-white m-0">{c.short_review}</p>
                         </div>
                       </div>

@@ -3,11 +3,14 @@ import Slider from "react-slick";
 import NextArrow from "../Arrow/NextArrow";
 import PrevArrow from "../Arrow/PrevArrow";
 import {getPublications} from "../../Api";
+import {
+  Link
+} from "react-router-dom";
 
 const Reviews = () => {
   const [publication, setPublication] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(1);
-  const [showArrow, setShowArrow] = useState(null);
+  // const [showArrow, setShowArrow] = useState(null);
 
   let nextArrow = {
     display: "flex",
@@ -144,28 +147,24 @@ const Reviews = () => {
               {new Date(p.publish_at).getFullYear()}
             </span>
           </div>
-          <p className="text-description mt-4">
+          <p className="text-description mt-4 fw_6">
             {p.description.length > 150
               ? `${p.description.substring(0, 100)}...`
               : p.description}
           </p>
-          <span
-            className="text-70 d-flex mt-auto"
+          <div
+            className="text-70 d-flex mt-auto justify-content-between"
             style={{fontSize:"14px"}}
-            onMouseEnter={(e) => {
-              setShowArrow(p.id);
-            }}
-            onMouseLeave={(e) => {
-              setShowArrow(null);
-            }}
+            // onMouseEnter={(e) => {
+            //   setShowArrow(p.id);
+            // }}
+            // onMouseLeave={(e) => {
+            //   setShowArrow(null);
+            // }}
           >
-            <img
-              src="assets/img/bookmark.png"
-              width="7%"
-              className="d-inline me-2 my-auto"
-            />
-            {p.type}
-            {showArrow === p.id ? (
+
+         
+            {/* {showArrow === p.id ? (
               <img
                 src="assets/img/red_next_arrow.png"
                 style={{ marginLeft: "auto",marginTop:"2px",width:"20px",height:"20px"}}
@@ -173,8 +172,30 @@ const Reviews = () => {
                   window.open("http://google.com");
                 }}
               />
-            ) : null}
-          </span>
+            ) : null} */}
+            <div className="fs_16">
+              {/* <img
+                src="assets/img/bookmark.png"
+                width="7%"
+                className="d-inline me-2 my-auto"
+              /> */}
+
+              <svg width="17" height="17" style={{marginTop: "-3px"}} className="mr-2" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.0851 0H2.01216C0.905471 0 0 0.9 0 2V18C0 19.1 0.905471 20 2.01216 20H14.0851C15.1918 20 16.0973 19.1 16.0973 18V2C16.0973 0.9 15.1918 0 14.0851 0ZM2.01216 2H7.04255V10L4.52736 8.5L2.01216 10V2Z" fill="#DE1A1B"/>
+              </svg>
+
+              {p.type}
+            </div>  
+            {p.url && <div className="review_arrow">
+
+            <Link to={{pathname:p.url}} target="_blank"><svg width="15" height="15" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.4543 8.27861L8.0845 1.72705L9.76363 1.70713e-06L19 9.5L9.76362 19L8.0845 17.2729L14.4543 10.7214L-1.87459e-06 10.7214L-1.44748e-06 8.2786L14.4543 8.27861Z" fill="#DE1A1B"/>
+            </svg>
+            </Link>
+            </div>}
+          </div>
+          
+
         </div>
       </div>
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {getBlogs,getBlogCounts} from '../Api';
 import moment from 'moment';
 import '../css/responsive.css';
+import { Link } from 'react-router-dom';
 const BlogLists = () =>{
     const [blogList,setBlogList]=useState([])
     const [hasMore,setHasMore]=useState(false)
@@ -38,15 +39,16 @@ const BlogLists = () =>{
             <img src={`${b.cover_image && b.cover_image.length ? b.cover_image[0].url : `assets/img/lab-1.png`}`} class="img-fluid" style={{width:"320px",height:"418px",objectFit:"cover"}}/>
             <div class="lab-text">
                 <span>{b.duration} min read</span>
-                <h3 class="text-sub mb-1 fw_6">{b.title}</h3>
+                <h3 class="text-sub mb-1 fw_6" style={{ display: "-webkit-box",WebkitLineClamp: "2",WebkitBoxOrient: "vertical",overflow: "hidden"}}>{b.title}</h3>
                 <div class="description-blog-hide">
                     <span class="text-70 fw_4 d-block">{`${b.description.slice(0,100)}...`}</span>
                     <span class="text-70 fw_4 d-block mt-2 mb-3">{moment(b.publish_at).format("MMM DD,YYYY")}</span>
-                    <a href="" class="text-decoration-none text-danger fw-bold text-fwb">Read More
+
+                    <Link to={{pathname:`${b.url}`}} class="text-decoration-none text-danger fw-bold text-fwb" target="_blank">Read More
                         <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginLeft: "5px"}}>
                             <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B"></path>
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div> 

@@ -6,7 +6,7 @@ let staging=`http://18.218.168.98:1337`
 
 
 const Api=axios.create({
-    baseURL:staging
+    baseURL:local
 })
 export default Api;
 

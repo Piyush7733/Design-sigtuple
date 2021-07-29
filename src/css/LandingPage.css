@@ -46,10 +46,10 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .clients_text_sections {
-  padding: 30px 40px;
+  padding: 20px 40px;
   font-size: 18px;
   margin: auto;
-  min-height: 218px;
+  min-height: 220px;
 }
 .clients_user_sections {
   padding: 10px 34px;

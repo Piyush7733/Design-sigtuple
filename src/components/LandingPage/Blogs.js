@@ -4,6 +4,9 @@ import moment from "moment";
 import NextArrow from "../Arrow/NextArrow";
 import PrevArrow from "../Arrow/PrevArrow";
 import { getBlogs } from "../../Api";
+import {
+  Link
+} from "react-router-dom";
 
 
 // const BlogContents = [
@@ -193,19 +196,18 @@ const Blogs = () => {
         <img src={`${b.cover_image && b.cover_image.length ? b.cover_image[0].url : `assets/img/lab-1.png`}`} class="img-fluid" style={{width:"320px",height:"418px",objectFit:"cover"}}/>
           <div class="lab-text">
             <span>{b.duration} min read</span>
-            <h3 className="text-sub mb-1 fw_6">{b.title}</h3>
+            <h3 className="text-sub mb-1 fw_6" style={{ display: "-webkit-box",WebkitLineClamp: "2",WebkitBoxOrient: "vertical",overflow: "hidden"}}>{b.title}</h3>
             <div className="description-blog-hide">
               <span className="text-70 fw_4 d-block">{`${b.description.slice(0,100)}...`}</span>
               <span className="text-70 fw_4 d-block mt-2 mb-3">{moment(b.publish_at).format("MMM DD,YYYY")}</span>
-              <a
-                href=""
+              <Link to={{pathname:`${b.url}`}} 
                 className="text-decoration-none text-danger fw-bold text-fwb"
-              >
+              target="_blank">
                 Read More
                 <svg width="12" height="12" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginLeft: "5px"}}>
                   <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B"></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
