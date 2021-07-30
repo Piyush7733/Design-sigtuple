@@ -18,12 +18,14 @@ import Header from "./Header";
 
 const LandingPage = () => {
   const [hoverStyle, setHoverStyle] = useState(null);
+  const [tab,setTab]=useState("shonit")
 
   return (
     <>
     {/* <div className="main"> */}
       {/* <Header /> */}
       <div className="heor-area hero-banner">
+                {/* <canvas className="bg-gradient-canvas" /> */}
                 <div className="container-fluid ">
                     <div className="row">
                         <div className="col-md-12">
@@ -307,7 +309,7 @@ const LandingPage = () => {
                   e.preventDefault();
                   setHoverStyle("shrava")
                 }}>
-                  <div className="ProcuctRight">
+                  <div className={`ProcuctRight ${hoverStyle === 'shrava' ? `ProcuctRight-hover` : ``}`}>
                     <div className={`blood ${hoverStyle === 'shrava' ? `bg-transparent shadow-none` : `bg-white`
                       }`}>
                       <img src="assets/img/urine.png" />
@@ -405,23 +407,27 @@ const LandingPage = () => {
           <div className="row">
             <div className="col-xxl-6 col-xl-6 col-md-6 col-sm-8 col-12  mx-auto mt-4">
               <div className="d-flex mb-3">
-                <ul className="nav nav-pills mb-3 mx-auto" id="pills-tab" role="tablist">
+                <ul className="nav nav-pills mb-3 mx-auto">
                   <li className="nav-item" role="presentation">
-                    <button className="nav-link px-5 nav-link-1" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false">Shonit</button>
+                    <button className={`nav-link px-5 nav-link-1 ${tab==='shonit' ? 'active' : ''}`} type="button" onClick={(e=>{
+                      setTab("shonit")
+                    })}>Shonit</button>
                   </li>
                   <li className="nav-item" role="presentation">
-                    <button className="nav-link px-5 nav-link-2 active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="true">Shrava</button>
+                    <button className={`nav-link px-5 nav-link-2 ${tab==='shrava' ? 'active' : ''}`} type="button" onClick={(e=>{
+                      setTab("shrava")
+                    })}>Shrava</button>
                   </li>
                 </ul>
               </div>
-              <div className="tab-content" id="pills-tabContent">
-                <div className="tab-pane fade position-relative" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div className="tab-content">
+                <div className={`tab-pane fade position-relative ${tab==='shonit' ? `active show` :''}`}>
                   <div className="work-box">
                     <div className="text_section_blood">Shonit <strong>in Action</strong></div>
                     <div className="blood image_section_blood"><img src="assets/img/shonit.png" /></div>
                   </div>
                 </div>
-                <div className="tab-pane fade position-relative active show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div className={`tab-pane fade position-relative ${tab==='shrava' ? `active show` :''}`}>
                   <div className="work-box">
                     <div className="text_section_blood">Shrava <strong>in Action</strong></div>
                     <div className="blood image_section_blood"><img src="assets/img/urine.png" /></div>
@@ -432,6 +438,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
       {/* <div className="container py-100">
         <h1 className="text-title text-center pb-3">
           How does
@@ -531,7 +538,7 @@ const LandingPage = () => {
       </div> */}
 
 
-  <div className="Clients-area our-client d-flex client-before pb-50">
+  <div className="Clients-area our-client d-flex client-before client-after pb-50">
         <div className="container py-100">
           <div className="row">
             <div className="col">

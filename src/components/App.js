@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import LandingPage from './LandingPage';
@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 
 const App = () =>{
+
   return (
     <div className="main">
       <Header />

@@ -26,7 +26,7 @@
 }
 
 .text-title {
-  font-size: 35px;
+  /* font-size: 35px; */
   font-family: nunitoSans-light;
   color: #707070;
 }
@@ -769,9 +769,9 @@ button {
   font-weight: bold;
 }
 
-.lab-text a {
+/* .lab-text a {
   font-size: 12px;
-}
+} */
 
 .lab-text i {
   font-size: 25px;
@@ -996,3 +996,62 @@ footer i {
 .Extensive-slider .cards p.text-description {
   min-height: 190px;
 }
+
+
+
+/* .ProcuctLeft .sub-description {
+    display: none;
+} */
+.ProcuctLeft:hover .blood {
+  box-shadow: none;
+  background: transparent;
+}
+/* .ProcuctLeft:hover .text-description {
+  font-size: 45px;
+  line-height: 35px;
+} */
+
+/* .ProcuctLeft:hover .sub-description {
+  display: block;
+} */
+
+.sub-description-none {
+  display: none;
+}
+.sub-description-block{
+  display: block;
+}
+.text-description-hover {
+  font-size: 45px;
+  line-height: 45px;
+ font-family: nunitoSans-light;
+  color: #868786;
+  word-wrap: initial
+}
+.text-description-hover-small {
+  font-size: 24px;
+  line-height: 25px;
+ font-family: nunitoSans-light;
+  color: #868786;
+  word-wrap: initial
+}
+
+
+.ProcuctRight {
+  margin-left: 50px;
+}
+/* .ProcuctRight .sub-description {
+  display: none;
+} */
+.ProcuctRight:hover .blood {
+  box-shadow: none;
+  background: transparent;
+}
+
+/* .ProcuctRight:hover .text-description {
+  font-size: 34px;
+  line-height: 35px;
+} */
+/* .ProcuctRight:hover .sub-description {
+  display: block;
+} */

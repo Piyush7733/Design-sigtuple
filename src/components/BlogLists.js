@@ -35,16 +35,16 @@ const BlogLists = () =>{
 
      const renderItems=blogList.map(b=>{
          return (
-            <div class="lab-card position-relative" key={b.id}>
-            <img src={`${b.cover_image && b.cover_image.length ? b.cover_image[0].url : `assets/img/lab-1.png`}`} class="img-fluid" style={{width:"320px",height:"418px",objectFit:"cover"}}/>
-            <div class="lab-text">
+            <div className="lab-card position-relative" key={b.id}>
+            <img src={`${b.cover_image && b.cover_image.length ? b.cover_image[0].url : `assets/img/lab-1.png`}`} className="img-fluid" style={{width:"320px",height:"418px",objectFit:"cover"}}/>
+            <div className="lab-text">
                 <span>{b.duration} min read</span>
-                <h3 class="text-sub mb-1 fw_6" style={{ display: "-webkit-box",WebkitLineClamp: "2",WebkitBoxOrient: "vertical",overflow: "hidden"}}>{b.title}</h3>
-                <div class="description-blog-hide">
-                    <span class="text-70 fw_4 d-block">{`${b.description.slice(0,100)}...`}</span>
-                    <span class="text-70 fw_4 d-block mt-2 mb-3">{moment(b.publish_at).format("MMM DD,YYYY")}</span>
+                <h3 className="text-sub mb-1 fw_6" style={{ display: "-webkit-box",WebkitLineClamp: "2",WebkitBoxOrient: "vertical",overflow: "hidden"}}>{b.title}</h3>
+                <div className="description-blog-hide">
+                    <span className="text-70 fw_4 d-block">{`${b.description.slice(0,100)}...`}</span>
+                    <span className="text-70 fw_4 d-block mt-2 mb-3">{moment(b.publish_at).format("MMM DD,YYYY")}</span>
 
-                    <Link to={{pathname:`${b.url}`}} class="text-decoration-none text-danger fw-bold text-fwb" target="_blank">Read More
+                    <Link to={{pathname:`${b.url}`}} className="text-decoration-none text-danger fw-bold text-fwb" target="_blank">Read More
                         <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginLeft: "5px"}}>
                             <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B"></path>
                         </svg>
@@ -59,26 +59,26 @@ const BlogLists = () =>{
 
    
       return(
-        <div class="Blog-area">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8">
-                            <div class="text-center blog-titles"> 
-                                <span class="text-color text-small-name fw_bold fs_18">Blogs</span>
-                                <h1 class="fw_4 text-gray mt-4">                                     
-                                    <span class="fw_5">Get all the latest updates & news</span> 
-                                    <span class="fw_3">from the world of pathology here</span>
+        <div className="Blog-area">
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-md-8">
+                            <div className="text-center blog-titles"> 
+                                <span className="text-color text-small-name fw_bold fs_18">Blogs</span>
+                                <h1 className="fw_4 text-gray mt-4">                                     
+                                    <span className="fw_5">Get all the latest updates & news</span> 
+                                    <span className="fw_3">from the world of pathology here</span>
                                 </h1> 
                             </div>                            
                         </div>
                     </div>
-                     <div class="row">
-                        <div class="col-md-11 col-12 mx-auto mt-4">
-                            <div class="Blog-list-grid grid-3 mtb-50"> 
+                     <div className="row">
+                        <div className="col-md-11 col-12 mx-auto mt-4">
+                            <div className="Blog-list-grid grid-3 mtb-50"> 
                                 {renderItems}
                             </div>
-                            {hasMore ? <div class="text-center mb-100">
-                                <span class="text-color mx-auto text-center" style={{cursor:"pointer"}} onClick={(async e=>{
+                            {hasMore ? <div className="text-center mb-100">
+                                <span className="text-color mx-auto text-center" style={{cursor:"pointer"}} onClick={(async e=>{
                                     e.preventDefault()
                                     getBlogDetails()                                   
                                 })}>

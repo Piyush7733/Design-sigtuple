@@ -12,39 +12,71 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 ==========================================*/
 
 /* Responsive Media Query (Greater than 1600px)*/
-@media only screen and (min-width:1600px) {    
-	.procuct-area .slick-prev {left: 390px; }
-	.procuct-area .slick-next {left: inherit; right: 394px; }
-
-	.main-hover {left: 185px; }
-    .bg_round {width: 1000px;}
-    .ProcuctRight {margin-left: 90px;}
-	
+@media only screen and (min-width: 1600px) {
+    .procuct-area .slick-prev {
+        left: 390px;
+    }
+    .procuct-area .slick-next {
+        left: inherit;
+        right: 394px;
+    }
+    .main-hover {
+        left: 185px;
+    }
+    .bg_round {
+        width: 1000px;
+    }
+    .ProcuctRight {
+        margin-left: 90px;
+    }
+    .ProcuctRight.ProcuctRight-hover {
+        margin-left: 50px;
+    }
 }
 /* Responsive Media Query (Greater than 1200px)*/
-@media only screen and (min-width:1200px) {    
+@media only screen and (min-width: 1200px) {
 }
 
 @media only screen and (max-width: 1400px) and (min-width: 1366px) {
-	.procuct-area .slick-prev {left: 270px; }
-	.procuct-area .slick-next {left: inherit; right: 270px; }
+    .procuct-area .slick-prev {
+        left: 270px;
+    }
+    .procuct-area .slick-next {
+        left: inherit;
+        right: 270px;
+    }
 }
 @media only screen and (max-width: 1600px) and (min-width: 1400px) {
-	.procuct-area .slick-prev {left: 290px; }
-	.procuct-area .slick-next {left: inherit; right: 300px; }
+    .procuct-area .slick-prev {
+        left: 290px;
+    }
+    .procuct-area .slick-next {
+        left: inherit;
+        right: 300px;
+    }
 }
-
 
 /* Responsive Media Query (less than 1600px)*/
-@media only screen and (max-width:1600px) {     
-	.bg_round {width: 68%; left: 190px; }
-	.procuct-area .slick-prev {left: 270px; }
+@media only screen and (max-width: 1600px) {
+    /*.bg_round {width: 68%; left: 220px; }*/
+    .procuct-area .slick-prev {
+        left: 270px;
+    }
+    .Careers-section {
+        justify-content: start !important;
+        margin-top: 90px;
+    }
 }
 /* Responsive Media Query (less than 1200px)*/
-@media only screen and (max-width:1366px) {     
-	.procuct-area .slick-prev {left: 244px; }
-	.procuct-area .slick-next {left: inherit; right: 260px; }
-	.Research-section h1,
+@media only screen and (max-width: 1366px) {
+    .procuct-area .slick-prev {
+        left: 244px;
+    }
+    .procuct-area .slick-next {
+        left: inherit;
+        right: 260px;
+    }
+    .Research-section h1,
     .blog-titles h1,
     .Careers-section h1 {
         font-size: 54px;
@@ -57,30 +89,67 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 }
 
 /* Responsive Media Query (less than 1199px)*/
-@media only screen and (max-width:1199px) {
-	.procuct-area .slick-prev {left: 310px; }
-	.procuct-area .slick-next {right: 310px; }
-	.procuct-area {padding: 0 0 60px 0; }
-	.box-ProcuctCenter{order: 1!important;}
-	.box-ProcuctLeft{order: 2!important;}
-	.box-ProcuctRight{order: 3!important;}
-	.product-grid {flex-direction: column; }
-	.bg_round, .box-ProcuctLeft, .box-ProcuctRight{display: none;}
-
-	.mobileproduct{display: block;}
-	.mobileproduct-grid{display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 2rem;}
-	.blood {width: 110px; height: 110px; }
-
-	.box-ProcuctCenter{width: 100%;}
-	.ProcuctLeft:hover .text-description, .ProcuctRight:hover .text-description {font-size: 24px; line-height: 25px; }
-
+@media only screen and (max-width: 1199px) {
+    .procuct-area .slick-prev {
+        left: 310px;
+    }
+    .procuct-area .slick-next {
+        right: 310px;
+    }
+    .procuct-area {
+        padding: 0 0 60px 0;
+    }
+    .box-ProcuctCenter {
+        order: 1 !important;
+    }
+    .box-ProcuctLeft {
+        order: 2 !important;
+    }
+    .box-ProcuctRight {
+        order: 3 !important;
+    }
+    .product-grid {
+        flex-direction: column;
+    }
+    .bg_round,
+    .box-ProcuctLeft,
+    .box-ProcuctRight {
+        display: none;
+    }
+    .mobileproduct {
+        display: block;
+    }
+    .mobileproduct-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+    .blood {
+        width: 110px;
+        height: 110px;
+    }
+    .box-ProcuctCenter {
+        width: 100%;
+    }
+    .ProcuctLeft:hover .text-description,
+    .ProcuctRight:hover .text-description {
+        font-size: 24px;
+        line-height: 25px;
+    }
+    /*Shonit-slider start*/
+    .Shonit-slider .slick-center {
+        transform: scale(1.2);
+    }
+    .Shonit-slider .slick-active {
+        padding: 25px 0;
+    }
+    /*Shonit-slider End*/
 }
-@media only screen and (max-width: 1140px) { 
+@media only screen and (max-width: 1140px) {
 }
 /* Responsive Media Query (less than 991px)*/
 @media only screen and (max-width: 991px) {
-
-    .right-panel-menu .right-panel .right-panel-head .close-panel{
+    .right-panel-menu .right-panel .right-panel-head .close-panel {
         right: -9px;
     }
     .Research-section h1,
@@ -104,11 +173,30 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     }
     .small h1 {
         font-size: 40px;
-		width: 332px;
+        width: 332px;
     }
-	.small h2 {font-size: 20px; width: 332px; }
-	.eye-section {position: relative; bottom: 0; left: 50%; transform: translateX(-50%); }
-	.verticle {margin-top: auto; height: 180px; border-left: 2px dashed #de1a1b; position: relative; top: calc(100% - 180px); left: 0; transform: translateX(50%); right: 0; bottom: 0; margin: 0 auto; }
+    .small h2 {
+        font-size: 20px;
+        width: 332px;
+    }
+    .eye-section {
+        position: relative;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .verticle {
+        margin-top: auto;
+        height: 180px;
+        border-left: 2px dashed #de1a1b;
+        position: relative;
+        top: calc(100% - 180px);
+        left: 0;
+        transform: translateX(50%);
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+    }
     .check-products {
         margin-top: 70px !important;
     }
@@ -149,8 +237,6 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         display: inline-block;
         width: 100%;
     }
-
-
     .solutions-vh {
         height: auto !important;
     }
@@ -162,29 +248,27 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         grid-gap: 2rem;
     }
     .Benefits-list {
-        margin: 0;
-        box-shadow: 0 9px 21px rgb(112 112 112 / 25%);
-        -webkit-box-shadow: 0 9px 21px rgb(112 112 112 / 25%);
-        -moz-box-shadow: 0 9px 21px rgba(112, 112, 112, 0.25);
-        border-bottom: 0 solid #de1a1b;
+        margin: 0 00px 0px 0;
+        box-shadow: 0px 9px 21px rgb(112 112 112 / 25%);
+        -webkit-box-shadow: 0px 9px 21px rgb(112 112 112 / 25%);
+        -moz-box-shadow: 0px 9px 21px rgba(112, 112, 112, 0.25);
+        border-bottom: 0px solid #de1a1b;
     }
     .Benefits-text {
         display: block;
     }
-
     .description-blog-hide {
         display: block;
     }
     .description-blog-hide span:nth-child(1) {
         display: none !important;
     }
-
     .Blog-list-grid.grid-3,
     .Publications-grid.grid-3 {
         grid-template-columns: repeat(2, 1fr);
     }
     .Blog-list-grid.grid-3 {
-        margin-left: 0 !important;
+        margin-left: 00px !important;
         margin-right: 0 !important;
     }
     .steps-vh {
@@ -194,21 +278,19 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         grid-template-columns: repeat(1, 1fr);
     }
     .steps-top-padding {
-        padding-top: 0 !important
+        padding-top: 0 !important;
     }
     .accurate-list,
     .steps-list {
         margin-right: 20px;
     }
-
     .Values-img {
         margin-right: 0;
         margin-top: 30px;
     }
     .Values-img img {
-        margin-left: 0;
+        margin-left: 00;
     }
-
     .Positions-grid.grid-2 {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -226,12 +308,33 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         margin-right: 0 !important;
     }
     .faqs-right {
-        padding: 50px 0 0;
+        padding: 50px 00px 00px 00px;
+    }
+    /*Shonit-slider start*/
+    .Shonit-slider .slick-center {
+        transform: scale(1.06);
+    }
+    .Shonit-slider .slick-arrow {
+        top: initial !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: -120px !important;
+        margin: 0 auto;
+    }
+    .Shonit-slider .slick-arrow.slick-next {
+        right: -100px !important;
+    }
+    .Shonit-slider .slick-arrow.slick-prev {
+        left: -100px !important;
+    }
+    /*Shonit-slider End*/
+
+    .Investors-grid.grid-4 {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 /* Responsive Media Query (less than 767px)*/
-@media only screen and (max-width: 767px){
-
+@media only screen and (max-width: 767px) {
     .item-last {
         margin-bottom: 0;
     }
@@ -272,7 +375,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         left: calc(100% - 155px) !important;
     }
     .awards-slider-item {
-        margin: 0 0 30px
+        margin: 0 0 30px;
     }
     .footer-menu > div {
         flex-direction: row !important;
@@ -300,7 +403,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     }
     .right-panel-menu .right-panel {
         width: 320px;
-        padding: 30px 0 30px 80px;
+        padding: 30px 0px 30px 80px;
     }
     .main-hover {
         bottom: 0;
@@ -311,7 +414,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         margin: 0 auto !important;
     }
     .awards-area {
-        padding: 200px 10%;
+        padding: 200px 10% 200px 10%;
     }
     .review-report-img,
     .Cell-identification-img,
@@ -338,7 +441,6 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         padding-right: 14px !important;
         padding-left: 14px !important;
     }
-
     .Research-section p br {
         display: none;
     }
@@ -349,10 +451,8 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         height: auto !important;
     }
     .Careers-section .blog-titles {
-        margin: 80px 0;
+        margin: 80px 0 80px 0;
     }
-
-
     .Code-data-list {
         flex-direction: column;
     }
@@ -362,12 +462,28 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     .Positions-area .optiontitle p br {
         display: none;
     }
-
     .Reachus-grid.grid-2 {
         grid-gap: 2rem;
         grid-template-columns: repeat(1, 1fr);
     }
+    /*Shonit-slider start*/
+    .Shonit-slider img {
+        width: 350px;
+    }
+    .Shonit-slider .slick-center img {
+        width: 420px !important;
+    }
+    .Shonit-slider .slick-center {
+        transform: scale(1.06);
+    }
+    .Shonit-slider .slick-active {
+        padding: 15px 0;
+    }
+    /*Shonit-slider End*/
 
+    .visiton-box {
+        margin-top: 100px;
+    }
 }
 @media only screen and (max-width: 599px) {
     .awards-slider-item > .text-center.plr-80 {
@@ -386,9 +502,31 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     .experts-list {
         margin: 0 65px;
     }
+    /*Shonit-slider start*/
+    .img-fluid.pc-img {
+        max-width: 280px;
+        width: 100%;
+    }
+    .Shonit-slider img {
+        width: 180px;
+    }
+    .Shonit-slider .slick-center img {
+        width: 220px !important;
+    }
+    .Shonit-slider .slick-center {
+        transform: scale(1.06);
+    }
+    .Shonit-slider .slick-active {
+        padding: 10px 0;
+    }
+    /*Shonit-slider End*/
+
+    .mission-text {
+        margin: 50px;
+    }
 }
 /* Responsive Media Query (less than 575px)*/
-@media only screen and (max-width:575px){
+@media only screen and (max-width: 575px) {
     .text-title {
         font-size: 22px;
     }
@@ -401,14 +539,14 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     }
 }
 /* Responsive Media Query (less than 480px)*/
-@media only screen and (max-width:480px) {
+@media only screen and (max-width: 480px) {
     .procuct-area .slick-next {
         right: 60px;
         left: inherit;
     }
 }
 /* Responsive Media Query (less than 360px)*/
-@media only screen and (max-width:375px)  {
+@media only screen and (max-width: 375px) {
     .procuct-area .slick-prev {
         left: 30px;
     }
@@ -418,7 +556,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     }
 }
 /* Responsive Media Query (less than 360px)*/
-@media only screen and (max-width:360px)  {
+@media only screen and (max-width: 360px) {
     .procuct-area .slick-prev {
         left: 30px;
     }
@@ -428,7 +566,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     }
 }
 /* Responsive Media Query (less than 320px)*/
-@media only screen and (max-width:320px){
+@media only screen and (max-width: 320px) {
     .procuct-area .slick-prev {
         left: 30px;
     }
@@ -436,5 +574,4 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         right: initial;
         left: 230px;
     }
-
 }

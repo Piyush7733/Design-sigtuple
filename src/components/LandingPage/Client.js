@@ -258,7 +258,7 @@ const Client = () => {
                       </div>
                       <div className="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
                         <div className="card-body right-card-body">
-                          <h1 className="text-title text-white fw_9">{c.review_title}</h1>
+                          <h1 className="text-title text-white fw_9 font-nunitoSans">{c.review_title}</h1>
                           <p className="text-description text-white m-0">{c.short_review}</p>
                         </div>
                       </div>
