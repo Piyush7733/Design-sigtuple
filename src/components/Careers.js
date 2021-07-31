@@ -135,7 +135,7 @@ return (
         </div>
     </div>
 
-    <div className="Positions-area py-100" id="opening_job">
+    {openings && openings.length ? <div className="Positions-area py-100" id="opening_job">
         <div className="container">
             <div className="row">
                 <div className="col">
@@ -153,7 +153,7 @@ return (
                 </div>                        
             </div>
         </div> 
-    </div>
+    </div> : null }
 
 
 
