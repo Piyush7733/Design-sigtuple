@@ -6,7 +6,7 @@ let staging=`http://18.217.114.77:1337`
 
 
 const Api=axios.create({
-    baseURL:staging
+    baseURL:local
 })
 export default Api;
 
@@ -39,4 +39,18 @@ export const getPublications = async () =>{
 export const getBlogCounts = async () =>{
     let data=await Api.get(`/blogs/count`);
     return data.data
+}
+
+export const getOpenings = async () =>{
+    let data = await Api.get("/openings");
+
+    return data.data;
+
+}
+
+export const getOpeningCounts = async () =>{
+    let data = await Api.get("/openings/count");
+
+    return data.data;
+
 }
