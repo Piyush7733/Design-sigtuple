@@ -10,11 +10,16 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 const App = () =>{
-
   return (
     <div className="main">
+      <Helmet>
+        <script
+          src="/assets/js/gradient.js"
+        />
+      </Helmet>
       <Header />
       <Router>
         <Switch>

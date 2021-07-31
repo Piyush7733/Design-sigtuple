@@ -596,7 +596,7 @@ button {
     position: relative;
 }
 .our-client {
-    background-image: url('../img/mesh-gradient-3.png');
+    /* background-image: url('../img/mesh-gradient-3.png'); */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -667,7 +667,7 @@ button {
     vertical-align: middle;
 }
 .award {
-    background-image: url('../img/mesh-gradient-4.png');
+    /* background-image: url('../img/mesh-gradient-4.png'); */
     background-size: cover;
     background-position-x: center;
     background-position-y: bottom;
@@ -984,7 +984,7 @@ footer i {
     --gradient-color-7: #f1ebeb;
     position: absolute;
     top: 0;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .fw-bold {
@@ -1116,7 +1116,7 @@ ul li {
     margin-left: 25px !important;
 }
 .procuct-area {
-    background-image: url('../../assets/img/mesh-gradient-2.png');
+    /* background-image: url('../../assets/img/mesh-gradient-2.png'); */
     background-size: cover;
     background-position: center center;
     overflow: hidden;

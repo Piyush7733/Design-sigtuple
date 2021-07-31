@@ -19,13 +19,13 @@ import Header from "./Header";
 const LandingPage = () => {
   const [hoverStyle, setHoverStyle] = useState(null);
   const [tab,setTab]=useState("shonit")
-
+  
   return (
     <>
     {/* <div className="main"> */}
       {/* <Header /> */}
       <div className="heor-area hero-banner">
-                {/* <canvas className="bg-gradient-canvas" /> */}
+                <canvas className="bg-gradient-canvas" />
                 <div className="container-fluid ">
                     <div className="row">
                         <div className="col-md-12">
@@ -223,6 +223,7 @@ const LandingPage = () => {
       {/*</div> */}
 
       <div className="procuct-area" id="product_sections">
+      <canvas className="bg-gradient-canvas1" />
         <div className="container-fluid container-set position-relative">
           <div className="row mt-5 position-relative">
             <div className="col position-relative">
@@ -539,6 +540,7 @@ const LandingPage = () => {
 
 
   <div className="Clients-area our-client d-flex client-before client-after pb-50">
+    <canvas className="bg-gradient-canvas2" />
         <div className="container py-100">
           <div className="row">
             <div className="col">
@@ -610,6 +612,7 @@ const LandingPage = () => {
 
 
       <div className="awards-area award d-flex">
+      <canvas className="bg-gradient-canvas3" />
         <div className="container">
           <div className="row">
             <div className="col">

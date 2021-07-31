@@ -305,7 +305,9 @@ class Gradient {
       }), e(this, "play", () => {
           requestAnimationFrame(this.animate), this.conf.playing = true
       }), e(this,"initGradient", (selector) => {
+          console.log("selector",selector,document.querySelector(selector))
         this.el = document.querySelector(selector);
+        console.log("el lofg",this.el)
         this.connect();
         return this;
       })
@@ -494,6 +496,7 @@ class Gradient {
       }).filter(Boolean).map(normalizeColor)
   }
 }
+
 /*
 *Finally initializing the Gradient class, assigning a canvas to it and calling Gradient.connect() which initializes everything,
 * Use Gradient.pause() and Gradient.play() for controls.
@@ -515,17 +518,17 @@ gradient.initGradient(".bg-gradient-canvas");
 
 console.log("load gradient",gradient)
 
-// var gradient1 = new Gradient();
-// gradient1.initGradient(".bg-gradient-canvas1");
+var gradient1 = new Gradient();
+gradient1.initGradient(".bg-gradient-canvas1");
 
-// var gradient2 = new Gradient();
-// gradient2.initGradient(".bg-gradient-canvas2");
+var gradient2 = new Gradient();
+gradient2.initGradient(".bg-gradient-canvas2");
 
-// var gradient3 = new Gradient();
-// gradient3.initGradient(".bg-gradient-canvas3");
+var gradient3 = new Gradient();
+gradient3.initGradient(".bg-gradient-canvas3");
 
-// var gradient4 = new Gradient();
-// gradient4.initGradient(".bg-gradient-canvas4");
+var gradient4 = new Gradient();
+gradient4.initGradient(".bg-gradient-canvas4");
 
-// var gradient5 = new Gradient();
-// gradient5.initGradient(".bg-gradient-canvas5");
+var gradient5 = new Gradient();
+gradient5.initGradient(".bg-gradient-canvas5");

@@ -41,12 +41,12 @@
   color: #707070 !important;
 }
 
-.hero-banner {
+/* .hero-banner {
   background-image: url(../img/mesh-gradient-1.png);
   background-size: cover;
   height: calc(100vh);
   background-position: center;
-}
+} */
 
 .font-regular {
   font-family: nunitoSans;
@@ -687,7 +687,7 @@ button {
 }
 
 .our-client {
-  background-image: url(../img/mesh-gradient-3.png);
+  /* background-image: url(../img/mesh-gradient-3.png); */
   background-size: cover;
   height: 100vh;
   background-position: center;
@@ -779,7 +779,7 @@ button {
 }
 
 .award {
-  background-image: url(../img/mesh-gradient-4.png);
+  /* background-image: url(../img/mesh-gradient-4.png); */
   background-size: cover;
   background-position-x: center;
   background-position-y: bottom;
