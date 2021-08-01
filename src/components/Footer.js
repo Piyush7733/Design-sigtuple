@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
 
     return (
@@ -15,9 +15,9 @@ const Footer = () => {
                                 <p className="text-description mb-0 mt-4">SigTuple builds intelligent screening solutions to aid diagnosis through AI-powered analysis of visual medical data.</p>
                             </div>
                             <div className="d-flex my-4 footer-three-menu">
-                                <a href="" className="text-decoration-none text-danger fw-bold text-fwb">AI100</a>
-                                <a href="" className="text-decoration-none text-danger fw-bold text-fwb mx-5">Shonit</a>
-                                <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Shrava</a>
+                                <Link to="/products" className="text-decoration-none text-danger fw-bold text-fwb">AI100</Link>
+                                <Link to="/shonit" className="text-decoration-none text-danger fw-bold text-fwb mx-5">Shonit</Link>
+                                <Link to="/shrava" className="text-decoration-none text-danger fw-bold text-fwb">Shrava</Link>
                             </div>
                             <div className="Copyright-area">
                                 <p className="text-description mb-0">Copyright © 2015-2021</p>
@@ -27,9 +27,12 @@ const Footer = () => {
                         </div>
                         <div className="col-md-4 d-flex footer-menu">
                             <div className="flex-column d-flex justify-content-between h-100 mx-auto">
-                                <a href="" className="text-decoration-none text-danger fw-bold text-fwb">About Us</a><a href="" class="text-decoration-none text-danger fw-bold text-fwb">Products</a>
-                                <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Research</a><a href="" class="text-decoration-none text-danger fw-bold text-fwb">Blog &amp; News</a>
-                                <a href="" className="text-decoration-none text-danger fw-bold text-fwb">Career</a><a href="" class="text-decoration-none text-danger fw-bold text-fwb">Contact Us</a>
+                                 <Link to="/aboutus" className="text-decoration-none text-danger fw-bold text-fwb">About Us</Link>
+                                 <Link to="/products" class="text-decoration-none text-danger fw-bold text-fwb">Products</Link>
+                                 <Link to="/research" className="text-decoration-none text-danger fw-bold text-fwb">Research</Link>
+                                 <Link to="/blogs" class="text-decoration-none text-danger fw-bold text-fwb">Blog &amp; News</Link>
+                                 <Link to="/careers" className="text-decoration-none text-danger fw-bold text-fwb">Career</Link>
+                                 <Link to="/contactus" class="text-decoration-none text-danger fw-bold text-fwb">Contact Us</Link>
                             </div>
                         </div>
                         <div className="col-md-4 footer-address-area">
@@ -51,7 +54,7 @@ const Footer = () => {
                         </div>
                     </div>
                             </div>
-            </footer>
+                    </footer>
                     </div>
                     )
 }

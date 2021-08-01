@@ -2084,12 +2084,13 @@ ul li {
     border-radius: 41px;
     z-index: 999;
 }
+
 .Shonit-slider .slick-prev:after {
     content: "";
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/left-arrow-black.png');
+    background: url('../../assets/img/left-arrow-black.svg');
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -2097,13 +2098,13 @@ ul li {
     left: 0;
     right: 0;
     margin: auto;
-}
-.Shonit-slider .slick-next:after {
+  }
+  .Shonit-slider .slick-next:after {
     content: "";
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/right-arrow-black.png');
+    background: url('../../assets/img/right-arrow-black.svg');
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -2111,7 +2112,8 @@ ul li {
     left: 0;
     right: 0;
     margin: auto;
-}
+  }
+  
 .Shonit-slider .slick-prev {
     left: -90px;
 }
@@ -2155,12 +2157,13 @@ ul li {
     border-radius: 41px;
     z-index: 999;
 }
+
 .ShravaAI-area .slick-prev:after {
     content: "";
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/left-arrow-black.png');
+    background: url('../../assets/img/left-arrow-black.svg');
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -2168,13 +2171,14 @@ ul li {
     left: 0;
     right: 0;
     margin: auto;
-}
-.ShravaAI-area .slick-next:after {
+  }
+  
+  .ShravaAI-area .slick-next:after {
     content: "";
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/right-arrow-black.png');
+    background: url('../../assets/img/right-arrow-black.svg');
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -2182,7 +2186,8 @@ ul li {
     left: 0;
     right: 0;
     margin: auto;
-}
+  }
+
 .ShravaAI-area .slick-prev {
     left: -90px;
 }
@@ -2561,7 +2566,7 @@ ul li {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/left-arrow-black.png');
+    background: url('../../assets/img/left-arrow-black.svg');
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -2575,7 +2580,7 @@ ul li {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/right-arrow-black.png');
+    background: url('../../assets/img/right-arrow-black.svg');
     width: 24px;
     height: 24px;
     background-size: 24px;

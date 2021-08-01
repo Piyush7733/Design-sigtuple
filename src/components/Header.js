@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaRegUserCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isStickey, setIsStickey] = useState(0);
@@ -86,19 +87,19 @@ const Header = () => {
                 <div className="right-panel-body">
                     <ul className="right-panel-item m-0">
                         <li>
-                            <a href="">About Us</a>
+                            <Link to="/aboutus">About Us</Link>
                         </li>
                         <li>
-                            <a href="">Products</a>
+                            <Link to="/products">Products</Link>
                         </li>
                         <li>
-                            <a href="">Research</a>
+                            <Link to="/research">Research</Link>
                         </li>
                         <li>
-                            <a href="">Career</a>
+                            <Link to="/careers">Career</Link>
                         </li>
                         <li>
-                            <a href="">Contact Us</a>
+                            <Link to="/contactus">Contact Us</Link>
                         </li> 
                     </ul>
                     <div className="social-media">

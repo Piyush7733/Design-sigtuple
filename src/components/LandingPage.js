@@ -7,9 +7,10 @@ import VideoDescription from "./LandingPage/VideoDescription";
 import Shonit from "./LandingPage/Shonit";
 import Shrava from "./LandingPage/Shrava";
 import Reviews from "./LandingPage/Reviews";
-import Client from "./LandingPage/Client";
+import Client from "./Client";
 import Blogs from "./LandingPage/Blogs";
 import Awards from "./LandingPage/Awards";
+import ImageFooter from "./ImageFooter";
 import Footer from "./Footer";
 import SectionCounter from "./LandingPage/SectionCounter";
 import "../css/LandingPage.css";
@@ -639,26 +640,7 @@ const LandingPage = () => {
                   </div>
                 </div>
               </div> */}
-
-
-<div className="yourself-area simple d-flex">
-                <div className="container my-auto">
-                    <div className="row">
-                        <div className="col">
-                            <h1>
-                                Simple. Quick. Accurate.<br />
-                                <b>See it for yourself.</b>
-                            </h1>
-                            <p className="my-3">
-                                Let us show you how our device helps<br />
-                                you transform your workflow
-                            </p>
-                            <button className="mt-3 px-4 shadow-none">Book a Demo</button>                            
-                        </div>
-                    </div>
-
-                </div>
-            </div> 
+    <ImageFooter />
       {/* <Footer /> */}
     {/* </div> */}
     </>

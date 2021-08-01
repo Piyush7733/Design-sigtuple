@@ -1055,3 +1055,52 @@ footer i {
 /* .ProcuctRight:hover .sub-description {
   display: block;
 } */
+
+
+.specs-heading span {
+  color: #707070;
+  padding: 20px 30px 20px 0;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  font-size: 18px;
+}
+.specs-heading span svg {
+  position: absolute;
+  right: 0;
+  top: 30px;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+}
+
+.Core-team-list li span {
+  padding: 0 0 0 30px;
+  border-left: 3px solid transparent;
+  opacity: 0.5;
+}
+.Core-team-list li .core-active {
+  border-color: #de1a1b;
+  opacity: 1;
+}
+
+.faq-left ul li span {
+  cursor: pointer;
+  font-size: 20px;
+  color: #707070;
+}
+.faq-left ul li.active span {
+  cursor: pointer;
+  font-weight: 600;
+}

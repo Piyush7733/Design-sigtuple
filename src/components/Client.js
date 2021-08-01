@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import {getClients} from "../../Api";
-import NextArrow from "../Arrow/NextArrow";
-import PrevArrow from "../Arrow/PrevArrow";
+import {getClients} from "../Api";
+import NextArrow from "./Arrow/NextArrow";
+import PrevArrow from "./Arrow/PrevArrow";
 
 const Client = () => {
   const [clients, setClient] = useState([]);
