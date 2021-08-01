@@ -40,9 +40,9 @@ const Header = () => {
     <>
       <nav className={`navbar fixed-top ${isStickey}`}>
         <div className="container">
-          <a className="navbar-brand">
+          <Link to="/" className="navbar-brand">
             <img src="assets/img/logo.png" alt="" />
-          </a>
+          </Link>
           <div className="d-flex">
             {/* <button class="me-4 px-4 nav-bookdemo" data-bs-toggle="modal" data-bs-target="#bookademo">Book a Demo</button> */}
             <button className="me-4 px-4 nav-bookdemo">Book a Demo</button>
