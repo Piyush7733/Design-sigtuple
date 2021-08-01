@@ -32,6 +32,14 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     .ProcuctRight.ProcuctRight-hover {
         margin-left: 50px;
     }
+    .Shonit-slider img {
+        height:385px;
+        width: 538px;
+    }
+    .Shonit-slider .slick-center img {
+        height:385px;
+        width: 578px !important;
+    }
 }
 /* Responsive Media Query (Greater than 1200px)*/
 @media only screen and (min-width: 1200px) {

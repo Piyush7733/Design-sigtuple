@@ -50,13 +50,13 @@ const ShravaPage = () => {
                         <div className="Shonit-slider ">
                             <Slider {...shrava_settings}>
                                 <div className="item">
-                                    <img src="assets/img/Shrava/SS1.png" alt="" style={{height:"385px",width:"578px"}}/>
+                                    <img src="assets/img/Shrava/SS1.png" alt="" />
                                 </div>
                                 <div className="item">
-                                    <img src="assets/img/Shrava/SS2.png" alt="" style={{height:"385px",width:"578px"}}/>
+                                    <img src="assets/img/Shrava/SS2.png" alt="" />
                                 </div>
                                 <div className="item">
-                                    <img src="assets/img/Shrava/SS3.png" alt="" style={{height:"385px",width:"578px"}}/>
+                                    <img src="assets/img/Shrava/SS3.png" alt="" />
                                 </div>
                             </Slider>
                         </div>

@@ -49,13 +49,13 @@ const ShonitPage = () => {
                         <div className="Shonit-slider ">
                             <Slider {...shonit_settings}>
                             <div className="item">
-                                <img src="assets/img/Shonit/SS1.png" alt="" style={{height:"385px",width:"578px"}}/>
+                                <img src="assets/img/Shonit/SS1.png" alt=""/>
                             </div>
                             <div className="item">
-                                <img src="assets/img/Shonit/SS2.png" alt="" style={{height:"385px",width:"578px"}}/>
+                                <img src="assets/img/Shonit/SS2.png" alt=""/>
                             </div>
                             <div className="item">
-                                <img src="assets/img/Shonit/SS3.png" alt="" style={{height:"385px",width:"578px"}}/>
+                                <img src="assets/img/Shonit/SS3.png" alt=""/>
                             </div>
                             </Slider>
                         </div>
