@@ -243,7 +243,7 @@ const Client = () => {
                     <div className="row" >
                       <div className="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12" >
                         <div className="card-body left-card-body">
-                          <p className="text-description fw-bold clients_text_sections">
+                          <p className="text-description fw_6 clients_text_sections">
                             “{c.review.slice(0,200)}”
                           </p>
                           <div className="d-flex name clients_user_sections">
@@ -258,7 +258,7 @@ const Client = () => {
                       </div>
                       <div className="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
                         <div className="card-body right-card-body">
-                          <h1 className="text-title text-white fw_9 font-nunitoSans">{c.review_title}</h1>
+                          <h1 className="text-title text-white fw_8 ls_1">{c.review_title}</h1>
                           <p className="text-description text-white m-0">{c.short_review}</p>
                         </div>
                       </div>

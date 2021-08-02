@@ -34,8 +34,10 @@ const LandingPage = () => {
                                 <div className="m-auto text-center"> 
                                     <div id="zoom" className="text mt-90">
                                         <div className="small">
-                                            <h1 className="m-0">The<b> Future of Microscopy</b> is Here!</h1>
-                                            <center><h2>We are democratizing microscopy through AI, robotics, and cloud computing.</h2></center>
+                                            {/* <h1 className="m-0">The<b> Future of Microscopy</b> is Here!</h1>
+                                            <center><h2>We are democratizing microscopy through AI, robotics, and cloud computing.</h2></center> */}
+                                            <h1 class="m-0 fw_3 ">The <span class="fw_6">Future of Microscopy</span> is Here!</h1>
+                                            <h2 class="fw_3 mt-1">We are democratizing microscopy through AI, robotics, and cloud computing.</h2>
                                         </div> 
                                         <div className="large"></div>
                                     </div> 
@@ -401,8 +403,8 @@ const LandingPage = () => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <div className="text-center">
-                <h1 className="text-title text-center pb-3">How does<b> AI100 work?</b></h1>
+              <div className="text-center"> 
+                <h1 className="text-title text-center pb-3 fw_2 fs_48">How does <span className="fw_6">AI100 work?</span></h1>
               </div>
             </div>
           </div>
@@ -496,8 +498,8 @@ const LandingPage = () => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <div className="text-center">
-                <h1 className="text-title text-center">Bringing Speed &amp; Precision with<b> Extensive R&amp;D</b></h1>
+              <div className="text-center"> 
+                <h1 className="text-title text-center fw_2">Bringing Speed &amp; Precision with <span className="fw_6">Extensive R&amp;D</span></h1>
               </div>
             </div>
           </div>
@@ -545,8 +547,8 @@ const LandingPage = () => {
         <div className="container py-100">
           <div className="row">
             <div className="col">
-              <div className="text-center">
-                <h1 className="text-title">From<b> Our Clients</b></h1>
+              <div className="text-center"> 
+                <h1 className="text-title fw_2">From <span className="fw_6">Our Clients</span></h1>
               </div>
             </div>
           </div>
@@ -578,10 +580,10 @@ const LandingPage = () => {
       <div className="Brewing-area">
         <div className="container py-100">
           <div className="row">
-            <div className="col">
+            <div className="col"> 
               <div className="text-center">
-                <h1 className="text-title">Know<b> What’s Brewing</b></h1>
-                <p className="text-description">Get access to the breakthroughs we make in our research and innovation every day.</p>
+                  <h1 className="text-title fw_2">Know <span className="fw_6">What’s Brewing</span></h1>
+                  <p className="text-description fw_3 mt-5 fs_22 lss_3">Get access to the breakthroughs we make in our research and innovation every day.</p>
               </div>
             </div>
           </div>
@@ -616,9 +618,9 @@ const LandingPage = () => {
       <canvas className="bg-gradient-canvas3" />
         <div className="container">
           <div className="row">
-            <div className="col">
+            <div className="col"> 
               <div className="text-center">
-                <h1 className="text-title">Awards &amp;<b> Recognitions</b></h1>
+                  <h1 className="text-title fw_2">Awards &amp; <span className="fw_6">Recognitions</span></h1>
               </div>
             </div>
           </div>

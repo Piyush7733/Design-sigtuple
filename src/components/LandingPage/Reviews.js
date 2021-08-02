@@ -147,7 +147,7 @@ const Reviews = () => {
               {new Date(p.publish_at).getFullYear()}
             </span>
           </div>
-          <p className="text-description mt-4 fw_6">
+          <p className="text-description mt-4 fw_3">
             {p.description.length > 150
               ? `${p.description.substring(0, 100)}...`
               : p.description}

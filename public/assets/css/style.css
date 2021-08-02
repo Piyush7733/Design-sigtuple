@@ -1,56 +1,61 @@
 /*
 --------------------------------------------------------------------------------------------------------
 * Project    : Sigtuple                                                                                *
-* Author     :                                                                                         *
-* Support    :                                                                                         *
-*-------------------------------------------------------------------------------------------------------
+* Author     :                                                                                         * 
+* Support    :                                                                                         * 
+*------------------------------------------------------------------------------------------------------- 
 NOTE: This is main stylesheet of template, This file contains the styling for the actual Template.
 */
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 
 @font-face {
-    font-family: nunitoSans;
+    
     src: url('../fonts/NunitoSans-Regular.ttf');
 }
 @font-face {
     font-family: nunitoSans-light;
     src: url('../fonts/NunitoSans-Light.ttf');
-}
+}*/
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Nunito Sans', sans-serif !important; /*font-family: 'Nunito', sans-serif;*/
+}
+
 .text-fwb {
-    font-family: nunitoSans !important;
+    
 }
 .text-description {
     font-size: 18px;
-    font-family: nunitoSans-light;
+    
     color: #868786;
     word-wrap: initial;
 }
 .text-title {
     /*font-size:35px;*/
-    font-family: nunitoSans-light;
+    
     color: #707070;
 }
 .text-sub {
     font-size: 24px;
-    font-family: nunitoSans;
+    
     color: #707070;
 }
 .text-70 {
     color: #707070 !important;
 }
 .font-nunitoSans {
-    font-family: nunitoSans !important;
+    
 }
 .font-nunitoSans-light {
-    font-family: nunitoSans-light !important;
+    
 }
 .hero-banner {
     background-size: cover;
@@ -59,7 +64,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     position: relative;
 }
 .font-regular {
-    font-family: nunitoSans;
+    
 }
 .eye-section {
     position: absolute;
@@ -81,7 +86,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     margin: auto;
 }
 .hero-section {
-    font-family: nunitoSans-light;
+    
     color: #707070;
 }
 .hero-section h1 {
@@ -108,9 +113,9 @@ button {
     color: #de1a1b;
     font-weight: 700;
     font-size: 18px;
-    font-family: nunitoSans;
+    
     transition: 0.2s;
-    box-shadow: 0 20px 42px rgb(134 135 134 / 20%);
+    box-shadow: 0px 20px 42px rgb(134 135 134 / 20%);
     background-color: #fff;
 }
 .explore i {
@@ -198,7 +203,7 @@ button {
 .offcanvas ul {
     list-style: none;
     font-size: 25px;
-    font-family: nunitoSans-light;
+    
 }
 .offcanvas ul li {
     margin: 20px 0;
@@ -229,7 +234,8 @@ button {
     -webkit-box-shadow: #222 5px 5px 5px;
     position: relative;
 }
-#zoom {}
+#zoom {
+}
 .zoom {
     display: block;
     margin: 0 auto;
@@ -279,7 +285,7 @@ button {
     color: red;
     font-weight: 700;
     font-size: 18px;
-    font-family: nunitoSans;
+    
     transition: 0.2s;
     box-shadow: none;
     background-repeat: no-repeat;
@@ -296,7 +302,7 @@ button {
     color: red;
     font-weight: 700;
     font-size: 18px;
-    font-family: nunitoSans;
+    
     transition: 0.2s;
     box-shadow: none;
     background-repeat: no-repeat;
@@ -313,7 +319,7 @@ button {
     color: red;
     font-weight: 700;
     font-size: 18px;
-    font-family: nunitoSans;
+    
     transition: 0.2s;
     box-shadow: none;
     background-repeat: no-repeat;
@@ -330,7 +336,7 @@ button {
     color: red;
     font-weight: 700;
     font-size: 18px;
-    font-family: nunitoSans;
+    
     transition: 0.2s;
     box-shadow: none;
     background-repeat: no-repeat;
@@ -347,7 +353,7 @@ button {
     color: red;
     font-weight: 700;
     font-size: 18px;
-    font-family: nunitoSans;
+    
     transition: 0.2s;
     box-shadow: none;
     background-repeat: no-repeat;
@@ -356,27 +362,27 @@ button {
     background-size: 35%;
 }
 .ai100 .prev-arrow {
-    background-image: url('../img/left_arrow.png');
+    background-image: url(../img/left_arrow.png);
     position: absolute;
     top: -34px;
     left: 25%;
 }
 .cards-slider .prev-arrow {
-    background-image: url('../img/left_arrow.png');
+    background-image: url(../img/left_arrow.png);
     position: absolute;
     top: 50%;
     left: -40px;
     transform: translateY(-50%);
 }
 .lab-slider .prev-arrow {
-    background-image: url('../img/left_arrow.png');
+    background-image: url(../img/left_arrow.png);
     position: absolute;
     top: 50%;
     left: -40px;
     transform: translateY(-50%);
 }
 .award-slider .prev-arrow {
-    background-image: url('../img/left_arrow.png');
+    background-image: url(../img/left_arrow.png);
     position: absolute;
     top: 50%;
     left: -40px;
@@ -384,7 +390,7 @@ button {
     background-color: transparent;
 }
 .our-slider .prev-arrow {
-    background-image: url('../img/left_arrow_white.png');
+    background-image: url(../img/left_arrow_white.png);
     position: absolute;
     top: calc(100% - 95px);
     right: 120px;
@@ -393,14 +399,14 @@ button {
     background-color: transparent;
 }
 .ai100 .next-arrow {
-    background-image: url('../img/right_arrow.png');
+    background-image: url(../img/right_arrow.png);
     order: -1;
     position: absolute;
     top: -34px;
     right: 25%;
 }
 .cards-slider .next-arrow {
-    background-image: url('../img/right_arrow.png');
+    background-image: url(../img/right_arrow.png);
     order: -1;
     position: absolute;
     top: 50%;
@@ -408,7 +414,7 @@ button {
     transform: translateY(-50%);
 }
 .lab-slider .next-arrow {
-    background-image: url('../img/right_arrow.png');
+    background-image: url(../img/right_arrow.png);
     order: -1;
     position: absolute;
     top: 50%;
@@ -416,7 +422,7 @@ button {
     transform: translateY(-50%);
 }
 .award-slider .next-arrow {
-    background-image: url('../img/right_arrow.png');
+    background-image: url(../img/right_arrow.png);
     order: -1;
     position: absolute;
     top: 50%;
@@ -425,7 +431,7 @@ button {
     background-color: transparent;
 }
 .our-slider .next-arrow {
-    background-image: url('../img/right_arrow_white.png');
+    background-image: url(../img/right_arrow_white.png);
     order: -1;
     position: absolute;
     top: calc(100% - 95px);
@@ -438,7 +444,7 @@ button {
     opacity: 0.5;
 }
 .microscope {
-    background-image: url('../img/mesh-gradient-2.png');
+    background-image: url(../img/mesh-gradient-2.png);
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -456,7 +462,7 @@ button {
 }
 .micro-product {
     border-radius: 50%;
-    padding: 100px 0 0;
+    padding: 100px 0 0 0;
 }
 .slick-slide {
     display: flex;
@@ -479,17 +485,16 @@ button {
 }
 .policy h1 {
     font-size: 80px;
-    font-family: nunitoSans;
+    
     color: #de1a1b;
     margin: 0;
 }
 .policy h5 {
     font-size: 19px;
-    font-family: nunitoSans;
     color: #707070;
     margin: 0;
-    font-weight: 700;
-    letter-spacing: 8px;
+    font-weight: 800;
+    letter-spacing: 6px;
     text-transform: uppercase;
 }
 #media-video {
@@ -512,11 +517,11 @@ button {
 }
 .video-text h1 {
     font-size: 50px;
-    font-family: nunitoSans;
+    
 }
 .video-text p {
     font-size: 20px;
-    font-family: nunitoSans-light;
+    
     font-weight: 100;
 }
 .play-btn {
@@ -538,7 +543,7 @@ button {
     margin-top: 12px;
     margin-left: 20px;
 }
-@media only screen and(min-width: 1400px) {
+@media only screen and (min-width: 1400px) {
     .micro-product {
         height: 770px;
         position: relative;
@@ -563,7 +568,7 @@ button {
     background-color: #de1a1b !important;
     position: relative;
     transition: 0;
-    font-weight: 900 !important;
+    font-weight: 600 !important;
 }
 .nav-link:hover {
     color: #868786;
@@ -573,7 +578,7 @@ button {
     height: auto;
     border-radius: 20px;
     color: #868786;
-    font-family: nunitoSans-light;
+    
     font-weight: 100;
     transition: none;
     border-radius: 50px !important;
@@ -596,7 +601,6 @@ button {
     position: relative;
 }
 .our-client {
-    /* background-image: url('../img/mesh-gradient-3.png'); */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -620,7 +624,7 @@ button {
 }
 .our-slider .client-say .name p {
     font-size: 12px;
-    font-family: nunitoSans;
+    
     color: #707070;
     margin: 0;
 }
@@ -667,7 +671,7 @@ button {
     vertical-align: middle;
 }
 .award {
-    /* background-image: url('../img/mesh-gradient-4.png'); */
+    background-image: url(../img/mesh-gradient-4.png);
     background-size: cover;
     background-position-x: center;
     background-position-y: bottom;
@@ -702,7 +706,7 @@ button {
     color: #868786;
 }
 .simple {
-    background-image: url('../img/simple.png');
+    background-image: url(../img/simple.png);
     background-size: cover;
     background-position: center;
     padding: 150px 0;
@@ -711,15 +715,15 @@ button {
 }
 .simple h1 {
     font-size: 50px;
-    font-family: nunitoSans-light;
+    
 }
 .simple p {
     font-size: 20px;
-    font-family: nunitoSans-light;
+    
     font-weight: 100;
 }
 footer {
-    background-image: url('../img/mesh-gradient-5.png');
+    background-image: url(../img/mesh-gradient-5.png);
     background-size: cover;
     background-position-x: center;
     background-position-y: bottom;
@@ -929,7 +933,7 @@ footer i {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 420px;
+    height: 500px;
     background: #f3f3f3;
 }
 .text_section_blood {
@@ -975,16 +979,16 @@ footer i {
 .bg-gradient-canvas7 {
     width: 100%;
     height: 100%;
-    --gradient-color-1: #bdbdbd;
+    --gradient-color-1: #ffffff;
     --gradient-color-2: #ffffff;
-    --gradient-color-3: #cec2c2;
+    --gradient-color-3: #ffffff;
     --gradient-color-4: #e0d9d9;
-    --gradient-color-5: #f5f5f5;
-    --gradient-color-6: #f0f0f0;
-    --gradient-color-7: #f1ebeb;
+    --gradient-color-5: #ffffff;
+    --gradient-color-6: #e0d9d9;
+    --gradient-color-7: #e0d9d9;
     position: absolute;
     top: 0;
-    opacity: 1;
+    opacity: 0.3;
 }
 
 .fw-bold {
@@ -1000,8 +1004,8 @@ footer i {
     color: #868786 !important
 }
 button:focus {
-    outline: 0 dotted !important;
-    outline: 0 auto -webkit-focus-ring-color !important;
+    outline: 0px dotted !important;
+    outline: 0px auto -webkit-focus-ring-color !important;
 }
 /*grid*/
 .grid-1 {
@@ -1059,7 +1063,7 @@ ul li {
     outline: 0;
     border: none;
     font-size: 18px;
-    font-family: nunitoSans;
+    
     transition: 0.2s;
     box-shadow: 1px 1px 3px #cfcfcf;
     background-color: #fff;
@@ -1099,7 +1103,7 @@ ul li {
 .slick-dots li button {
     width: 6px;
     height: 6px;
-    padding: 0;
+    padding: 0px;
     background: #868786;
     opacity: 0.5;
 }
@@ -1111,12 +1115,11 @@ ul li {
 		Product Slider Start
 ----------------------------------------*/
 
-.procuct-area .product-grid .text-description {
+.procuct-area .product-grid .text-description { 
     line-height: 22px;
     margin-left: 25px !important;
 }
 .procuct-area {
-    /* background-image: url('../../assets/img/mesh-gradient-2.png'); */
     background-size: cover;
     background-position: center center;
     overflow: hidden;
@@ -1168,7 +1171,7 @@ ul li {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/left-arrow-black.png');
+    background: url(../../assets/img/left-arrow-black.png);
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -1182,7 +1185,7 @@ ul li {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/right-arrow-black.png');
+    background: url(../../assets/img/right-arrow-black.png);
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -1249,7 +1252,7 @@ ul li {
 .awards-area {
     position: relative;
     height: auto;
-    padding: 10% 0 15%;
+    padding: 10% 0% 15% 0%;
 }
 .awards-area:before {
     content: "";
@@ -1280,7 +1283,7 @@ ul li {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/left-arrow-black.png');
+    background: url(../../assets/img/left-arrow-black.png);
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -1294,7 +1297,7 @@ ul li {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/right-arrow-black.png');
+    background: url(../../assets/img/right-arrow-black.png);
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -1338,7 +1341,7 @@ ul li {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/left-arrow-black.png');
+    background: url(../../assets/img/left-arrow-black.png);
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -1352,7 +1355,7 @@ ul li {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/right-arrow-black.png');
+    background: url(../../assets/img/right-arrow-black.png);
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -1383,18 +1386,18 @@ ul li {
 .Clients-slider {
     background-color: rgb(222, 26, 27);
     border-radius: 50px;
-    box-shadow: rgb(112 112 112 / 30%) 0 4px 14px;
+    box-shadow: rgb(112 112 112 / 30%) 0px 4px 14px;
     overflow: hidden;
 }
 .Clients-slider .left-card-body {
     background-color: rgb(255, 255, 255);
-    box-shadow: rgb(112 112 112 / 25%) 0 4px 14px;
+    box-shadow: rgb(112 112 112 / 25%) 0px 4px 14px;
     border-top-right-radius: 50px;
     padding: 50px 30px;
     border-bottom-right-radius: 0;
 }
 .Clients-slider .right-card-body {
-    padding: 0 70px;
+    padding: 0px 70px;
 }
 .Clients-count {
     top: calc(100% - 75px);
@@ -1431,7 +1434,7 @@ ul li {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/left_arrow_white.png');
+    background: url(../../assets/img/left_arrow_white.png);
     width: 15px;
     height: 15px;
     background-size: 15px;
@@ -1445,7 +1448,7 @@ ul li {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/right_arrow_white.png');
+    background: url(../../assets/img/right_arrow_white.png);
     width: 15px;
     height: 15px;
     background-size: 15px;
@@ -1504,7 +1507,7 @@ ul li {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/left-arrow-black.png');
+    background: url(../../assets/img/left-arrow-black.png);
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -1518,7 +1521,7 @@ ul li {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: url('../../assets/img/right-arrow-black.png');
+    background: url(../../assets/img/right-arrow-black.png);
     width: 24px;
     height: 24px;
     background-size: 24px;
@@ -1623,7 +1626,7 @@ ul li {
     cursor: pointer;
     list-style: none;
     font-size: 28px;
-    font-family: nunitoSans-light;
+    
     color: #707070;
     display: inline-block;
     width: 100%;
@@ -1707,7 +1710,7 @@ ul li {
 
 /*product-area start*/
 .product-area {
-    background-image: url('../img/mesh-gradient-1.png');
+    background-image: url(../img/mesh-gradient-1.png);
     background-size: cover;
     background-position: center;
     padding-top: 74px;
@@ -1723,7 +1726,7 @@ ul li {
 
 .slider-pc-bg {
     position: relative;
-    margin: 50px 0 160px;
+    margin: 50px 0 160px 0;
 }
 .img-fluid.pc-img {
     position: absolute;
@@ -1735,13 +1738,13 @@ ul li {
 }
 .Shonit-slider .slick-active img.img-fluid {
     width: 85%;
-    margin: 0 0 0 50px;
+    margin: 0 0 00 50px;
     text-align: center;
 }
 
 /*Multiple Area Slider Start*/
 .multiple-area {
-    background-image: url('../../assets/img/mesh-gradient-2.png');
+    background-image: url(../../assets/img/mesh-gradient-2.png);
     background-size: 100% 100%;
     background-position: center center;
     overflow: hidden;
@@ -1770,7 +1773,7 @@ ul li {
     margin: 7px;
     width: 8px;
     height: 8px;
-    padding: 0;
+    padding: 0px;
     background: #de1a1b;
     opacity: 0.3;
 }
@@ -1781,7 +1784,7 @@ ul li {
 
 /*Cell Identification Slider Start*/
 .Cell-identification-area {
-    background-image: url('../../assets/img/mesh-gradient-2.png');
+    background-image: url(../../assets/img/mesh-gradient-2.png);
     background-size: 100% 100%;
     background-position: center center;
     overflow: hidden;
@@ -1810,7 +1813,7 @@ ul li {
     margin: 7px;
     width: 8px;
     height: 8px;
-    padding: 0;
+    padding: 0px;
     background: #de1a1b;
     opacity: 0.3;
 }
@@ -1821,7 +1824,7 @@ ul li {
 
 /*Review Report Slider Start*/
 .review-report-area {
-    background-image: url('../../assets/img/mesh-gradient-2.png');
+    background-image: url(../../assets/img/mesh-gradient-2.png);
     background-size: 100% 100%;
     background-position: center center;
     overflow: hidden;
@@ -1850,7 +1853,7 @@ ul li {
     margin: 7px;
     width: 8px;
     height: 8px;
-    padding: 0;
+    padding: 0px;
     background: #de1a1b;
     opacity: 0.3;
 }
@@ -1861,7 +1864,7 @@ ul li {
 
 /*solutions-area Start*/
 .solutions-area {
-    background-image: url('../img/mesh-gradient-1.png');
+    background-image: url(../img/mesh-gradient-1.png);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -1881,7 +1884,7 @@ ul li {
     border-radius: 50%;
     background-color: #fff;
     display: flex;
-    box-shadow: 0 3px 20px rgb(134 135 134 / 20%);
+    box-shadow: 0px 3px 20px rgb(134 135 134 / 20%);
     position: relative;
     justify-content: center;
     margin: 0 auto;
@@ -1906,16 +1909,16 @@ ul li {
     padding: 30px;
     border-radius: 19px;
     overflow: hidden;
-    margin: 0 120px 0 0;
+    margin: 0 50px;
     min-height: 248px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .Benefits-list:hover {
-    box-shadow: 0 9px 21px rgb(112 112 112 / 25%);
-    -webkit-box-shadow: 0 9px 21px rgb(112 112 112 / 25%);
-    -moz-box-shadow: 0 9px 21px rgba(112, 112, 112, 0.25);
+    box-shadow: 0px 9px 21px rgb(112 112 112 / 25%);
+    -webkit-box-shadow: 0px 9px 21px rgb(112 112 112 / 25%);
+    -moz-box-shadow: 0px 9px 21px rgba(112, 112, 112, 0.25);
     border-bottom: 8px solid #de1a1b;
 }
 .Benefits-text {
@@ -1926,6 +1929,8 @@ ul li {
 }
 .Benefits-title h6 {
     color: #707070;
+    font-size: 18px;
+    font-weight: 600;
 }
 .Benefits-list:hover .Benefits-title h6 {
     color: #de1a1b;
@@ -1946,7 +1951,7 @@ ul li {
 }
 .specs-heading a {
     color: #707070;
-    padding: 20px 30px 20px 0;
+    padding: 20px 30px 20px 0px;
     display: inline-block;
     width: 100%;
     position: relative;
@@ -1981,7 +1986,7 @@ ul li {
     padding-top: 70px;
 }
 .blog-titles {
-    margin: 80px 0 40px;
+    margin: 80px 0 40px 0;
     display: inline-block;
     width: 100%;
 }
@@ -2009,7 +2014,7 @@ ul li {
 		Research page Start
 ----------------------------------------*/
 .Research-area {
-    background-image: url('../img/mesh-gradient-1.png');
+    background-image: url(../img/mesh-gradient-1.png);
     background-size: cover;
     background-position: center;
 }
@@ -2084,7 +2089,6 @@ ul li {
     border-radius: 41px;
     z-index: 999;
 }
-
 .Shonit-slider .slick-prev:after {
     content: "";
     position: absolute;
@@ -2098,8 +2102,8 @@ ul li {
     left: 0;
     right: 0;
     margin: auto;
-  }
-  .Shonit-slider .slick-next:after {
+}
+.Shonit-slider .slick-next:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -2112,8 +2116,7 @@ ul li {
     left: 0;
     right: 0;
     margin: auto;
-  }
-  
+}
 .Shonit-slider .slick-prev {
     left: -90px;
 }
@@ -2137,10 +2140,10 @@ ul li {
 
 /*Extensive slider Start*/
 .ShravaAI-area {
-    background-image: url('../img/mesh-gradient-1.png');
+    background-image: url(../img/mesh-gradient-1.png);
     background-size: cover;
     background-position: center;
-    padding: 100px 0 120px;
+    padding: 100px 0 120px 0;
 }
 .ShravaAI-area .slick-arrow {
     display: flex;
@@ -2157,7 +2160,6 @@ ul li {
     border-radius: 41px;
     z-index: 999;
 }
-
 .ShravaAI-area .slick-prev:after {
     content: "";
     position: absolute;
@@ -2171,9 +2173,8 @@ ul li {
     left: 0;
     right: 0;
     margin: auto;
-  }
-  
-  .ShravaAI-area .slick-next:after {
+}
+.ShravaAI-area .slick-next:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -2186,8 +2187,7 @@ ul li {
     left: 0;
     right: 0;
     margin: auto;
-  }
-
+}
 .ShravaAI-area .slick-prev {
     left: -90px;
 }
@@ -2201,7 +2201,7 @@ ul li {
 
 /*analysis Slider Start*/
 .analysis-area {
-    background-image: url('../../assets/img/mesh-gradient-2.png');
+    background-image: url(../../assets/img/mesh-gradient-2.png);
     background-size: 100% 100%;
     background-position: center center;
     overflow: hidden;
@@ -2230,7 +2230,7 @@ ul li {
     margin: 7px;
     width: 8px;
     height: 8px;
-    padding: 0;
+    padding: 0px;
     background: #de1a1b;
     opacity: 0.3;
 }
@@ -2241,7 +2241,7 @@ ul li {
 
 /*Microscopic Slider Start*/
 .Microscopic-area {
-    background-image: url('../../assets/img/mesh-gradient-2.png');
+    background-image: url(../../assets/img/mesh-gradient-2.png);
     background-size: 100% 100%;
     background-position: center center;
     overflow: hidden;
@@ -2270,7 +2270,7 @@ ul li {
     margin: 7px;
     width: 8px;
     height: 8px;
-    padding: 0;
+    padding: 0px;
     background: #de1a1b;
     opacity: 0.3;
 }
@@ -2281,7 +2281,7 @@ ul li {
 
 /*steps-area start*/
 .steps-area {
-    background-image: url('../../assets/img/bg_01.png');
+    background-image: url(../../assets/img/bg_01.png);
     background-size: cover;
     background-position: center center;
     overflow: hidden;
@@ -2308,17 +2308,17 @@ ul li {
 .contact-area,
 .Investors-area,
 .values-area {
-    background-image: url('../img/mesh-gradient-1.png');
+    background-image: url(../img/mesh-gradient-1.png);
     background-size: cover;
     background-position: center;
     position: relative;
 }
 .experts-area {
-    background-image: url('../../assets/img/mesh-gradient-2.png');
+    background-image: url(../../assets/img/mesh-gradient-2.png);
     background-size: cover;
     background-position: center center;
     overflow: hidden;
-    padding: 8% 0 12%;
+    padding: 8% 0 12% 0;
 }
 .Careers-area:before,
 .contact-area:before {
@@ -2464,7 +2464,7 @@ ul li {
     font-weight: 600;
 }
 .faqs-right {
-    padding: 50px 50px 0;
+    padding: 50px 50px 00px 50px;
 }
 .Reachus-grid.grid-2 {
     grid-gap: 5rem;
@@ -2511,10 +2511,13 @@ ul li {
     border-color: #de1a1b;
     opacity: 1;
 }
+.coreteam-mobile{
+    display: none;
+}
 /*core End*/
 
 .mission-area {
-    background-image: url('../img/mesh-gradient-5.png');
+    background-image: url(../img/mesh-gradient-5.png);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -2529,7 +2532,7 @@ ul li {
     grid-gap: 2rem;
 }
 .values-grid .value-center.values-list {
-    margin-right: 0;
+    margin-right: 0px;
 }
 .values-grid .values-list {
     margin-right: 60px;
@@ -2629,17 +2632,17 @@ ul li {
 .story-box.story-grid {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
     justify-content: center;
+    /*flex-wrap: nowrap;
     align-content: center;
-    flex-direction: row;
+    flex-direction: row;*/
 }
-.Story-left-slider {
+.Story-left-slider{
     width: 50%;
 }
 .storyright-image {
     /*overflow: hidden;*/
-    transform: translate(45%, 0px);
+    transform: translate(45%, 00px);
     position: relative;
     width: 50%;
 }
@@ -2648,15 +2651,15 @@ ul li {
     margin: 0 0 0 20%;
     height: 768px;
     border-radius: 50%;
-    border: 1px solid;
+    border: 1px solid; 
 }
 
-.storyright-image-box .slider-images img {
-    width: 50px;
+.storyright-image-box .slider-images img{
+    width: 50px; 
     border-radius: 50px;
 }
-.storyright-image-box .slider-images.active img {
-    width: 420px;
+.storyright-image-box .slider-images.active img{
+    width: 420px; 
     border-radius: 50%;
 }
 

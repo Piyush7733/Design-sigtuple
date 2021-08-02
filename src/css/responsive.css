@@ -340,6 +340,28 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     .Investors-grid.grid-4 {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .Story-vh {
+        height: auto !important;
+    }
+    .story-box.story-grid {
+        display: block; 
+    }
+    .Story-left-slider {
+        width: 100%;
+    }
+    .storyright-image {  
+        width: 100%;
+        margin-top: 100px;
+    }
+    .values-grid.grid-3 { 
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    .values-grid .values-list {
+        margin-right: 0;
+        padding: 0 !important;
+    }
 }
 /* Responsive Media Query (less than 767px)*/
 @media only screen and (max-width: 767px) {
@@ -488,10 +510,68 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         padding: 15px 0;
     }
     /*Shonit-slider End*/
-
+    .mission-text { 
+        margin-top: 50px;
+    }
     .visiton-box {
         margin-top: 100px;
+        padding-bottom: 100px;
     }
+    
+    .coreteam-mobile{
+        display: block;
+        margin-top: 10px;
+    }
+    .coreteam-deaktop{
+        display: none;
+    }
+    .Core-team-list li a {
+        display: inline-block !important;
+        text-align: center;
+        padding: 0;
+        opacity: 1;
+    }
+    .Core-team-list li a.core-active {
+        border-color: transparent; 
+    }
+    .Core-grid.grid-2 {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    .Core-team-list li {
+        margin-bottom: 60px;
+    }
+
+    .story-slider {
+        padding-left: 50px;
+    }
+    .story-slider .slick-prev, .story-slider .slick-next {
+        left: 10px;
+    }
+    .story-slider .slick-next { 
+        top: 120px;
+    }
+
+    .storyright-image-box {
+        width: 480px; 
+        height: 480px; 
+    }
+    .storyright-image { 
+        transform: translate(15%, 00px);
+    }
+    .storyright-image-box .slider-images.active img {
+        width: 220px; 
+    }
+    .storyright-image-box .slider-images:nth-child(1) {
+        transform: translate(118px, 0px);
+    }
+    .storyright-image-box .slider-images:nth-child(2) {
+        transform: translate(-90px, 70px);
+    }    
+    .storyright-image-box .slider-images:nth-child(3) {
+        transform: translate(120px, 160px);
+    }
+
 }
 @media only screen and (max-width: 599px) {
     .awards-slider-item > .text-center.plr-80 {
@@ -544,6 +624,9 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     .procuct-area .slick-next {
         right: 60px;
         left: inherit;
+    }
+    .Investors-grid.grid-4 {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 /* Responsive Media Query (less than 480px)*/

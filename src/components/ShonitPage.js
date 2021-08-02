@@ -2,8 +2,33 @@ import Benefits from "./Products/Benefits";
 import Client from "./Client";
 import ImageFooter from "./ImageFooter";
 import Slider from "react-slick";
+import { useEffect, useRef } from "react";
 
 const ShonitPage = () => {
+    const parentRef=useRef()
+    const sliderRef=useRef()
+
+
+    useEffect(()=>{
+        if (!parentRef.current) {
+            return;
+          }
+
+          parentRef.current.addEventListener("wheel", e => handleScroll(e));
+      
+          return () => {
+            parentRef.current.removeEventListener("wheel", e => handleScroll(e));
+          };
+    },[parentRef])
+
+    const handleScroll = e => {
+        e.preventDefault();
+        if (e.deltaY < 0) {
+          sliderRef && sliderRef.current.slickNext();
+        } else {
+          sliderRef && sliderRef.current.slickPrev();
+        }
+      };
    
       let shonit_settings={
         slidesToShow: 1,
@@ -22,12 +47,13 @@ const ShonitPage = () => {
     let product_settings={
         arrows: false,
         dots: true,
-        infinite: true,
+        infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         vertical: true,
         verticalSwiping: true,
         swipeToSlide: false,
+        swipe: true,
     }
 
     return (<>
@@ -46,7 +72,7 @@ const ShonitPage = () => {
                         </div>
                     </div>
                     <div className="col-lg-10 col-md-12 mx-auto slider-pc-bg">
-                        <div className="Shonit-slider ">
+                        <div className="Shonit-slider">
                             <Slider {...shonit_settings}>
                             <div className="item">
                                 <img src="assets/img/Shonit/SS1.png" alt=""/>
@@ -101,8 +127,8 @@ const ShonitPage = () => {
 
         <div className="analysis-area mx-auto">
             <div className="container ptb-80">
-                <div className="analysis-slider">
-                    <Slider {...product_settings}>
+                <div className="analysis-slider" ref={parentRef}>
+                    <Slider {...product_settings}  ref={sliderRef}>
                     <div className="item">
                         <div className="row align-items-center">
                             <div className="col-md-4">

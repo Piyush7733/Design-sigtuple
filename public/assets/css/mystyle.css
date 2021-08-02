@@ -1,12 +1,4 @@
-@font-face {
-  font-family: nunitoSans;
-  src: url(../fonts/NunitoSans-Regular.ttf);
-}
-
-@font-face {
-  font-family: nunitoSans-light;
-  src: url(../fonts/NunitoSans-Light.ttf);
-}
+ 
 
 * {
   margin: 0;
@@ -14,26 +6,22 @@
   box-sizing: border-box;
 }
 
-.text-fwb {
-  font-family: nunitoSans !important;
-}
+ 
 
 .text-description {
-  font-size: 18px;
-  font-family: nunitoSans-light;
+  font-size: 18px; 
   color: #868786;
   word-wrap: initial;
 }
 
 .text-title {
   /* font-size: 35px; */
-  font-family: nunitoSans-light;
+  
   color: #707070;
 }
 
 .text-sub {
-  font-size: 24px;
-  font-family: nunitoSans;
+  font-size: 24px; 
   color: #707070;
 }
 
@@ -48,8 +36,7 @@
   background-position: center;
 } */
 
-.font-regular {
-  font-family: nunitoSans;
+.font-regular { 
 }
 
 .eye-section {
@@ -74,8 +61,7 @@
   margin: auto;
 }
 
-.hero-section {
-  font-family: nunitoSans-light;
+.hero-section { 
   color: #707070;
 }
 
@@ -109,8 +95,7 @@ button {
   border: none;
   color: #de1a1b;
   font-weight: bold;
-  font-size: 18px;
-  font-family: nunitoSans;
+  font-size: 18px; 
   transition: 0.2s;
   box-shadow: 1px 1px 3px rgb(207, 207, 207);
   background-color: #fff;
@@ -213,7 +198,7 @@ button {
 .offcanvas ul {
   list-style: none;
   font-size: 25px;
-  font-family: nunitoSans-light;
+  
 }
 .offcanvas ul li {
   margin: 20px 0px;
@@ -315,7 +300,7 @@ button {
   color: red;
   font-weight: bold;
   font-size: 18px;
-  font-family: nunitoSans;
+  
   transition: 0.2s;
   box-shadow: none;
   background-repeat: no-repeat;
@@ -333,7 +318,7 @@ button {
   color: red;
   font-weight: bold;
   font-size: 18px;
-  font-family: nunitoSans;
+  
   transition: 0.2s;
   box-shadow: none;
   background-repeat: no-repeat;
@@ -351,7 +336,7 @@ button {
   color: red;
   font-weight: bold;
   font-size: 18px;
-  font-family: nunitoSans;
+  
   transition: 0.2s;
   box-shadow: none;
   background-repeat: no-repeat;
@@ -369,7 +354,7 @@ button {
   color: red;
   font-weight: bold;
   font-size: 18px;
-  font-family: nunitoSans;
+  
   transition: 0.2s;
   box-shadow: none;
   background-repeat: no-repeat;
@@ -387,7 +372,7 @@ button {
   color: red;
   font-weight: bold;
   font-size: 18px;
-  font-family: nunitoSans;
+  
   transition: 0.2s;
   box-shadow: none;
   background-repeat: no-repeat;
@@ -545,14 +530,14 @@ button {
 
 .policy h1 {
   font-size: 80px;
-  font-family: nunitoSans;
+  
   color: #de1a1b;
   margin: 0;
 }
 
 .policy h5 {
   font-size: 19px;
-  font-family: nunitoSans;
+  
   color: #707070;
   margin: 0;
   font-weight: bold;
@@ -586,12 +571,12 @@ button {
 
 .video-text h1 {
   font-size: 50px;
-  font-family: nunitoSans;
+  
 }
 
 .video-text p {
   font-size: 20px;
-  font-family: nunitoSans-light;
+  
   font-weight: 100;
 }
 
@@ -657,7 +642,7 @@ button {
   height: auto;
   border-radius: 20px;
   color: #868786;
-  font-family: nunitoSans-light;
+  
   font-weight: 100;
   transition: none;
   border-radius: 50px !important;
@@ -717,7 +702,7 @@ button {
 
 .our-slider .client-say .name p {
   font-size: 12px;
-  font-family: nunitoSans;
+  
   color: #707070;
   margin: 0;
 }
@@ -832,12 +817,12 @@ button {
 
 .simple h1 {
   font-size: 50px;
-  font-family: nunitoSans-light;
+  
 }
 
 .simple p {
   font-size: 20px;
-  font-family: nunitoSans-light;
+  
   font-weight: 100;
 }
 
@@ -1024,14 +1009,14 @@ footer i {
 .text-description-hover {
   font-size: 45px;
   line-height: 45px;
- font-family: nunitoSans-light;
+ 
   color: #868786;
   word-wrap: initial
 }
 .text-description-hover-small {
   font-size: 24px;
   line-height: 25px;
- font-family: nunitoSans-light;
+ 
   color: #868786;
   word-wrap: initial
 }

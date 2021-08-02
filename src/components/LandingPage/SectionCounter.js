@@ -55,7 +55,7 @@ const SectionCounter = () => {
                             <h5>ACCURACY</h5>
                             <div className="d-flex mt-2">
                                 <h1>{accuracy}</h1>
-                                <p className="text-description mt-auto ps-3">
+                                <p className="text-description mt-auto ps-3 ml-3 fw_3">
                                     Clinical Studies<br />
                                     Performed
                                 </p>
@@ -65,7 +65,7 @@ const SectionCounter = () => {
                             <h5>Innovation</h5>
                             <div className="d-flex mt-2">
                                 <h1>{innovation}</h1>
-                                <p className="text-description mt-auto ps-3">
+                                <p className="text-description mt-auto ps-3 ml-3 fw_3">
                                     Granted Patents in<br />
                                     The US and India
                                 </p>
@@ -75,7 +75,7 @@ const SectionCounter = () => {
                             <h5>Acceptance</h5>
                             <div className="d-flex mt-2">
                                 <h1>{acceptance}</h1>
-                                <p className="text-description mt-auto ps-3">
+                                <p className="text-description mt-auto ps-3 ml-3 fw_3">
                                     Publications in Medical<br />
                                     and Technical Journals
                                 </p>
