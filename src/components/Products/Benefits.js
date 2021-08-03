@@ -7,7 +7,7 @@ return(
         <div className="row">
             <div className="col">
                 <div className="text-center optiontitle">
-                    <h2 className="text-title text-color fw_6 fs_20">Benefits</h2>
+                    <h2 className="text-title text-color fw_7 fs_20">Benefits</h2>
                 </div>
             </div>
         </div>

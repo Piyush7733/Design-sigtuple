@@ -196,7 +196,7 @@ const Blogs = () => {
         <img src={`${b.cover_image && b.cover_image.length ? b.cover_image[0].url : `assets/img/lab-1.png`}`} class="img-fluid" style={{width:"320px",height:"418px",objectFit:"cover"}}/>
           <div class="lab-text">
             <span>{b.duration} min read</span>
-            <h3 className="text-sub mb-1 fw_6" style={{ display: "-webkit-box",WebkitLineClamp: "2",WebkitBoxOrient: "vertical",overflow: "hidden"}}>{b.title}</h3>
+            <h3 className="text-sub mb-1 fw_7" style={{ display: "-webkit-box",WebkitLineClamp: "2",WebkitBoxOrient: "vertical",overflow: "hidden"}}>{b.title}</h3>
             <div className="description-blog-hide">
               <span className="text-70 fw_4 d-block">{`${b.description.slice(0,100)}...`}</span>
               <span className="text-70 fw_4 d-block mt-2 mb-3">{moment(b.publish_at).format("MMM DD,YYYY")}</span>
