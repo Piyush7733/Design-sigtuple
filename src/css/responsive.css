@@ -21,7 +21,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         right: 394px;
     }
     .main-hover {
-        left: 185px;
+        left: 210px;
     }
     .bg_round {
         width: 1000px;
@@ -62,6 +62,13 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
         left: inherit;
         right: 300px;
     }
+}
+@media only screen and (max-width: 1599px) and (min-width: 1366px){
+    .bg_rounds {width: 760px; height: 768px;}
+    .product-logo img{width: 100px;}
+    .main-hover {width: 290px; padding-top: 15px; padding-bottom: 15px;left: 130px; }
+    .main-hover img {width: 90px; height: 90px; }
+    .main-hover .classified {margin-top: 0; }
 }
 
 /* Responsive Media Query (less than 1600px)*/
@@ -317,6 +324,9 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     }
     .faqs-right {
         padding: 50px 00px 00px 00px;
+    }
+    .Solutions-grid.grid-2 {
+        margin: 0 0px;
     }
     /*Shonit-slider start*/
     .Shonit-slider .slick-center {

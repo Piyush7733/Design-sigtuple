@@ -1089,3 +1089,5 @@ footer i {
   cursor: pointer;
   font-weight: 600;
 }
+
+.specs-ul li{ list-style: disc;}
