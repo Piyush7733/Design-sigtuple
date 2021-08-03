@@ -31,7 +31,7 @@ const LandingPage = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="hero-section d-flex vh-100 flex-column">
-                <div className="m-auto text-center">
+                <div className="m-auto text-center w-100">
                   <div id="zoom" className="text mt-90">
                     <div className="small">
                       {/* <h1 className="m-0">The<b> Future of Microscopy</b> is Here!</h1>
@@ -233,6 +233,9 @@ const LandingPage = () => {
               <div className="text-center position-relative">
                 <h2 className={`text-title text-center pb-3 position-relative ${hoverStyle ? `our_product_text_block` : `our_product_text_none`}`}>Our<b> Products</b></h2>
               </div>
+              <div className="text-center ">
+                <img src="assets/img/AI100_2 1.png" className="img-fluid position-relative" />
+              </div>
             </div>
           </div>
           <div className="row mt-3">
@@ -249,7 +252,7 @@ const LandingPage = () => {
                     </div>
                     <div className="ProcuctLeft-description">
                       <div className="mt-3 mx-3">
-                        <p className={`${hoverStyle === 'shonit' ? `text-description-hover` : 'text-description'} m-0 text-start`}>Blood <br /><strong>Analyser</strong></p>
+                        <p className={`${hoverStyle === 'shonit' ? `text-description-hover` : 'text-description'} m-0 text-start fw_2`}>Blood <br /><span className="fw_6">Analyser</span></p>
                       </div>
                       <div className={`mt-3 mx-3 sub-description ${hoverStyle === 'shonit' ? `sub-description-block` : `sub-description-none`}`}>
                         <p className="m-0 text-start text-gray-1">Shonit is an automated peripheral blood smear slide analyzer</p>
@@ -264,10 +267,8 @@ const LandingPage = () => {
                   </div>
                 </div>
                 <div className="box-ProcuctCenter my-auto">
-                  <div className="text-center ">
-                    <img src="assets/img/AI100_2 1.png" className="img-fluid position-relative" />
-                  </div>
-                  <div className="slick-slider product-slider mt-5">
+                  
+                  <div className="slick-slider product-slider">
                     <MicroProduct hoverStyle={hoverStyle} />
                     {/* <div class="">
                       <div class="relative_microscope text-center">
@@ -288,12 +289,11 @@ const LandingPage = () => {
                   <div class={`box-detailsproduct ${hoverStyle ? `main-hover-flex` : `main-hover-none`}`} onMouseLeave={(e => {
                     setHoverStyle(null)
                   })}>
-                    <div className="main-hover row m-0 g-0">
+                    {/* <div className="main-hover row m-0 g-0">
                       <div className="text-img">
                         <img src="assets/img/circle-dot.png" />
                         <div className="text-hover col">
-                          <p className="text-description mt-auto ps-3">
-                            Neutrophil <span>2</span></p>
+                          <p className="text-description mt-auto ps-3">Neutrophil <span>2</span></p>
                           <p className="text-description mt-auto ps-3">Lymphocyte</p>
                           <p className="text-description mt-auto ps-3">Monocyte<span>1</span></p>
                           <p className="text-description mt-auto ps-3">Neutrophil</p>
@@ -305,7 +305,26 @@ const LandingPage = () => {
                         <p className="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger">Unclassified<span>1</span></p>
                         <p className="text-description mb-0 ps-3 bg-light px-2 py-1 text-danger ms-auto">Rejected <span>7</span></p>
                       </div>
-                    </div>
+                    </div> */}
+                    <div className="main-hover m-0 g-0">
+                      <div className="d-flex justify-content-between">
+                          <div className="text-img w-50">
+                              <img src="assets/img/circle-dot.png" />
+                          </div>                                            
+                          <div className="text-hover col">
+                              <p className="m-0">Neutrophil <span>2</span></p>
+                              <p className="m-0">Lymphocyte</p>
+                              <p className="m-0">Monocyte<span>1</span></p>
+                              <p className="m-0">Neutrophil</p>
+                              <p className="m-0">Lymphocyte</p>
+                              <p className="m-0">Monocyte</p>
+                          </div>
+                      </div>
+                      <div className="d-flex justify-content-between classified border-top">
+                          <p className=" mb-0 ps-3 bg-light px-2 py-1 text-danger">Unclassified<span>1</span></p>
+                          <p className="mb-0 ps-3 bg-light px-2 py-1 text-danger ms-auto">Rejected <span>7</span></p>
+                      </div>
+                  </div>
                   </div>
                 </div>
 
@@ -320,7 +339,7 @@ const LandingPage = () => {
                     </div>
                     <div className="ProcuctRight-description">
                       <div className="mt-3 mx-3">
-                        <p className={`${hoverStyle === 'shrava' ? `text-description-hover` : 'text-description'} m-0 text-start`}>Urine <br /><strong>Analyser</strong></p>
+                        <p className={`${hoverStyle === 'shrava' ? `text-description-hover` : 'text-description'} m-0 text-start fw_2`}>Urine <br /><span className="fw_6">Analyser</span></p>
                       </div>
                       <div className={`mt-3 mx-3 sub-description ${hoverStyle === 'shrava' ? `sub-description-block` : `sub-description-none`}`}>
                         <p className="m-0 text-start text-gray-1">Shrava is an automated peripheral blood smear slide analyzer</p>
@@ -390,7 +409,7 @@ const LandingPage = () => {
 
           </div>
         </div>
-        <div class="bg_round"></div>
+        <div class="bg_rounds"></div>
       </div>
 
 
@@ -409,7 +428,7 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-xxl-6 col-xl-6 col-md-6 col-sm-8 col-12  mx-auto mt-4">
+            <div className="col-xxl-8 col-xl-8 col-md-8 col-sm-8 col-12  mx-auto mt-4">
               <div className="d-flex mb-3">
                 <ul className="nav nav-pills mb-3 mx-auto">
                   <li className="nav-item" role="presentation">

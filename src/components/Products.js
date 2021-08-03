@@ -129,8 +129,8 @@ const Products = () => {
                                 <div className="row align-items-center">
                                     <div className="col-md-4">
                                         <div className="multiple-tests-text">
-                                            <h1 className="text-gray fw_3">One device, <br /><strong>multiple tests!</strong></h1>
-                                            <p className="text-gray m-0">Can digitize and analyse both blood and urine</p>
+                                            <h1 className="text-gray fw_2 fs_50">One device, <br /><span className="fw_6">multiple tests!</span></h1>
+                                            <p className="text-gray fs_24 fw_3 m-0 mt-2">Can digitize and analyse both blood and urine</p>
                                         </div>
                                     </div>
                                     <div className="col-md-8 text-center">
@@ -144,8 +144,8 @@ const Products = () => {
                                 <div className="row align-items-center">
                                     <div className="col-md-4">
                                         <div className="multiple-tests-text">
-                                            <h1 className="text-gray fw_3">Automated, <br /><strong>cell identification!</strong></h1>
-                                            <p className="text-gray m-0">backed by visual evidence</p>
+                                            <h1 className="text-gray fw_2 fs_50">Automated, <br /><span className="fw_6">cell identification!</span></h1>
+                                            <p className="text-gray fs_24 fw_3 m-0 mt-2">backed by visual evidence</p>
                                         </div>
                                     </div>
                                     <div className="col-md-8 text-center">
@@ -159,8 +159,8 @@ const Products = () => {
                                 <div className="row align-items-center">
                                     <div className="col-md-4">
                                         <div className="multiple-tests-text">
-                                            <h1 className="text-gray fw_3">Review report from <br /><strong>anytime & anywhere</strong></h1>
-                                            <p className="text-gray m-0">Web-enabled reports allow WFH</p>
+                                            <h1 className="text-gray fw_2 fs_50">Review report from <br /><span className="fw_6">anytime & anywhere</span></h1>
+                                            <p className="text-gray fs_24 fw_3 m-0 mt-2">Web-enabled reports allow WFH</p>
                                         </div>
                                     </div>
                                     <div className="col-md-8 text-center">
@@ -181,8 +181,8 @@ const Products = () => {
                     <div className="row align-items-center solutions-vh vh-100">
                         <div className="col-md-5">
                             <div className="">
-                                <h1 className="text-gray fw_3">Image Analysis <br /><strong>Solutions</strong></h1>
-                                <p className="text-gray m-0">Analysers with Sigtuple AI100</p>
+                                <h1 className="text-gray fw_2 fs_54">Image Analysis <br /><span className="fw_6">Solutions</span></h1>
+                                <p className="text-gray fs_22 fw_3 mb-0 mt-3">Analysers with Sigtuple AI100</p>
                             </div>
                         </div>
                         <div className="col-md-7 text-center">
@@ -192,7 +192,7 @@ const Products = () => {
                                         <img src="assets/img/shonit.png" className="img-fluid" alt="" />
                                     </div>
                                     <div className="Solutions-text mt-4">
-                                        <h5 className="text-gray fw_3">Blood <br /><strong>Analyser</strong></h5>
+                                        <h4 className="text-gray fw_4">Blood <br /><span className="fw_7">Analyser</span></h4>
                                     </div>
                                 </div>
                                 </Link>
@@ -202,7 +202,7 @@ const Products = () => {
                                         <img src="assets/img/urine.png" className="img-fluid" alt="" />
                                     </div>
                                     <div className="Solutions-text mt-4">
-                                        <h5 className="text-gray fw_3">Urine<br /><strong>Analyser</strong></h5>
+                                        <h4 className="text-gray fw_4">Urine<br /><span className="fw_7">Analyser</span></h4>
                                     </div>
                                 </div>
                                 </Link>
@@ -218,7 +218,7 @@ const Products = () => {
                     <div className="row">
                         <div className="col">
                             <div className="text-center optiontitle">
-                                <h2 className="text-title text-color fw_6 fs_20">Tech Specs</h2>
+                                <h2 className="text-title text-color fw_7 fs_20">Tech Specs</h2>
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@ const Products = () => {
                                 e.preventDefault()
                                 getTechSpecDetails()
                             })}>
-                                <span href="" className="text-color fw_6 mx-auto ">
+                                <span href="" className="text-color fw_7 mx-auto ">
                                     <span>View More</span>
                                     <svg width="18" height="18" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginLeft: "5px" }}>
                                         <path d="M0.999999 1L10.5289 10.7991C10.6538 10.9277 10.8233 11 11 11C11.1767 11 11.3462 10.9277 11.4711 10.7991L21 0.999999" stroke="#DE1A1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -241,10 +241,10 @@ const Products = () => {
                             </div> : null}
 
                             <div className="detailed-btn mt-50 mb-30 mx-auto text-center">
-                                <Link to={{ pathname: `https://sigtuple2021.s3.us-east-2.amazonaws.com/sample_caeb4040c2.pdf` }} className="text-color fw_6 mx-auto" target="_blank">
+                                <Link to={{ pathname: `https://sigtuple2021.s3.us-east-2.amazonaws.com/sample_caeb4040c2.pdf` }} className="fw_7 text-gray mx-auto" target="_blank">
                                     <svg width="18" height="21" className="mr-1" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M15.3337 9.83333H22.0003L14.0003 17.8333L6.00033 9.83333H12.667V0.5H15.3337V9.83333ZM3.33366 21.8333H24.667V12.5H27.3337V23.1667C27.3337 23.5203 27.1932 23.8594 26.9431 24.1095C26.6931 24.3595 26.3539 24.5 26.0003 24.5H2.00033C1.6467 24.5 1.30756 24.3595 1.05752 24.1095C0.807468 23.8594 0.666992 23.5203 0.666992 23.1667V12.5H3.33366V21.8333Z" fill="#707070" />
-                                    </svg>
+                                    </svg>&nbsp;
                                     Detailed Specifications
 
                                 </Link>

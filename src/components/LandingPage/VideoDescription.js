@@ -10,13 +10,13 @@ const VideoDescription = () =>{
                 <source src="assets/video/video.mp4" type="video/mp4" />
                 </video>
             <div className="video-text container">
-                <h1>
-                    SigTuple Combined Robotics &amp;<br />
-                    <b>Artificial Intelligence</b>
+                <h1 className="fw_2">
+                    SigTuple Combined Robotics &amp; <br />
+                    <sapn className="fw_6">Artificial Intelligence</sapn>
                 </h1>
                 <p className="textdescription">
-                    to build a smart screening solution.<br />
-                    Healthcare made accessible, accurate, and affordable.
+                    to build a smart screening solution. Healthcare <br />
+                    made accessible, accurate, and affordable.
                 </p>
             </div>
             <div id="play-pause-button" className="play-btn" onClick={(e=>{
