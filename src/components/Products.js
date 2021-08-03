@@ -213,8 +213,6 @@ const Products = () => {
             </div>
 
             <Benefits term={"product"}/>
-
-
             <div className="techSpecs-area">
                 <div className="container ptb-80">
                     <div className="row">
