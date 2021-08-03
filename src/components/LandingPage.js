@@ -19,43 +19,43 @@ import Header from "./Header";
 
 const LandingPage = () => {
   const [hoverStyle, setHoverStyle] = useState(null);
-  const [tab,setTab]=useState("shonit")
-  
+  const [tab, setTab] = useState("shonit")
+
   return (
     <>
-    {/* <div className="main"> */}
+      {/* <div className="main"> */}
       {/* <Header /> */}
       <div className="heor-area hero-banner">
-                <canvas className="bg-gradient-canvas" />
-                <div className="container-fluid ">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="hero-section d-flex vh-100 flex-column">
-                                <div className="m-auto text-center"> 
-                                    <div id="zoom" className="text mt-90">
-                                        <div className="small">
-                                            {/* <h1 className="m-0">The<b> Future of Microscopy</b> is Here!</h1>
+        <canvas className="bg-gradient-canvas" />
+        <div className="container-fluid ">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="hero-section d-flex vh-100 flex-column">
+                <div className="m-auto text-center">
+                  <div id="zoom" className="text mt-90">
+                    <div className="small">
+                      {/* <h1 className="m-0">The<b> Future of Microscopy</b> is Here!</h1>
                                             <center><h2>We are democratizing microscopy through AI, robotics, and cloud computing.</h2></center> */}
-                                            <h1 class="m-0 fw_3 ">The <span class="fw_6">Future of Microscopy</span> is Here!</h1>
-                                            <h2 class="fw_3 mt-1">We are democratizing microscopy through AI, robotics, and cloud computing.</h2>
-                                        </div> 
-                                        <div className="large"></div>
-                                    </div> 
-                                </div>
-                                <div className="m-auto text-center check-products">
-                                    <a href="#product_sections">
-                                        <div className="eye-section">
-                                            <span className="text-danger font-regular fw-bold">Check our products</span>
-                                            <div className="eye mt-2"><img src="assets/img/eye.png" /></div>
-                                        </div>
-                                    </a>
-                                    <div className="verticle"></div>
-                                </div>
-                            </div>
-                        </div>
+                      <h1 class="m-0 fw_3 ">The <span class="fw_6">Future of Microscopy</span> is Here!</h1>
+                      <h2 class="fw_3 mt-1">We are democratizing microscopy through AI, robotics, and cloud computing.</h2>
                     </div>
+                    <div className="large"></div>
+                  </div>
                 </div>
+                <div className="m-auto text-center check-products">
+                  <a href="#product_sections">
+                    <div className="eye-section">
+                      <span className="text-danger font-regular fw-bold">Check our products</span>
+                      <div className="eye mt-2"><img src="assets/img/eye.png" /></div>
+                    </div>
+                  </a>
+                  <div className="verticle"></div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
       {/* <div className="container-fluid hero-banner">
         <div className="container hero-section d-flex h-100 flex-column">
           <div className="m-auto text-center">
@@ -82,7 +82,7 @@ const LandingPage = () => {
               </a>
               <div class="verticle"></div>
             </div> */}
-            {/* <a href="#product_sections">
+      {/* <a href="#product_sections">
               <div className="eye-section">
                 <span className="text-danger font-regular fw-bold">
                   Check our products
@@ -93,7 +93,7 @@ const LandingPage = () => {
               </div>
             </a>
             <div className="verticle"></div> */}
-          {/* </div>
+      {/* </div>
         </div>
       </div> */}
 
@@ -226,7 +226,7 @@ const LandingPage = () => {
       {/*</div> */}
 
       <div className="procuct-area" id="product_sections">
-      <canvas className="bg-gradient-canvas1" />
+        <canvas className="bg-gradient-canvas1" />
         <div className="container-fluid container-set position-relative">
           <div className="row mt-5 position-relative">
             <div className="col position-relative">
@@ -341,11 +341,11 @@ const LandingPage = () => {
           <div className="mobileproduct">
             <div className="mobileproduct-grid mt-4 mx-auto ">
               <div className="ProcuctLeft mx-auto" onMouseEnter={(e) => {
-                  e.preventDefault();
-                  setHoverStyle("shonit")
-                }}>
+                e.preventDefault();
+                setHoverStyle("shonit")
+              }}>
                 <div className={`ProcuctLeft-img  ${hoverStyle === 'shonit' ? `bg-transparent shadow-none` : `bg-white`
-                      }`}>
+                  }`}>
                   <img src="assets/img/shonit.png" />
                 </div>
                 <div className="ProcuctLeft-description mx-auto">
@@ -354,7 +354,7 @@ const LandingPage = () => {
                   </div>
                   <div className={`mt-3 mx-3 sub-description ${hoverStyle === 'shonit' ? `sub-description-block` : `sub-description-none`}`}>
                     <p className="m-0 text-start text-gray-1">Shonit is an automated peripheral blood smear slide analyzer</p>
-                    <button className="d-block px-4 mt-3 explore text-start" style={{width:"131px"}}>
+                    <button className="d-block px-4 mt-3 explore text-start" style={{ width: "131px" }}>
                       Explore
                       {" "}<svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B" />
@@ -364,11 +364,11 @@ const LandingPage = () => {
                 </div>
               </div>
               <div className="ProcuctRight mx-auto" onMouseEnter={(e) => {
-                  e.preventDefault();
-                  setHoverStyle("shrava")
-                }}>
+                e.preventDefault();
+                setHoverStyle("shrava")
+              }}>
                 <div className={`ProcuctLeft-img  ${hoverStyle === 'shrava' ? `bg-transparent shadow-none` : `bg-white`
-                      }`}>
+                  }`}>
                   <img src="assets/img/urine.png" />
                 </div>
                 <div className="ProcuctRight-description text-center">
@@ -377,7 +377,7 @@ const LandingPage = () => {
                   </div>
                   <div className={`mt-3 mx-3 sub-description ${hoverStyle === 'shrava' ? `sub-description-block` : `sub-description-none`}`}>
                     <p className="m-0 text-start text-gray-1">Shrava is an automated peripheral blood smear slide analyzer</p>
-                    <button className="d-block px-4 mt-3 explore text-start" style={{width:"131px"}}>
+                    <button className="d-block px-4 mt-3 explore text-start" style={{ width: "131px" }}>
                       Explore
                       {" "}<svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B" />
@@ -403,7 +403,7 @@ const LandingPage = () => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <div className="text-center"> 
+              <div className="text-center">
                 <h1 className="text-title text-center pb-3 fw_2 fs_48">How does <span className="fw_6">AI100 work?</span></h1>
               </div>
             </div>
@@ -413,25 +413,25 @@ const LandingPage = () => {
               <div className="d-flex mb-3">
                 <ul className="nav nav-pills mb-3 mx-auto">
                   <li className="nav-item" role="presentation">
-                    <button className={`nav-link px-5 nav-link-1 ${tab==='shonit' ? 'active' : ''}`} type="button" onClick={(e=>{
+                    <button className={`nav-link px-5 nav-link-1 ${tab === 'shonit' ? 'active' : ''}`} type="button" onClick={(e => {
                       setTab("shonit")
                     })}>Shonit</button>
                   </li>
                   <li className="nav-item" role="presentation">
-                    <button className={`nav-link px-5 nav-link-2 ${tab==='shrava' ? 'active' : ''}`} type="button" onClick={(e=>{
+                    <button className={`nav-link px-5 nav-link-2 ${tab === 'shrava' ? 'active' : ''}`} type="button" onClick={(e => {
                       setTab("shrava")
                     })}>Shrava</button>
                   </li>
                 </ul>
               </div>
               <div className="tab-content">
-                <div className={`tab-pane fade position-relative ${tab==='shonit' ? `active show` :''}`}>
+                <div className={`tab-pane fade position-relative ${tab === 'shonit' ? `active show` : ''}`}>
                   <div className="work-box">
                     <div className="text_section_blood">Shonit <strong>in Action</strong></div>
                     <div className="blood image_section_blood"><img src="assets/img/shonit.png" /></div>
                   </div>
                 </div>
-                <div className={`tab-pane fade position-relative ${tab==='shrava' ? `active show` :''}`}>
+                <div className={`tab-pane fade position-relative ${tab === 'shrava' ? `active show` : ''}`}>
                   <div className="work-box">
                     <div className="text_section_blood">Shrava <strong>in Action</strong></div>
                     <div className="blood image_section_blood"><img src="assets/img/urine.png" /></div>
@@ -498,7 +498,7 @@ const LandingPage = () => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <div className="text-center"> 
+              <div className="text-center">
                 <h1 className="text-title text-center fw_2">Bringing Speed &amp; Precision with <span className="fw_6">Extensive R&amp;D</span></h1>
               </div>
             </div>
@@ -513,9 +513,9 @@ const LandingPage = () => {
           <div className="row">
             <div className="col-12 text-center mt-5">
               <a href="" className="text-decoration-none text-danger fw-bold text-fwb">View All
-              <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginLeft: "5px",marginTop:"-3px"}}>
-               <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B"></path>
-              </svg>
+                <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginLeft: "5px", marginTop: "-3px" }}>
+                  <path d="M14.1935 7.87501L8.159 1.84051L9.74975 0.249756L18.5 9.00001L9.74975 17.7503L8.159 16.1595L14.1935 10.125H0.5V7.87501H14.1935Z" fill="#DE1A1B"></path>
+                </svg>
               </a>
             </div>
           </div>
@@ -542,24 +542,7 @@ const LandingPage = () => {
       </div> */}
 
 
-  <div className="Clients-area our-client d-flex client-before client-after pb-50">
-    <canvas className="bg-gradient-canvas2" />
-        <div className="container py-100">
-          <div className="row">
-            <div className="col">
-              <div className="text-center"> 
-                <h1 className="text-title fw_2">From <span className="fw_6">Our Clients</span></h1>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xxl-9 col-12 mx-auto mt-5 position-relative">
-              <img src="assets/img/cot.png" className="cot" />
-              <Client />
-            </div>
-          </div>
-        </div>
-      </div>
+      <Client />
 
       {/* <div className="container-fluid our-client d-flex">
         <div className="container my-auto">
@@ -580,10 +563,10 @@ const LandingPage = () => {
       <div className="Brewing-area">
         <div className="container py-100">
           <div className="row">
-            <div className="col"> 
+            <div className="col">
               <div className="text-center">
-                  <h1 className="text-title fw_2">Know <span className="fw_6">What’s Brewing</span></h1>
-                  <p className="text-description fw_3 mt-5 fs_22 lss_3">Get access to the breakthroughs we make in our research and innovation every day.</p>
+                <h1 className="text-title fw_2">Know <span className="fw_6">What’s Brewing</span></h1>
+                <p className="text-description fw_3 mt-5 fs_22 lss_3">Get access to the breakthroughs we make in our research and innovation every day.</p>
               </div>
             </div>
           </div>
@@ -615,12 +598,12 @@ const LandingPage = () => {
 
 
       <div className="awards-area award d-flex">
-      <canvas className="bg-gradient-canvas3" />
+        <canvas className="bg-gradient-canvas3" />
         <div className="container">
           <div className="row">
-            <div className="col"> 
+            <div className="col">
               <div className="text-center">
-                  <h1 className="text-title fw_2">Awards &amp; <span className="fw_6">Recognitions</span></h1>
+                <h1 className="text-title fw_2">Awards &amp; <span className="fw_6">Recognitions</span></h1>
               </div>
             </div>
           </div>
@@ -628,7 +611,7 @@ const LandingPage = () => {
 
             <div className="slick-slider awards-slider">
               <Awards />
-          </div>
+            </div>
           </div>
         </div>
       </div>
@@ -642,9 +625,9 @@ const LandingPage = () => {
                   </div>
                 </div>
               </div> */}
-    <ImageFooter />
+      <ImageFooter />
       {/* <Footer /> */}
-    {/* </div> */}
+      {/* </div> */}
     </>
   );
 };

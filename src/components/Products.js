@@ -2,13 +2,38 @@ import Client from "./Client";
 import ImageFooter from "./ImageFooter";
 import Benefits from "./Products/Benefits";
 import Slider from "react-slick";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getTechSepcs, getTechSepcsCounts } from "../Api";
 import { Link } from "react-router-dom";
 const Products = () => {
     const [techSpecs, setTechSpecs] = useState([])
     const [tab, setTab] = useState(0)
     const [hasMore, setHasMore] = useState(false)
+
+    const parentRef = useRef()
+    const sliderRef = useRef()
+
+
+    useEffect(() => {
+        if (!parentRef.current) {
+            return;
+        }
+
+        parentRef.current.addEventListener("wheel", e => handleScroll(e));
+
+        return () => {
+            parentRef && parentRef.current && parentRef.current.removeEventListener("wheel", e => handleScroll(e));
+        };
+    }, [parentRef])
+
+    const handleScroll = e => {
+        e.preventDefault();
+        if (e.deltaY < 0) {
+            sliderRef && sliderRef.current.slickNext();
+        } else {
+            sliderRef && sliderRef.current.slickPrev();
+        }
+    };
 
     useEffect(() => {
         const getTechSepc = async () => {
@@ -88,7 +113,7 @@ const Products = () => {
                                     </button>
                                 </div>
                                 <div className="m-auto text-center products-image">
-                                    <img src="assets/img/product/1.png" alt="" className="img-fluid" />
+                                    <img src="assets/img/product/products-ai100-landing.png" alt="" className="img-fluid" />
                                 </div>
                             </div>
                         </div>
@@ -98,8 +123,8 @@ const Products = () => {
 
             <div className="multiple-area mx-auto">
                 <div className="container ptb-80">
-                    <div className="Multiple-tests-slider">
-                        <Slider {...slider_settings}>
+                    <div className="Multiple-tests-slider" ref={parentRef}>
+                        <Slider {...slider_settings} ref={sliderRef}>
                             <div className="item">
                                 <div className="row align-items-center">
                                     <div className="col-md-4">
@@ -162,7 +187,7 @@ const Products = () => {
                         </div>
                         <div className="col-md-7 text-center">
                             <div className="Solutions-grid grid-2">
-                                <div className="Solutions-list">
+                                <Link to="/shonit"><div className="Solutions-list">
                                     <div className="Solutions-img">
                                         <img src="assets/img/shonit.png" className="img-fluid" alt="" />
                                     </div>
@@ -170,23 +195,26 @@ const Products = () => {
                                         <h5 className="text-gray fw_3">Blood <br /><strong>Analyser</strong></h5>
                                     </div>
                                 </div>
+                                </Link>
+                                <Link to="/shrava">
                                 <div className="Solutions-list">
                                     <div className="Solutions-img">
                                         <img src="assets/img/urine.png" className="img-fluid" alt="" />
                                     </div>
                                     <div className="Solutions-text mt-4">
-                                        <h5 className="text-gray fw_3">Blood <br /><strong>Analyser</strong></h5>
+                                        <h5 className="text-gray fw_3">Urine<br /><strong>Analyser</strong></h5>
                                     </div>
                                 </div>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <Benefits />
+            <Benefits term={"product"}/>
 
-          
+
             <div className="techSpecs-area">
                 <div className="container ptb-80">
                     <div className="row">
@@ -202,20 +230,20 @@ const Products = () => {
                                 {renderItems}
                             </div>
 
-                            {hasMore ? <div className="mt-30 mb-30 mx-auto text-center" style={{cursor:"pointer"}} onClick={(async e=>{
-                                    e.preventDefault()
-                                    getTechSpecDetails()                                   
-                                })}>
+                            {hasMore ? <div className="mt-30 mb-30 mx-auto text-center" style={{ cursor: "pointer" }} onClick={(async e => {
+                                e.preventDefault()
+                                getTechSpecDetails()
+                            })}>
                                 <span href="" className="text-color fw_6 mx-auto ">
                                     <span>View More</span>
                                     <svg width="18" height="18" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginLeft: "5px" }}>
                                         <path d="M0.999999 1L10.5289 10.7991C10.6538 10.9277 10.8233 11 11 11C11.1767 11 11.3462 10.9277 11.4711 10.7991L21 0.999999" stroke="#DE1A1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </span>
-                            </div> : null }
+                            </div> : null}
 
                             <div className="detailed-btn mt-50 mb-30 mx-auto text-center">
-                                <Link to={{pathname:`https://sigtuple2021.s3.us-east-2.amazonaws.com/sample_caeb4040c2.pdf`}}  className="text-color fw_6 mx-auto" target="_blank">
+                                <Link to={{ pathname: `https://sigtuple2021.s3.us-east-2.amazonaws.com/sample_caeb4040c2.pdf` }} className="text-color fw_6 mx-auto" target="_blank">
                                     <svg width="18" height="21" className="mr-1" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M15.3337 9.83333H22.0003L14.0003 17.8333L6.00033 9.83333H12.667V0.5H15.3337V9.83333ZM3.33366 21.8333H24.667V12.5H27.3337V23.1667C27.3337 23.5203 27.1932 23.8594 26.9431 24.1095C26.6931 24.3595 26.3539 24.5 26.0003 24.5H2.00033C1.6467 24.5 1.30756 24.3595 1.05752 24.1095C0.807468 23.8594 0.666992 23.5203 0.666992 23.1667V12.5H3.33366V21.8333Z" fill="#707070" />
                                     </svg>
@@ -228,24 +256,9 @@ const Products = () => {
                 </div>
             </div>
 
-            <div className="Clients-area our-client d-flex client-before client-after pb-50">
-                <canvas className="bg-gradient-canvas2" />
-                <div className="container py-100">
-                    <div className="row">
-                        <div className="col">
-                            <div className="text-center">
-                                <h1 className="text-title">From<b> Our Clients</b></h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-xxl-9 col-12 mx-auto mt-5 position-relative">
-                            <img src="assets/img/cot.png" className="cot" />
-                            <Client />
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <Client />
+
 
             <ImageFooter />
         </>

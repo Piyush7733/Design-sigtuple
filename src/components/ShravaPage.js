@@ -2,8 +2,35 @@ import Benefits from "./Products/Benefits";
 import Client from "./Client";
 import ImageFooter from "./ImageFooter";
 import Slider from "react-slick";
+import { useEffect, useRef } from "react";
 
 const ShravaPage = () => {
+
+    const parentRef = useRef()
+    const sliderRef = useRef()
+
+
+    useEffect(() => {
+        if (!parentRef.current) {
+            return;
+        }
+
+        parentRef.current.addEventListener("wheel", e => handleScroll(e));
+
+        return () => {
+            parentRef && parentRef.current && parentRef.current.removeEventListener("wheel", e => handleScroll(e));
+        };
+    }, [parentRef])
+
+    const handleScroll = e => {
+        e.preventDefault();
+        if (e.deltaY < 0) {
+            sliderRef && sliderRef.current.slickNext();
+        } else {
+            sliderRef && sliderRef.current.slickPrev();
+        }
+    };
+
 
     let shrava_settings = {
         slidesToShow: 1,
@@ -222,27 +249,11 @@ const ShravaPage = () => {
 
         <Benefits />
 
-        <div className="Clients-area our-client d-flex client-before client-after pb-50">
-            <canvas className="bg-gradient-canvas2" />
-            <div className="container py-100">
-                <div className="row">
-                    <div className="col">
-                        <div className="text-center">
-                            <h1 className="text-title">From<b> Our Clients</b></h1>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-xxl-9 col-12 mx-auto mt-5 position-relative">
-                        <img src="assets/img/cot.png" className="cot" />
-                        <Client />
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <Client />
+
 
         <ImageFooter />
-
 
     </>
     )

@@ -5,32 +5,32 @@ import Slider from "react-slick";
 import { useEffect, useRef } from "react";
 
 const ShonitPage = () => {
-    const parentRef=useRef()
-    const sliderRef=useRef()
+    const parentRef = useRef()
+    const sliderRef = useRef()
 
 
-    useEffect(()=>{
+    useEffect(() => {
         if (!parentRef.current) {
             return;
-          }
+        }
 
-          parentRef.current.addEventListener("wheel", e => handleScroll(e));
-      
-          return () => {
-            parentRef.current.removeEventListener("wheel", e => handleScroll(e));
-          };
-    },[parentRef])
+        parentRef.current.addEventListener("wheel", e => handleScroll(e));
+
+        return () => {
+            parentRef && parentRef.current && parentRef.current.removeEventListener("wheel", e => handleScroll(e));
+        };
+    }, [parentRef])
 
     const handleScroll = e => {
         e.preventDefault();
         if (e.deltaY < 0) {
-          sliderRef && sliderRef.current.slickNext();
+            sliderRef && sliderRef.current.slickNext();
         } else {
-          sliderRef && sliderRef.current.slickPrev();
+            sliderRef && sliderRef.current.slickPrev();
         }
-      };
-   
-      let shonit_settings={
+    };
+
+    let shonit_settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
@@ -44,7 +44,7 @@ const ShonitPage = () => {
     }
 
 
-    let product_settings={
+    let product_settings = {
         arrows: false,
         dots: true,
         infinite: false,
@@ -74,15 +74,15 @@ const ShonitPage = () => {
                     <div className="col-lg-10 col-md-12 mx-auto slider-pc-bg">
                         <div className="Shonit-slider">
                             <Slider {...shonit_settings}>
-                            <div className="item">
-                                <img src="assets/img/Shonit/SS1.png" alt=""/>
-                            </div>
-                            <div className="item">
-                                <img src="assets/img/Shonit/SS2.png" alt=""/>
-                            </div>
-                            <div className="item">
-                                <img src="assets/img/Shonit/SS3.png" alt=""/>
-                            </div>
+                                <div className="item">
+                                    <img src="assets/img/Shonit/SS1.png" alt="" />
+                                </div>
+                                <div className="item">
+                                    <img src="assets/img/Shonit/SS2.png" alt="" />
+                                </div>
+                                <div className="item">
+                                    <img src="assets/img/Shonit/SS3.png" alt="" />
+                                </div>
                             </Slider>
                         </div>
                         <img src="assets/img/Shonit/pc.png" className="img-fluid pc-img" alt="" />
@@ -128,37 +128,37 @@ const ShonitPage = () => {
         <div className="analysis-area mx-auto">
             <div className="container ptb-80">
                 <div className="analysis-slider" ref={parentRef}>
-                    <Slider {...product_settings}  ref={sliderRef}>
-                    <div className="item">
-                        <div className="row align-items-center">
-                            <div className="col-md-4">
-                                <div className="analysis-text">
-                                    <h1 className="text-gray fw_3"><strong>AI-assisted </strong> analysis</h1>
-                                    <p className="text-gray m-0">Automated WBC DC, RBC morphology, and platelet morphology reporting with visual evidence</p>
+                    <Slider {...product_settings} ref={sliderRef}>
+                        <div className="item">
+                            <div className="row align-items-center">
+                                <div className="col-md-4">
+                                    <div className="analysis-text">
+                                        <h1 className="text-gray fw_3"><strong>AI-assisted </strong> analysis</h1>
+                                        <p className="text-gray m-0">Automated WBC DC, RBC morphology, and platelet morphology reporting with visual evidence</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="col-md-8 text-center">
-                                <div className="analysis-img">
-                                    <img src="assets/img/product/multiple_tests/banner_01.png" className="img-fluid" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="row align-items-center">
-                            <div className="col-md-4">
-                                <div className="Microscopic-text">
-                                    <h1 className="text-gray fw_3"><strong>Microscopic </strong> view</h1>
-                                    <p className="text-gray m-0">The Microscopic view enables the pathologist to virtually “see” the slide as if it were under a microscope </p>
-                                </div>
-                            </div>
-                            <div className="col-md-8 text-center">
-                                <div className="analysis-img">
-                                    <img src="assets/img/product/multiple_tests/banner_01.png" className="img-fluid" alt="" />
+                                <div className="col-md-8 text-center">
+                                    <div className="analysis-img">
+                                        <img src="assets/img/product/multiple_tests/banner_01.png" className="img-fluid" alt="" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div className="item">
+                            <div className="row align-items-center">
+                                <div className="col-md-4">
+                                    <div className="Microscopic-text">
+                                        <h1 className="text-gray fw_3"><strong>Microscopic </strong> view</h1>
+                                        <p className="text-gray m-0">The Microscopic view enables the pathologist to virtually “see” the slide as if it were under a microscope </p>
+                                    </div>
+                                </div>
+                                <div className="col-md-8 text-center">
+                                    <div className="analysis-img">
+                                        <img src="assets/img/product/multiple_tests/banner_01.png" className="img-fluid" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </Slider>
                 </div>
             </div>
@@ -229,10 +229,10 @@ const ShonitPage = () => {
         </div>
 
         <div className="work-area ">
-            <div className="container-fluid px-0 position-relative video-section" style={{margin:"140px"}}>
+            <div className="container-fluid px-0 position-relative video-section" style={{ margin: "140px" }}>
                 <video id="media-video" poster="assets/img/video_bg.png">
                     <source src="assets/video/video.mp4" type="video/mp4" />
-                    </video>
+                </video>
                 <div className="video-text container text-center">
                     <img src="assets/img/shonit_logo.png" className="img-fluid" alt="" />
                 </div>
@@ -242,24 +242,8 @@ const ShonitPage = () => {
 
         <Benefits />
 
-        <div className="Clients-area our-client d-flex client-before client-after pb-50">
-            <canvas className="bg-gradient-canvas2" />
-            <div className="container py-100">
-                <div className="row">
-                    <div className="col">
-                        <div className="text-center">
-                            <h1 className="text-title">From<b> Our Clients</b></h1>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-xxl-9 col-12 mx-auto mt-5 position-relative">
-                        <img src="assets/img/cot.png" className="cot" />
-                        <Client />
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <Client />
 
         <ImageFooter />
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import {getClients} from "../Api";
+import { getClients } from "../Api";
 import NextArrow from "./Arrow/NextArrow";
 import PrevArrow from "./Arrow/PrevArrow";
 
@@ -240,45 +240,62 @@ const Client = () => {
       // </>
 
       <div className="slide" key={c.id}>
-                    <div className="row" >
-                      <div className="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12" >
-                        <div className="card-body left-card-body">
-                          <p className="text-description fw_6 clients_text_sections">
-                            “{c.review.slice(0,200)}”
-                          </p>
-                          <div className="d-flex name clients_user_sections">
-                            <img src={`${c.profilepic && c.profilepic[0] ? c.profilepic[0].url :'assets/img/carbon_user-avatar-filled.png'}`} class="me-3" style={{objectFit:"cover"}}/>
-                            <div className="py-2">
-                              <h3 className="text-sub fw-bold m-0">{c.Username}</h3>
-                              <p className="m-0 client_section_text">{c.designation},</p>
-                              <p className="m-0 client_section_text">{c.work_at}</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
-                        <div className="card-body right-card-body">
-                          <h1 className="text-title text-white fw_8 ls_1">{c.review_title}</h1>
-                          <p className="text-description text-white m-0">{c.short_review}</p>
-                        </div>
-                      </div>
-                    </div>
+        <div className="row" >
+          <div className="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12" >
+            <div className="card-body left-card-body">
+              <p className="text-description fw_6 clients_text_sections">
+                “{c.review.slice(0, 200)}”
+              </p>
+              <div className="d-flex name clients_user_sections">
+                <img src={`${c.profilepic && c.profilepic[0] ? c.profilepic[0].url : 'assets/img/carbon_user-avatar-filled.png'}`} class="me-3" style={{ objectFit: "cover" }} />
+                <div className="py-2">
+                  <h3 className="text-sub fw-bold m-0">{c.Username}</h3>
+                  <p className="m-0 client_section_text">{c.designation},</p>
+                  <p className="m-0 client_section_text">{c.work_at}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
+            <div className="card-body right-card-body">
+              <h1 className="text-title text-white fw_8 ls_1">{c.review_title}</h1>
+              <p className="text-description text-white m-0">{c.short_review}</p>
+            </div>
+          </div>
         </div>
+      </div>
     );
   });
 
   return (
-    <div class="Clients-slider">
-    <Slider {...settings_clinet}>{renderItems}</Slider>
-    <div class="Clients-count">
-    {currentIndex < 10
-                    ? currentIndex.toString().padStart(2, "0")
-                    : currentIndex}
-                  {" "}/{" "}
-                  {clients.length < 10
-                    ? clients.length.toString().padStart(2, "0")
-                    : clients.length}
-    </div>
+    <div className="Clients-area our-client d-flex client-before client-after pb-50">
+      <canvas className="bg-gradient-canvas2" />
+      <div className="container py-100">
+        <div className="row">
+          <div className="col">
+            <div className="text-center">
+              <h1 className="text-title fw_2">From <span className="fw_6">Our Clients</span></h1>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xxl-9 col-12 mx-auto mt-5 position-relative">
+            <img src="assets/img/cot.png" className="cot" />
+            <div class="Clients-slider">
+              <Slider {...settings_clinet}>{renderItems}</Slider>
+              <div class="Clients-count">
+                {currentIndex < 10
+                  ? currentIndex.toString().padStart(2, "0")
+                  : currentIndex}
+                {" "}/{" "}
+                {clients.length < 10
+                  ? clients.length.toString().padStart(2, "0")
+                  : clients.length}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
