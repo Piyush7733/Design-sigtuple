@@ -48,7 +48,7 @@ return (
                                     <span className="fw_6">Grow with us.</span>
                                 </h1> 
                                 <p className="text-gray mt-3 fs_18 fw_3 ls_7">At Sigtuple, working is more than just a job, it's a calling to discover, to invent, to bring a revolution in pathology. Here, we don't just do something better but attempt to create things the world has never thought about.</p>
-                                {openings && openings.length ? <a href="#opening_job"><button className="d-block mx-auto px-4 explore">See Openings</button></a>: null}
+                                <a href="#opening_job"><button className="d-block mx-auto px-4 explore">See Openings</button></a>
                             </div>
                         </div>
                         <div className="text-center check-products">
@@ -135,13 +135,14 @@ return (
         </div>
     </div>
 
-    {openings && openings.length ? <div className="Positions-area py-100" id="opening_job">
+     <div className="Positions-area py-100" id="opening_job">
         <div className="container">
             <div className="row">
                 <div className="col">
                     <div className="text-center optiontitle">
                         <h2 className="text-title text-color fw_8 fs_24 mb-20">Open Positions</h2> 
-                        <p className="text-gray mt-4 fs_18 fw_3 ls_7">So, are you ready to lead in this era of technology and help empower the <br /> healthcare industry with AI?</p>
+                        {openings && openings.length ?<p className="text-gray mt-4 fs_18 fw_3 ls_7">So, are you ready to lead in this era of technology and help empower the <br /> healthcare industry with AI?</p>:
+                        <p className="text-gray mt-4 fs_18 fw_3 ls_7">If you are unable to find a suitable opening please do not worry. We are always up to discover new talents, kindly mail us your resume to info@sigtuple.com</p>}
                     </div>
                 </div>
             </div>
@@ -153,7 +154,7 @@ return (
                 </div>                        
             </div>
         </div> 
-    </div> : null }
+    </div> 
 
 
 
@@ -218,9 +219,9 @@ return (
                                         </div>
                                         <div>
                                             <h2 className="fw-6">
-                                                <span className="text-color" style={{fontSize:"25px"}}>{code.title}</span>
+                                                <span className="text-color" style={{fontSize:"25px"}}>{code.title.split(" ")[0]}</span>
                                                 <br /> 
-                                                <span className="text-gray">the bar</span>
+                                                <span className="text-gray">{code.title.slice(code.title.split(" ")[0].length,code.title.length)}</span>
                                             </h2>
                                         </div>
                                     </div> 

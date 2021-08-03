@@ -169,8 +169,8 @@ const ShravaPage = () => {
 
         <div className="analysis-area mx-auto">
             <div className="container ptb-80">
-                <div className="analysis-slider">
-                    <Slider {...product_settings} >
+                <div className="analysis-slider" ref={parentRef}>
+                    <Slider {...product_settings} ref={sliderRef}>
                         <div className="item">
                             <div className="row align-items-center">
                                 <div className="col-md-4">

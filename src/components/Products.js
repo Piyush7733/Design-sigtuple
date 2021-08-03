@@ -5,10 +5,13 @@ import Slider from "react-slick";
 import { useEffect, useRef, useState } from "react";
 import { getTechSepcs, getTechSepcsCounts } from "../Api";
 import { Link } from "react-router-dom";
+
+import tech_sech from "../contents_json/tech_spec";
+
 const Products = () => {
-    const [techSpecs, setTechSpecs] = useState([])
+    const [techSpecs, setTechSpecs] = useState(tech_sech.slice(0, 5))
     const [tab, setTab] = useState(0)
-    const [hasMore, setHasMore] = useState(false)
+    const [hasMore, setHasMore] = useState(true)
 
     const parentRef = useRef()
     const sliderRef = useRef()
@@ -35,30 +38,47 @@ const Products = () => {
         }
     };
 
-    useEffect(() => {
-        const getTechSepc = async () => {
-            let data = await getTechSepcs({ limit: 4 })
-            if (data.length === 4) {
-                let count = await getTechSepcsCounts()
-                if (count <= 4) setHasMore(false)
-                else setHasMore(true)
-            }
-            setTechSpecs(data)
-        }
-        getTechSepc()
-    }, [])
+    // useEffect(() => {
+    //     const getTechSepc = async () => {
+    //         let data = await getTechSepcs({ limit: 4 })
+    //         if (data.length === 4) {
+    //             let count = await getTechSepcsCounts()
+    //             if (count <= 4) setHasMore(false)
+    //             else setHasMore(true)
+    //         }
+    //         setTechSpecs(data)
+    //     }
+    //     getTechSepc()
+    // }, [])
 
     const getTechSpecDetails = () => {
         const getTechSepc = async () => {
-            let data = await getTechSepcs({ start: `${techSpecs.length}`, limit: 4 })
+            // let data = await getTechSepcs({ start: `${techSpecs.length}`, limit: 4 })
+            let data = tech_sech.slice(techSpecs.length, techSpecs.length + 5)
             let blogs = techSpecs.concat(data)
             setTechSpecs(blogs)
-            let count = await getTechSepcsCounts()
+            // let count = await getTechSepcsCounts()
+            let count = tech_sech.length
             if (count <= blogs.length) setHasMore(false)
             else setHasMore(true)
         }
         getTechSepc()
     }
+
+    const setDefault = () =>{
+        setTechSpecs(tech_sech.slice(0,5))
+        setHasMore(true)
+    }
+
+    const toggelTab = (id) =>{
+        if(id==tab){
+            setTab(0)
+        }
+        else{
+            setTab(id)
+        }
+    }
+
 
     let slider_settings = {
         arrows: false,
@@ -75,12 +95,12 @@ const Products = () => {
         return (
             <div className="specs-card" key={m.id} onClick={(e => {
                 e.preventDefault()
-                setTab(m.id)
+                toggelTab(m.id)
             })}>
                 <div className="specs-heading">
                     <span className={`${tab === m.id ? `` : 'collapsed'}`}>
                         {m.title}
-                        {tab === m.id ? <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        {tab === m.id ? <svg width="18" height="18" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21 11L11.4711 1.20088C11.3462 1.07227 11.1767 1 11 1C10.8233 1 10.6538 1.07227 10.5289 1.20088L1 11" stroke="#DE1A1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                             : <svg width="18" height="18" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +110,15 @@ const Products = () => {
                 </div>
                 <div className={`specs-details ${tab === m.id ? `` : 'collapse'}`}>
                     <div className="specs-body">
-                        {m.description}
+                        <ui>
+                            {
+                                m.fetures.map(f => {
+                                    return (
+                                        <li><p>{f}</p></li>
+                                    )
+                                })
+                            }
+                        </ui>
                     </div>
                 </div>
             </div>
@@ -197,14 +225,14 @@ const Products = () => {
                                 </div>
                                 </Link>
                                 <Link to="/shrava">
-                                <div className="Solutions-list">
-                                    <div className="Solutions-img">
-                                        <img src="assets/img/urine.png" className="img-fluid" alt="" />
+                                    <div className="Solutions-list">
+                                        <div className="Solutions-img">
+                                            <img src="assets/img/urine.png" className="img-fluid" alt="" />
+                                        </div>
+                                        <div className="Solutions-text mt-4">
+                                            <h5 className="text-gray fw_3">Urine<br /><strong>Analyser</strong></h5>
+                                        </div>
                                     </div>
-                                    <div className="Solutions-text mt-4">
-                                        <h5 className="text-gray fw_3">Urine<br /><strong>Analyser</strong></h5>
-                                    </div>
-                                </div>
                                 </Link>
                             </div>
                         </div>
@@ -212,7 +240,7 @@ const Products = () => {
                 </div>
             </div>
 
-            <Benefits term={"product"}/>
+            <Benefits term={"product"} />
 
 
             <div className="techSpecs-area">
@@ -240,7 +268,17 @@ const Products = () => {
                                         <path d="M0.999999 1L10.5289 10.7991C10.6538 10.9277 10.8233 11 11 11C11.1767 11 11.3462 10.9277 11.4711 10.7991L21 0.999999" stroke="#DE1A1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </span>
-                            </div> : null}
+                            </div> : <div className="mt-30 mb-30 mx-auto text-center" style={{ cursor: "pointer" }} onClick={(async e => {
+                                e.preventDefault()
+                                setDefault()
+                            })}>
+                                <span href="" className="text-color fw_6 mx-auto ">
+                                    <span>View less</span>
+                                    <svg width="18" height="18" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginLeft: "5px" }}>
+                                        <path d="M21 11L11.4711 1.20088C11.3462 1.07227 11.1767 1 11 1C10.8233 1 10.6538 1.07227 10.5289 1.20088L1 11" stroke="#DE1A1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </div>}
 
                             <div className="detailed-btn mt-50 mb-30 mx-auto text-center">
                                 <Link to={{ pathname: `https://sigtuple2021.s3.us-east-2.amazonaws.com/sample_caeb4040c2.pdf` }} className="text-color fw_6 mx-auto" target="_blank">

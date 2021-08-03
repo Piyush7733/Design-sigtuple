@@ -65,15 +65,22 @@ let tech_sech=[
         id:8,
         title:"Barcode reader",
         fetures:[
-            "External barcode reader",
-            
+            "External barcode reader" 
         ]
     },
     {
-        id:1,
-        title:"Major Components",
+        id:9,
+        title:"Quality Control",
         fetures:[
-            "Slide or Cartridge holding stage",
+            "Sigtuple Performance Qualification test for hardware and image quality",
+            "Built-in assessment test of Sample preparation quality"
+        ]
+    },
+    {
+        id:10,
+        title:"Archiving of results and images",
+        fetures:[
+            "Unlimited archiving in Sigtuple Mandara utilizing either LAN or WiFi",
             "XYZ motion stage",
             "Optics unit with Turret mechanism unit",
             "Optics digital camera",
@@ -83,81 +90,43 @@ let tech_sech=[
         ]
     },
     {
-        id:1,
-        title:"Major Components",
+        id:11,
+        title:"External interface",
         fetures:[
-            "Slide or Cartridge holding stage",
-            "XYZ motion stage",
-            "Optics unit with Turret mechanism unit",
-            "Optics digital camera",
-            "Display unit",
-            "Control unit",
-            "Casing"
+            "USB, Ethernet"
         ]
     },
     {
-        id:1,
-        title:"Major Components",
+        id:12,
+        title:"Electrical specification",
         fetures:[
-            "Slide or Cartridge holding stage",
-            "XYZ motion stage",
-            "Optics unit with Turret mechanism unit",
-            "Optics digital camera",
-            "Display unit",
-            "Control unit",
-            "Casing"
+            "Input voltage - 100-240 VAC",
+            "Nominal Power- 60 watt",
+            "AC Frequency - 50/60Hz"
         ]
     },
     {
-        id:1,
-        title:"Major Components",
+        id:13,
+        title:"Size (W x D x H)",
         fetures:[
-            "Slide or Cartridge holding stage",
-            "XYZ motion stage",
-            "Optics unit with Turret mechanism unit",
-            "Optics digital camera",
-            "Display unit",
-            "Control unit",
-            "Casing"
+            "485 x 572 x 485 mm /",
+            "19.1 x 22.52 x 19.1 inches"
         ]
     },
     {
-        id:1,
-        title:"Major Components",
+        id:14,
+        title:"Weight",
         fetures:[
-            "Slide or Cartridge holding stage",
-            "XYZ motion stage",
-            "Optics unit with Turret mechanism unit",
-            "Optics digital camera",
-            "Display unit",
-            "Control unit",
-            "Casing"
+            "49 kg / 108 lbs"
         ]
     },
     {
-        id:1,
-        title:"Major Components",
+        id:15,
+        title:"Regulatory Approval",
         fetures:[
-            "Slide or Cartridge holding stage",
-            "XYZ motion stage",
-            "Optics unit with Turret mechanism unit",
-            "Optics digital camera",
-            "Display unit",
-            "Control unit",
-            "Casing"
+            "CE"
         ]
-    },
-    {
-        id:1,
-        title:"Major Components",
-        fetures:[
-            "Slide or Cartridge holding stage",
-            "XYZ motion stage",
-            "Optics unit with Turret mechanism unit",
-            "Optics digital camera",
-            "Display unit",
-            "Control unit",
-            "Casing"
-        ]
-    },
+    }
 ]
+
+export default tech_sech;
